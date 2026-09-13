@@ -24,17 +24,16 @@ jobs:
       - name: Install backend dependencies
         run: |
           python -m pip install --upgrade pip
-          cd SIH26102
           pip install -r backend/requirements.txt
 
       - name: Initialize test database and seed sample data
         run: |
-          cd SIH26102
           python init_data.py
 
       - name: Run Pytest suite
+        env:
+          PYTHONPATH: .
         run: |
-          cd SIH26102
           pytest tests/ -v
 
   frontend-build:
@@ -50,14 +49,14 @@ jobs:
         with:
           node-version: 20
           cache: 'npm'
-          cache-dependency-path: 'SIH26102/frontend/package-lock.json'
+          cache-dependency-path: 'frontend/package-lock.json'
 
       - name: Install frontend dependencies
         run: |
-          cd SIH26102/frontend
+          cd frontend
           npm ci
 
       - name: Build frontend application
         run: |
-          cd SIH26102/frontend
+          cd frontend
           npm run build
