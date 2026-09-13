@@ -4,6 +4,12 @@ import datetime
 from PIL import Image, ImageDraw
 from sqlalchemy.orm import Session
 
+import sys
+from pathlib import Path
+
+# Add project root to sys.path
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+
 from backend.app.database.connection import SessionLocal
 from backend.app.database.models import Project, ProjectLocation
 from ai.evidence.engine import AssetEvidenceEngine

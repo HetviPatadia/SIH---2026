@@ -30,6 +30,7 @@ jobs:
         run: |
           python init_data.py
           python scripts/load_demo_dataset.py
+          python scripts/seed_evidence_data.py
 
       - name: Run Pytest suite
         env:
