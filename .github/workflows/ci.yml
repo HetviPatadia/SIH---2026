@@ -29,6 +29,7 @@ jobs:
       - name: Initialize test database and seed sample data
         run: |
           python init_data.py
+          python scripts/load_demo_dataset.py
 
       - name: Run Pytest suite
         env:

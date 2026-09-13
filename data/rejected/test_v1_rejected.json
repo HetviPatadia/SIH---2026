@@ -14,7 +14,7 @@
       "longitude": null,
       "has_valid_coords": false
     },
-    "rejected_at": "2026-09-12T23:11:46.989164"
+    "rejected_at": "2026-09-13T01:44:31.270282"
   },
   {
     "row_index": 2,
@@ -31,6 +31,6 @@
       "longitude": null,
       "has_valid_coords": false
     },
-    "rejected_at": "2026-09-12T23:11:46.989164"
+    "rejected_at": "2026-09-13T01:44:31.270282"
   }
 ]
