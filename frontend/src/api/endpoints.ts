@@ -1,4 +1,4 @@
-import { apiClient } from './client';
+import { apiClient, getBaseUrl } from './client';
 import type { 
   SystemHealthResponse, 
   AnomalySummaryResponse, 
@@ -114,7 +114,7 @@ export const api = {
     getById: (evidenceId: string) => 
       apiClient<ProjectEvidenceItem>(`/api/evidence/${evidenceId}`),
     getFileUrl: (evidenceId: string) => {
-      const baseUrl = import.meta.env.VITE_API_BASE_URL || 'http://127.0.0.1:8000';
+      const baseUrl = getBaseUrl();
       return `${baseUrl}/api/evidence/${evidenceId}/file`;
     },
     getSummary: () => 

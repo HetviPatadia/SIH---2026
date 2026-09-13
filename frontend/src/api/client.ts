@@ -1,9 +1,24 @@
-﻿/**
+/**
  * Centralized API Client
  * Configured with environment-driven base URL and normalized error handling.
  */
 
-const BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000';
+export const getBaseUrl = (): string => {
+  const envUrl = import.meta.env.VITE_API_BASE_URL;
+  if (envUrl && typeof envUrl === 'string' && envUrl.trim().length > 0) {
+    return envUrl.trim().replace(/\/+$/, '');
+  }
+  if (typeof window !== 'undefined') {
+    // When running Vite locally on port 3000 / 5173 without proxy or with direct backend calls,
+    // point to FastAPI on port 8000
+    if (window.location.port && window.location.port !== '8000') {
+      return `http://${window.location.hostname}:8000`;
+    }
+  }
+  return '';
+};
+
+export const BASE_URL = getBaseUrl();
 
 export interface RequestOptions extends RequestInit {
   params?: Record<string, string | number | boolean | undefined | null>;
