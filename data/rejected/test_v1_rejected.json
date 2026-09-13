@@ -1,0 +1,36 @@
+[
+  {
+    "row_index": 1,
+    "project_id": "",
+    "reasons": [
+      "Missing project_id"
+    ],
+    "data": {
+      "project_id": "",
+      "district": "Rajkot",
+      "sector": "Water",
+      "sanctioned_amount": 50000.0,
+      "latitude": null,
+      "longitude": null,
+      "has_valid_coords": false
+    },
+    "rejected_at": "2026-09-12T23:11:46.989164"
+  },
+  {
+    "row_index": 2,
+    "project_id": "P003",
+    "reasons": [
+      "Negative sanctioned amount"
+    ],
+    "data": {
+      "project_id": "P003",
+      "district": "Nagpur",
+      "sector": "Health",
+      "sanctioned_amount": -15000.0,
+      "latitude": null,
+      "longitude": null,
+      "has_valid_coords": false
+    },
+    "rejected_at": "2026-09-12T23:11:46.989164"
+  }
+]

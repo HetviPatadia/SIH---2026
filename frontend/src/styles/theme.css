@@ -1,0 +1,410 @@
+@import 'leaflet/dist/leaflet.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #f8fafc;
+  --foreground: #0f172a;
+  
+  --surface: #ffffff;
+  --surface-muted: #f1f5f9;
+  --surface-elevated: #ffffff;
+  --surface-highest: #e2e8f0;
+  
+  --card: #ffffff;
+  --card-foreground: #0f172a;
+  
+  --border: #cbd5e1;
+  --border-muted: #e2e8f0;
+  --border-subtle: #f1f5f9;
+  
+  --primary: #0d9488;
+  --primary-foreground: #ffffff;
+  --primary-muted: #ccfbf1;
+  
+  --secondary: #475569;
+  --secondary-foreground: #ffffff;
+  
+  --accent: #0284c7;
+  --accent-muted: #e0f2fe;
+  
+  --muted: #f1f5f9;
+  --muted-foreground: #64748b;
+  
+  --success: #059669;
+  --success-foreground: #ffffff;
+  --success-surface: #ecfdf5;
+  
+  --warning: #d97706;
+  --warning-foreground: #ffffff;
+  --warning-surface: #fffbeb;
+  
+  --danger: #dc2626;
+  --danger-foreground: #ffffff;
+  --danger-surface: #fef2f2;
+  
+  --info: #2563eb;
+  --info-foreground: #ffffff;
+  --info-surface: #eff6ff;
+
+  /* Global Motion System Tokens */
+  --motion-fast: 140ms;
+  --motion-normal: 200ms;
+  --motion-emphasis: 320ms;
+  --motion-page: 350ms;
+  --ease-audit: cubic-bezier(0.16, 1, 0.3, 1);
+  
+  color-scheme: light;
+}
+
+.dark {
+  --background: #0b0f19;
+  --foreground: #f1f5f9;
+  
+  --surface: #111827;
+  --surface-muted: #182030;
+  --surface-elevated: #1e293b;
+  --surface-highest: #283347;
+  
+  --card: #111827;
+  --card-foreground: #f1f5f9;
+  
+  --border: #263248;
+  --border-muted: #1e293b;
+  --border-subtle: #161f2e;
+  
+  --primary: #10b981;
+  --primary-foreground: #022c22;
+  --primary-muted: #064e3b;
+  
+  --secondary: #94a3b8;
+  --secondary-foreground: #0f172a;
+  
+  --accent: #38bdf8;
+  --accent-muted: #0c4a6e;
+  
+  --muted: #1e293b;
+  --muted-foreground: #94a3b8;
+  
+  --success: #10b981;
+  --success-foreground: #022c22;
+  --success-surface: rgba(6, 78, 59, 0.35);
+  
+  --warning: #f59e0b;
+  --warning-foreground: #451a03;
+  --warning-surface: rgba(120, 53, 15, 0.35);
+  
+  --danger: #ef4444;
+  --danger-foreground: #450a0a;
+  --danger-surface: rgba(127, 29, 29, 0.35);
+  
+  --info: #3b82f6;
+  --info-foreground: #172554;
+  --info-surface: rgba(30, 58, 138, 0.35);
+  
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+/* Custom scrollbar for tables and dense content */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--surface);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted-foreground);
+}
+
+/* Nexus Magnetic & Ripple Animations */
+@keyframes nexusRipple {
+  0% {
+    r: 36px;
+    opacity: 0.8;
+    stroke-width: 2.5px;
+  }
+  50% {
+    opacity: 0.35;
+    stroke-width: 1.5px;
+  }
+  100% {
+    r: 105px;
+    opacity: 0;
+    stroke-width: 0.5px;
+  }
+}
+
+@keyframes nexusProjectPulse {
+  0% {
+    r: 24px;
+    opacity: 0.8;
+    stroke-width: 2px;
+  }
+  100% {
+    r: 52px;
+    opacity: 0;
+    stroke-width: 0.5px;
+  }
+}
+
+@keyframes nexusEnergyFlow {
+  0% {
+    stroke-dashoffset: 32;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.nexus-ripple-ring {
+  fill: none;
+  animation: nexusRipple 3.6s cubic-bezier(0.1, 0.55, 0.45, 1) infinite;
+}
+
+.nexus-ripple-ring-1 {
+  animation-delay: 0s;
+}
+
+.nexus-ripple-ring-2 {
+  animation-delay: 1.2s;
+}
+
+.nexus-ripple-ring-3 {
+  animation-delay: 2.4s;
+}
+
+.nexus-project-pulse {
+  fill: none;
+  animation: nexusProjectPulse 2.2s cubic-bezier(0.15, 0.6, 0.35, 1) infinite;
+}
+
+.nexus-energy-edge {
+  stroke-dasharray: 6 10;
+  animation: nexusEnergyFlow 2s linear infinite;
+}
+
+/* Leaflet GIS Overrides */
+.leaflet-container {
+  font-family: inherit !important;
+  background: var(--background) !important;
+  outline: none;
+}
+
+.leaflet-popup-content-wrapper {
+  background: var(--surface) !important;
+  color: var(--foreground) !important;
+  border-radius: 0.75rem !important;
+  border: 1px solid var(--border) !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.25), 0 8px 10px -6px rgba(0, 0, 0, 0.2) !important;
+  padding: 0 !important;
+  overflow: hidden;
+}
+
+.leaflet-popup-content {
+  margin: 0 !important;
+  line-height: 1.4 !important;
+}
+
+.leaflet-popup-tip {
+  background: var(--surface) !important;
+  border: 1px solid var(--border) !important;
+}
+
+.leaflet-popup-close-button {
+  color: var(--muted-foreground) !important;
+  padding: 4px 6px !important;
+}
+
+.leaflet-popup-close-button:hover {
+  color: var(--foreground) !important;
+}
+
+/* OpenStreetMap Tile Filter for Dark Mode - 100% Free / Zero API Key */
+.dark .leaflet-tile-pane {
+  filter: brightness(0.65) invert(1) contrast(3) hue-rotate(200deg) saturate(0.25) brightness(0.7);
+}
+
+/* Leaflet Tooltip Overrides */
+.leaflet-tooltip {
+  background: var(--surface) !important;
+  color: var(--foreground) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 0.5rem !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25) !important;
+  padding: 4px 8px !important;
+  font-size: 11px !important;
+  font-family: inherit !important;
+}
+
+.leaflet-tooltip-top:before {
+  border-top-color: var(--surface) !important;
+}
+.leaflet-tooltip-bottom:before {
+  border-bottom-color: var(--surface) !important;
+}
+
+/* Subtle pulse for selected project */
+@keyframes gisPinPulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+  60% {
+    transform: scale(1.7);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+.gis-selected-pulse {
+  animation: gisPinPulse 2s cubic-bezier(0.25, 1, 0.5, 1) infinite;
+}
+
+/* ==================================================
+   GLOBAL MOTION SYSTEM UTILITIES
+   ================================================== */
+
+@keyframes pageEnter {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page-transition {
+  animation: pageEnter var(--motion-page) var(--ease-audit) forwards;
+  will-change: opacity, transform;
+}
+
+@keyframes staggerFade {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-stagger-1 {
+  animation: staggerFade var(--motion-emphasis) var(--ease-audit) 0ms both;
+}
+
+.animate-stagger-2 {
+  animation: staggerFade var(--motion-emphasis) var(--ease-audit) 40ms both;
+}
+
+.animate-stagger-3 {
+  animation: staggerFade var(--motion-emphasis) var(--ease-audit) 80ms both;
+}
+
+.animate-stagger-4 {
+  animation: staggerFade var(--motion-emphasis) var(--ease-audit) 120ms both;
+}
+
+/* Subtle Hover Micro-Interactions */
+.hover-elevate {
+  transition: transform var(--motion-fast) var(--ease-audit),
+              box-shadow var(--motion-fast) var(--ease-audit),
+              border-color var(--motion-fast) var(--ease-audit);
+}
+
+.hover-elevate:hover {
+  transform: translateY(-1px);
+}
+
+.table-row-hover {
+  transition: background-color var(--motion-fast) var(--ease-audit);
+}
+
+.table-row-hover:hover {
+  background-color: var(--surface-muted);
+}
+
+/* Shimmer Skeleton Animation */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.skeleton-shimmer {
+  background: linear-gradient(
+    90deg, 
+    var(--surface-muted) 0%, 
+    var(--surface-highest) 50%, 
+    var(--surface-muted) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.8s infinite;
+}
+
+/* Subtle Status Pulse */
+@keyframes subtleStatusPulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.65;
+    transform: scale(0.96);
+  }
+}
+
+.status-pulse-live {
+  animation: subtleStatusPulse 3s ease-in-out infinite;
+}
+
+/* ==================================================
+   ACCESSIBILITY — PREFERS-REDUCED-MOTION
+   ================================================== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .page-transition,
+  .animate-stagger-1,
+  .animate-stagger-2,
+  .animate-stagger-3,
+  .animate-stagger-4,
+  .gis-selected-pulse,
+  .nexus-ripple-ring,
+  .nexus-project-pulse,
+  .nexus-energy-edge,
+  .skeleton-shimmer,
+  .status-pulse-live {
+    animation: none !important;
+    transform: none !important;
+  }
+}

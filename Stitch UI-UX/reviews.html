@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MPLADS Audit - Reviews &amp; Human Verification</title>
+<!-- Font Imports -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-secondary-fixed": "#002113",
+            "on-primary-fixed-variant": "#3f465b",
+            "secondary": "#4edea3",
+            "primary": "#bec6e0",
+            "primary-container": "#131b2e",
+            "surface-container": "#122131",
+            "surface-container-lowest": "#010f1f",
+            "secondary-container": "#00a572",
+            "on-primary-container": "#7c839b",
+            "on-primary": "#283044",
+            "inverse-surface": "#d4e4fa",
+            "on-background": "#d4e4fa",
+            "surface-container-highest": "#273647",
+            "inverse-primary": "#565e74",
+            "primary-fixed-dim": "#bec6e0",
+            "on-tertiary": "#472a00",
+            "error-container": "#93000a",
+            "on-tertiary-fixed-variant": "#653e00",
+            "error": "#ffb4ab",
+            "on-surface-variant": "#c6c6cd",
+            "outline": "#909097",
+            "background": "#051424",
+            "surface-bright": "#2c3a4c",
+            "surface-tint": "#bec6e0",
+            "on-surface": "#d4e4fa",
+            "on-secondary": "#003824",
+            "secondary-fixed": "#6ffbbe",
+            "on-error-container": "#ffdad6",
+            "surface-container-low": "#0d1c2d",
+            "surface-dim": "#051424",
+            "on-tertiary-container": "#b87500",
+            "on-secondary-fixed-variant": "#005236",
+            "surface-container-high": "#1c2b3c",
+            "secondary-fixed-dim": "#4edea3",
+            "outline-variant": "#45464d",
+            "tertiary-fixed-dim": "#ffb95f",
+            "inverse-on-surface": "#233143",
+            "surface-variant": "#273647",
+            "tertiary-container": "#2a1700",
+            "surface": "#051424",
+            "on-tertiary-fixed": "#2a1700",
+            "primary-fixed": "#dae2fc",
+            "on-primary-fixed": "#131b2e",
+            "tertiary": "#ffb95f",
+            "on-error": "#690005",
+            "on-secondary-container": "#00311f",
+            "tertiary-fixed": "#ffddb8"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "space-sm": "0.5rem",
+            "space-2xs": "0.125rem",
+            "gutter-compact": "0.75rem",
+            "space-md": "0.75rem",
+            "space-xs": "0.25rem",
+            "space-base": "1rem",
+            "space-xl": "1.5rem",
+            "space-lg": "1.25rem",
+            "gutter-wide": "1.5rem",
+            "gutter-normal": "1rem",
+            "space-3xl": "3rem",
+            "space-2xl": "2rem"
+          },
+          "fontFamily": {
+            "headline-md": ["IBM Plex Sans", "sans-serif"],
+            "headline-lg": ["IBM Plex Sans", "sans-serif"],
+            "headline-xl": ["IBM Plex Sans", "sans-serif"],
+            "mono-data": ["JetBrains Mono", "monospace"],
+            "body-md": ["Inter", "sans-serif"],
+            "headline-sm": ["IBM Plex Sans", "sans-serif"],
+            "body-lg": ["Inter", "sans-serif"],
+            "body-sm": ["Inter", "sans-serif"],
+            "label-md": ["Inter", "sans-serif"],
+            "label-sm": ["Inter", "sans-serif"],
+            "mono-data-sm": ["JetBrains Mono", "monospace"]
+          },
+          "fontSize": {
+            "headline-md": ["1.25rem", { lineHeight: "1.75rem", letterSpacing: "-0.01em", fontWeight: "600" }],
+            "headline-lg": ["1.5rem", { lineHeight: "2rem", letterSpacing: "-0.015em", fontWeight: "600" }],
+            "headline-xl": ["2rem", { lineHeight: "2.5rem", letterSpacing: "-0.02em", fontWeight: "600" }],
+            "mono-data": ["0.8125rem", { lineHeight: "1.125rem", letterSpacing: "-0.01em", fontWeight: "400" }],
+            "body-md": ["0.875rem", { lineHeight: "1.25rem", letterSpacing: "0", fontWeight: "400" }],
+            "headline-sm": ["1.125rem", { lineHeight: "1.5rem", letterSpacing: "-0.005em", fontWeight: "500" }],
+            "body-lg": ["1rem", { lineHeight: "1.5rem", letterSpacing: "0", fontWeight: "400" }],
+            "body-sm": ["0.75rem", { lineHeight: "1.125rem", letterSpacing: "0.01em", fontWeight: "400" }],
+            "label-md": ["0.75rem", { lineHeight: "1rem", letterSpacing: "0.04em", fontWeight: "600" }],
+            "label-sm": ["0.6875rem", { lineHeight: "0.875rem", letterSpacing: "0.05em", fontWeight: "500" }],
+            "mono-data-sm": ["0.6875rem", { lineHeight: "0.875rem", letterSpacing: "0", fontWeight: "400" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 20;
+      vertical-align: middle;
+      display: inline-block;
+      line-height: 1;
+    }
+    /* Custom subtle scrollbars for high-density tabular workspace */
+    ::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #051424;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #273647;
+      border-radius: 2px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #45464d;
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface antialiased font-body-md overflow-x-hidden selection:bg-secondary-container selection:text-on-secondary-fixed">
+<!-- ========================================================================= -->
+<!-- 1. PERSISTENT SIDE NAVIGATION BAR (As defined in Shared Components JSON)  -->
+<!-- ========================================================================= -->
+<aside class="fixed top-0 left-0 h-screen w-60 z-30 bg-surface-container-low dark:bg-surface-container-low border-r border-outline-variant dark:border-outline-variant flex flex-col justify-between py-4 px-3 select-none">
+<!-- Header: Institutional Seal / Title -->
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-3 px-2">
+<div class="w-8 h-8 rounded bg-surface-container-high border border-outline-variant flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary text-lg" data-icon="account_balance">account_balance</span>
+</div>
+<div class="flex flex-col overflow-hidden">
+<span class="text-headline-sm font-headline-sm font-semibold tracking-tight text-on-surface dark:text-on-surface truncate">MPLADS Audit</span>
+<span class="text-label-sm font-label-sm text-primary tracking-wider truncate">Parliamentary Oversight</span>
+</div>
+</div>
+<!-- Navigation Links (10 tabs from JSON, 'Reviews' is strictly active) -->
+<nav class="flex flex-col gap-1 mt-2 overflow-y-auto max-h-[calc(100vh-280px)] pr-1">
+<!-- Dashboard -->
+<a class="flex items-center gap-3 px-3 py-2 text-on-surface-variant dark:text-on-surface-variant font-label-md hover:text-on-surface hover:bg-surface-container-high transition-colors duration-150 rounded" href="#">
+<span class="material-symbols-outlined text-[18px]" data-icon="dashboard">dashboard</span>
+<span>Dashboard</span>
+</a>
+<!-- Reviews (ACTIVE STATE per Conflict Protocol & System Shell) -->
+<a class="flex items-center gap-3 px-3 py-2 bg-primary-container text-secondary font-label-md rounded border-l-2 border-secondary" href="#">
+<span class="material-symbols-outlined text-[18px]" data-icon="fact_check" style="font-variation-settings: 'FILL' 1;">fact_check</span>
+<span>Reviews</span>
+<span class="ml-auto font-mono-data-sm text-mono-data-sm bg-surface-container-highest px-1.5 py-0.5 rounded text-secondary border border-outline-variant">42</span>
+</a>
+<!-- Projects -->
+<a class="flex items-center gap-3 px-3 py-2 text-on-surface-variant dark:text-on-surface-variant font-label-md hover:text-on-surface hover:bg-surface-container-high transition-colors duration-150 rounded" href="#">
+<span class="material-symbols-outlined text-[18px]" data-icon="account_tree">account_tree</span>
+<span>Projects</span>
+</a>
+<!-- Evidence -->
+<a class="flex items-center gap-3 px-3 py-2 text-on-surface-variant dark:text-on-surface-variant font-label-md hover:text-on-surface hover:bg-surface-container-high transition-colors duration-150 rounded" href="#">
+<span class="material-symbols-outlined text-[18px]" data-icon="folder_supervised">folder_supervised</span>
+<span>Evidence</span>
+</a>
+<!-- GIS Intelligence -->
+<a class="flex items-center gap-3 px-3 py-2 text-on-surface-variant dark:text-on-surface-variant font-label-md hover:text-on-surface hover:bg-surface-container-high transition-colors duration-150 rounded" href="#">
+<span class="material-symbols-outlined text-[18px]" data-icon="public">public</span>
+<span>GIS Intelligence</span>
+</a>
+<!-- Network Intelligence -->
+<a class="flex items-center gap-3 px-3 py-2 text-on-surface-variant dark:text-on-surface-variant font-label-md hover:text-on-surface hover:bg-surface-container-high transition-colors duration-150 rounded" href="#">
+<span class="material-symbols-outlined text-[18px]" data-icon="hub">hub</span>
+<span>Network Intelligence</span>
+</a>
+<!-- Analytics -->
+<a class="flex items-center gap-3 px-3 py-2 text-on-surface-variant dark:text-on-surface-variant font-label-md hover:text-on-surface hover:bg-surface-container-high transition-colors duration-150 rounded" href="#">
+<span class="material-symbols-outlined text-[18px]" data-icon="query_stats">query_stats</span>
+<span>Analytics</span>
+</a>
+<!-- Reports -->
+<a class="flex items-center gap-3 px-3 py-2 text-on-surface-variant dark:text-on-surface-variant font-label-md hover:text-on-surface hover:bg-surface-container-high transition-colors duration-150 rounded" href="#">
+<span class="material-symbols-outlined text-[18px]" data-icon="description">description</span>
+<span>Reports</span>
+</a>
+<!-- Data Sources -->
+<a class="flex items-center gap-3 px-3 py-2 text-on-surface-variant dark:text-on-surface-variant font-label-md hover:text-on-surface hover:bg-surface-container-high transition-colors duration-150 rounded" href="#">
+<span class="material-symbols-outlined text-[18px]" data-icon="database">database</span>
+<span>Data Sources</span>
+</a>
+<!-- System -->
+<a class="flex items-center gap-3 px-3 py-2 text-on-surface-variant dark:text-on-surface-variant font-label-md hover:text-on-surface hover:bg-surface-container-high transition-colors duration-150 rounded" href="#">
+<span class="material-symbols-outlined text-[18px]" data-icon="tune">tune</span>
+<span>System</span>
+</a>
+</nav>
+</div>
+<!-- Footer Area: System Health & Officer Identity -->
+<div class="flex flex-col gap-2 pt-3 border-t border-outline-variant">
+<!-- Sync telemetry -->
+<div class="px-2 py-1.5 rounded bg-surface-container-lowest border border-outline-variant flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary shrink-0"></span>
+<span class="font-mono-data-sm text-mono-data-sm text-on-surface-variant truncate">PFMS / e-Sakshi</span>
+</div>
+<span class="font-mono-data-sm text-mono-data-sm text-secondary">LIVE</span>
+</div>
+<!-- Officer Profile Anchor -->
+<div class="flex items-center gap-2.5 px-2 py-2 rounded bg-surface-container hover:bg-surface-container-high transition-colors">
+<div class="w-7 h-7 rounded bg-surface-bright flex items-center justify-center font-label-md text-label-md text-primary font-semibold border border-outline-variant">
+          RS
+        </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface truncate">R. Sharma</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Sr. Audit Officer</span>
+</div>
+<span class="material-symbols-outlined text-outline ml-auto text-base" data-icon="verified_user">verified_user</span>
+</div>
+</div>
+</aside>
+<!-- ========================================================================= -->
+<!-- 2. MAIN WORKSPACE CANVAS (Responsive split layout with persistent TopNavBar) -->
+<!-- ========================================================================= -->
+<div class="pl-60 flex flex-col min-h-screen bg-background">
+<!-- TopNavBar (Matches Shared Components JSON contract) -->
+<header class="sticky top-0 right-0 h-14 w-full z-20 bg-surface-container-lowest dark:bg-surface-container-lowest border-b border-outline-variant dark:border-outline-variant flex items-center justify-between px-6">
+<!-- Left: Title & Fiscal Context -->
+<div class="flex items-center gap-4">
+<div>
+<h1 class="text-headline-sm font-headline-sm font-semibold text-on-surface dark:text-on-surface tracking-tight">Reviews</h1>
+<p class="text-body-sm font-body-sm text-on-surface-variant hidden lg:block">Parliamentary sanction ledger verification queue</p>
+</div>
+<div class="h-4 w-[1px] bg-outline-variant mx-1 hidden sm:block"></div>
+<!-- Navigation Context Filter from JSON -->
+<div class="hidden sm:flex items-center gap-4">
+<button class="text-secondary font-semibold border-b-2 border-secondary pb-1 text-label-md font-label-md">All Batches</button>
+<button class="text-on-surface-variant hover:text-on-surface font-body-sm text-body-sm transition-colors">FY 2023-24</button>
+<button class="text-on-surface-variant hover:text-on-surface font-body-sm text-body-sm transition-colors">Priority Expedited</button>
+<button class="text-on-surface-variant hover:text-on-surface font-body-sm text-body-sm transition-colors">Reconciliation Queue</button>
+</div>
+</div>
+<!-- Right Utility Actions -->
+<div class="flex items-center gap-3">
+<!-- Search field in TopNav -->
+<div class="relative hidden xl:block w-64">
+<input class="w-full h-8 bg-surface text-on-surface text-body-sm font-body-sm rounded border border-outline-variant pl-8 pr-3 focus:border-secondary focus:ring-0" placeholder="Filter sanction ledger..." type="text"/>
+<span class="material-symbols-outlined absolute left-2 top-2 text-[16px] text-outline" data-icon="search">search</span>
+</div>
+<!-- Mode Toggle & Badges -->
+<div class="flex items-center gap-1.5 bg-surface-container px-2 py-1 rounded border border-outline-variant">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-on-surface">Audit Strict Mode</span>
+</div>
+<div class="h-4 w-[1px] bg-outline-variant mx-1"></div>
+<!-- Action Buttons from JSON -->
+<button class="h-8 px-3 rounded bg-surface-container border border-outline-variant hover:bg-surface-container-high text-on-surface text-label-md font-label-md flex items-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[16px]" data-icon="file_download">file_download</span>
+<span>Export Ledger</span>
+</button>
+<button class="h-8 px-3 rounded bg-surface-container-high hover:bg-surface-bright text-on-surface font-label-md text-label-md border border-outline-variant flex items-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[16px]" data-icon="checklist">checklist</span>
+<span>Batch Action</span>
+</button>
+<!-- Trailing Utility Icons -->
+<div class="flex items-center gap-1 text-on-surface-variant">
+<button class="w-8 h-8 rounded flex items-center justify-center hover:bg-surface-container-high transition-colors" title="Notifications">
+<span class="material-symbols-outlined text-[18px]" data-icon="notifications">notifications</span>
+</button>
+<button class="w-8 h-8 rounded flex items-center justify-center hover:bg-surface-container-high transition-colors" title="System Guidance">
+<span class="material-symbols-outlined text-[18px]" data-icon="help">help</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Fluid Layout: Table on Left + Fixed 420px Drawer on Right -->
+<main class="flex-1 flex overflow-hidden">
+<!-- Left Content Canvas: Metric Bar + Filter Bar + Dense Audit Table -->
+<section class="flex-1 flex flex-col p-5 overflow-y-auto space-y-4 max-w-[calc(100vw-240px-420px)] xl:max-w-none">
+<!-- Demonstration Watermark Bar -->
+<div class="w-full bg-surface-container-low border border-outline-variant rounded px-3 py-1.5 flex items-center justify-between">
+<div class="flex items-center gap-2 text-primary font-mono-data-sm text-mono-data-sm">
+<span class="material-symbols-outlined text-[15px] text-tertiary" data-icon="info">info</span>
+<span>RESTRICTED DEMONSTRATION WORKSPACE • SYNTHESIZED AUDIT SAMPLES FOR PARLIAMENTARY COMMITTEE REVIEW</span>
+</div>
+<span class="text-label-sm font-label-sm text-outline">SECURE LEVEL 3 OVERSIGHT</span>
+</div>
+<!-- 3. METRIC SUMMARY BAR (Compact, Institutional, Restrained) -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+<!-- Metric 1: Needs Review -->
+<div class="bg-surface-container-low border border-outline-variant rounded p-3.5 flex items-center justify-between">
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider">Needs Human Scrutiny</span>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg font-semibold text-on-surface">42</span>
+<span class="text-body-sm font-body-sm text-on-surface-variant">Sanctioned Works</span>
+</div>
+<div class="flex items-center gap-1.5 text-tertiary text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-[14px]" data-icon="schedule">schedule</span>
+<span>+6 ingested in past 24 hrs</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded bg-tertiary-container border border-outline-variant flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-xl" data-icon="pending_actions">pending_actions</span>
+</div>
+</div>
+<!-- Metric 2: High Priority Flagged -->
+<div class="bg-surface-container-low border border-outline-variant rounded p-3.5 flex items-center justify-between">
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider">High Audit Priority</span>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg font-semibold text-on-surface">11</span>
+<span class="text-body-sm font-body-sm text-on-surface-variant">Active Files</span>
+</div>
+<div class="flex items-center gap-1.5 text-error text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-[14px]" data-icon="priority_high">priority_high</span>
+<span>Immediate determination recommended</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded bg-error-container border border-outline-variant flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-xl" data-icon="report_problem">report_problem</span>
+</div>
+</div>
+<!-- Metric 3: In Review -->
+<div class="bg-surface-container-low border border-outline-variant rounded p-3.5 flex items-center justify-between">
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider">In Active Review</span>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg font-semibold text-on-surface">19</span>
+<span class="text-body-sm font-body-sm text-on-surface-variant">Allocated Files</span>
+</div>
+<div class="flex items-center gap-1.5 text-secondary text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-[14px]" data-icon="group">group</span>
+<span>Distributed across 4 audit officers</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded bg-surface-container-high border border-outline-variant flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-xl" data-icon="assignment_ind">assignment_ind</span>
+</div>
+</div>
+</div>
+<!-- 4. HORIZONTAL FILTER BAR (Clinical, precise, non-crowded) -->
+<div class="bg-surface-container-low border border-outline-variant rounded p-2.5 flex flex-wrap items-center gap-2">
+<!-- Search input -->
+<div class="relative flex-1 min-w-[200px]">
+<input class="w-full h-8 bg-surface text-on-surface text-body-sm font-body-sm rounded border border-outline-variant pl-8 pr-3 focus:border-secondary focus:ring-0" placeholder="Search project title, sanction code, or nodal agency..." type="text"/>
+<span class="material-symbols-outlined absolute left-2 top-2 text-[16px] text-outline" data-icon="filter_alt">filter_alt</span>
+</div>
+<!-- Priority Dropdown -->
+<div class="relative">
+<select class="h-8 bg-surface text-on-surface text-label-sm font-label-sm rounded border border-outline-variant pl-2.5 pr-7 focus:border-secondary focus:ring-0 appearance-none cursor-pointer">
+<option>Priority: All Levels</option>
+<option>High Priority (Score &gt; 75)</option>
+<option>Medium Priority (Score 40-75)</option>
+<option>Low Priority (Score &lt; 40)</option>
+</select>
+<span class="material-symbols-outlined absolute right-1.5 top-2 text-[16px] pointer-events-none text-outline" data-icon="arrow_drop_down">arrow_drop_down</span>
+</div>
+<!-- Review Status Dropdown -->
+<div class="relative">
+<select class="h-8 bg-surface text-on-surface text-label-sm font-label-sm rounded border border-outline-variant pl-2.5 pr-7 focus:border-secondary focus:ring-0 appearance-none cursor-pointer">
+<option>Status: Needs Review</option>
+<option>Status: In Review</option>
+<option>Status: Verification Required</option>
+<option>Status: Verified / Reconciled</option>
+<option>Status: Dismissed</option>
+</select>
+<span class="material-symbols-outlined absolute right-1.5 top-2 text-[16px] pointer-events-none text-outline" data-icon="arrow_drop_down">arrow_drop_down</span>
+</div>
+<!-- State Dropdown -->
+<div class="relative">
+<select class="h-8 bg-surface text-on-surface text-label-sm font-label-sm rounded border border-outline-variant pl-2.5 pr-7 focus:border-secondary focus:ring-0 appearance-none cursor-pointer">
+<option>State: All Jurisdictions</option>
+<option>Uttar Pradesh (UP)</option>
+<option>Bihar (BR)</option>
+<option>Maharashtra (MH)</option>
+<option>Rajasthan (RJ)</option>
+<option>Madhya Pradesh (MP)</option>
+</select>
+<span class="material-symbols-outlined absolute right-1.5 top-2 text-[16px] pointer-events-none text-outline" data-icon="arrow_drop_down">arrow_drop_down</span>
+</div>
+<!-- Evidence Status Dropdown -->
+<div class="relative">
+<select class="h-8 bg-surface text-on-surface text-label-sm font-label-sm rounded border border-outline-variant pl-2.5 pr-7 focus:border-secondary focus:ring-0 appearance-none cursor-pointer">
+<option>Evidence: All States</option>
+<option>Photographic Discrepancy</option>
+<option>Missing Completion Cert</option>
+<option>Geo-Tag Duplicate</option>
+<option>Measurement Book Discrepancy</option>
+</select>
+<span class="material-symbols-outlined absolute right-1.5 top-2 text-[16px] pointer-events-none text-outline" data-icon="arrow_drop_down">arrow_drop_down</span>
+</div>
+<button class="h-8 px-2.5 text-label-sm font-label-sm text-outline hover:text-on-surface transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="close">close</span>
+<span>Reset</span>
+</button>
+</div>
+<!-- 5. MAIN REVIEW TABLE (High-density institutional ledger) -->
+<div class="border border-outline-variant rounded bg-surface-container-low overflow-hidden flex flex-col">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="h-8 bg-surface-container border-b border-outline-variant text-label-sm font-label-sm text-primary uppercase tracking-wider select-none">
+<th class="px-3 py-1 font-medium w-8">
+<input class="rounded bg-surface border-outline-variant text-secondary focus:ring-0 w-3.5 h-3.5" type="checkbox"/>
+</th>
+<th class="px-3 py-1 font-medium min-w-[260px]">Project &amp; Sanction Details</th>
+<th class="px-3 py-1 font-medium min-w-[130px]">Sector / Category</th>
+<th class="px-3 py-1 font-medium min-w-[120px]">Jurisdiction</th>
+<th class="px-3 py-1 font-medium min-w-[130px]">Audit Priority</th>
+<th class="px-3 py-1 font-medium min-w-[240px]">Audit Finding Signals</th>
+<th class="px-3 py-1 font-medium min-w-[150px]">Evidence Integrity</th>
+<th class="px-3 py-1 font-medium min-w-[120px]">Review Status</th>
+<th class="px-3 py-1 font-medium text-right min-w-[100px]">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/60 font-body-sm text-body-sm">
+<!-- ROW 1 (SELECTED ROW / CURRENTLY ACTIVE IN DRAWER) -->
+<tr class="bg-surface-container-high border-l-2 border-l-secondary hover:bg-surface-container-high transition-colors cursor-pointer group">
+<td class="px-3 py-2.5">
+<input checked="" class="rounded bg-surface border-outline-variant text-secondary focus:ring-0 w-3.5 h-3.5" type="checkbox"/>
+</td>
+<td class="px-3 py-2.5">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-mono-data-sm text-mono-data-sm text-secondary font-medium">MPLAD-2023-UP-4891</span>
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="text-label-sm font-label-sm text-primary">Ward 14</span>
+</div>
+<span class="font-medium text-on-surface text-body-md font-body-md group-hover:text-secondary transition-colors">Construction of Community Health Sub-Centre</span>
+<span class="text-body-sm font-body-sm text-on-surface-variant">MP: Hon. V. K. Tripathi (Varanasi)</span>
+</div>
+</td>
+<td class="px-3 py-2.5">
+<span class="px-2 py-0.5 rounded bg-surface-container border border-outline-variant text-label-sm font-label-sm text-on-surface">
+                      Public Health
+                    </span>
+</td>
+<td class="px-3 py-2.5 text-on-surface-variant font-body-sm">
+                    Varanasi, UP
+                  </td>
+<td class="px-3 py-2.5">
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-mono-data text-mono-data font-semibold text-error">84 / 100</span>
+<span class="text-label-sm font-label-sm text-error uppercase">High</span>
+</div>
+<div class="w-full bg-surface-container-lowest h-1.5 rounded-full overflow-hidden">
+<div class="bg-error h-full rounded-full" style="width: 84%"></div>
+</div>
+</div>
+</td>
+<td class="px-3 py-2.5">
+<ul class="space-y-1 text-on-surface-variant text-body-sm">
+<li class="flex items-start gap-1 text-error">
+<span class="material-symbols-outlined text-[13px] mt-0.5 shrink-0" data-icon="distance">distance</span>
+<span class="truncate max-w-[220px]">Geotag proximity (&lt;45m) to 2021 work</span>
+</li>
+<li class="flex items-start gap-1 text-tertiary">
+<span class="material-symbols-outlined text-[13px] mt-0.5 shrink-0" data-icon="hourglass_top">hourglass_top</span>
+<span class="truncate max-w-[220px]">Disbursement 4 days prior to inspection</span>
+</li>
+</ul>
+</td>
+<td class="px-3 py-2.5">
+<div class="flex flex-col gap-1">
+<span class="inline-flex items-center gap-1 text-tertiary text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-[14px]" data-icon="image_search">image_search</span>
+<span>91% Image Match</span>
+</span>
+<span class="text-body-sm text-outline font-mono-data-sm">2 Records Filed</span>
+</div>
+</td>
+<td class="px-3 py-2.5">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-tertiary-container/40 border border-tertiary/30 text-tertiary text-label-sm font-label-sm font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                      Needs Review
+                    </span>
+</td>
+<td class="px-3 py-2.5 text-right">
+<button class="h-7 px-2.5 bg-surface-bright text-on-surface rounded border border-outline-variant hover:border-secondary hover:text-secondary font-label-sm text-label-sm transition-colors">
+                      Inspect
+                    </button>
+</td>
+</tr>
+<!-- ROW 2 -->
+<tr class="hover:bg-surface-container transition-colors cursor-pointer group">
+<td class="px-3 py-2.5">
+<input class="rounded bg-surface border-outline-variant text-secondary focus:ring-0 w-3.5 h-3.5" type="checkbox"/>
+</td>
+<td class="px-3 py-2.5">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-mono-data-sm text-mono-data-sm text-primary font-medium">MPLAD-2023-BR-1104</span>
+<span class="text-label-sm font-label-sm text-outline">Panchayat Bhavan</span>
+</div>
+<span class="font-medium text-on-surface text-body-md font-body-md group-hover:text-secondary transition-colors">Solar Mini-Grid Installation for Piped Water</span>
+<span class="text-body-sm font-body-sm text-on-surface-variant">MP: Smt. R. Devi (Patna Sahib)</span>
+</div>
+</td>
+<td class="px-3 py-2.5">
+<span class="px-2 py-0.5 rounded bg-surface-container border border-outline-variant text-label-sm font-label-sm text-on-surface">
+                      Rural Drinking Water
+                    </span>
+</td>
+<td class="px-3 py-2.5 text-on-surface-variant font-body-sm">
+                    Patna, BR
+                  </td>
+<td class="px-3 py-2.5">
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-mono-data text-mono-data font-semibold text-tertiary">68 / 100</span>
+<span class="text-label-sm font-label-sm text-tertiary uppercase">Medium</span>
+</div>
+<div class="w-full bg-surface-container-lowest h-1.5 rounded-full overflow-hidden">
+<div class="bg-tertiary h-full rounded-full" style="width: 68%"></div>
+</div>
+</div>
+</td>
+<td class="px-3 py-2.5">
+<ul class="space-y-1 text-on-surface-variant text-body-sm">
+<li class="flex items-start gap-1 text-tertiary">
+<span class="material-symbols-outlined text-[13px] mt-0.5 shrink-0" data-icon="receipt_long">receipt_long</span>
+<span class="truncate max-w-[220px]">Vendor bank registration &lt;60 days</span>
+</li>
+<li class="flex items-start gap-1 text-outline">
+<span class="material-symbols-outlined text-[13px] mt-0.5 shrink-0" data-icon="sync_alt">sync_alt</span>
+<span class="truncate max-w-[220px]">Installment speed deviation +42%</span>
+</li>
+</ul>
+</td>
+<td class="px-3 py-2.5">
+<span class="inline-flex items-center gap-1 text-on-surface-variant text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-[14px] text-secondary" data-icon="check_circle">check_circle</span>
+<span>3/3 Invoices Reconciled</span>
+</span>
+</td>
+<td class="px-3 py-2.5">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-surface-container-highest border border-outline-variant text-on-surface-variant text-label-sm font-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                      In Review
+                    </span>
+</td>
+<td class="px-3 py-2.5 text-right">
+<button class="h-7 px-2.5 bg-surface-container text-on-surface rounded border border-outline-variant hover:border-secondary hover:text-secondary font-label-sm text-label-sm transition-colors">
+                      Inspect
+                    </button>
+</td>
+</tr>
+<!-- ROW 3 -->
+<tr class="hover:bg-surface-container transition-colors cursor-pointer group">
+<td class="px-3 py-2.5">
+<input class="rounded bg-surface border-outline-variant text-secondary focus:ring-0 w-3.5 h-3.5" type="checkbox"/>
+</td>
+<td class="px-3 py-2.5">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-mono-data-sm text-mono-data-sm text-primary font-medium">MPLAD-2023-MH-9023</span>
+<span class="text-label-sm font-label-sm text-outline">Hingna Block</span>
+</div>
+<span class="font-medium text-on-surface text-body-md font-body-md group-hover:text-secondary transition-colors">Multipurpose Community Hall &amp; Library</span>
+<span class="text-body-sm font-body-sm text-on-surface-variant">MP: Shri A. Deshmukh (Nagpur)</span>
+</div>
+</td>
+<td class="px-3 py-2.5">
+<span class="px-2 py-0.5 rounded bg-surface-container border border-outline-variant text-label-sm font-label-sm text-on-surface">
+                      Community Assets
+                    </span>
+</td>
+<td class="px-3 py-2.5 text-on-surface-variant font-body-sm">
+                    Nagpur, MH
+                  </td>
+<td class="px-3 py-2.5">
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-mono-data text-mono-data font-semibold text-error">79 / 100</span>
+<span class="text-label-sm font-label-sm text-error uppercase">High</span>
+</div>
+<div class="w-full bg-surface-container-lowest h-1.5 rounded-full overflow-hidden">
+<div class="bg-error h-full rounded-full" style="width: 79%"></div>
+</div>
+</div>
+</td>
+<td class="px-3 py-2.5">
+<ul class="space-y-1 text-on-surface-variant text-body-sm">
+<li class="flex items-start gap-1 text-error">
+<span class="material-symbols-outlined text-[13px] mt-0.5 shrink-0" data-icon="wrong_location">wrong_location</span>
+<span class="truncate max-w-[220px]">GIS pinpoint placed inside private trust plot</span>
+</li>
+<li class="flex items-start gap-1 text-outline">
+<span class="material-symbols-outlined text-[13px] mt-0.5 shrink-0" data-icon="domain_disabled">domain_disabled</span>
+<span class="truncate max-w-[220px]">Asset classification mismatch</span>
+</li>
+</ul>
+</td>
+<td class="px-3 py-2.5">
+<span class="inline-flex items-center gap-1 text-error text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-[14px]" data-icon="cancel">cancel</span>
+<span>Missing Land NOC</span>
+</span>
+</td>
+<td class="px-3 py-2.5">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-error-container/40 border border-error/30 text-error text-label-sm font-label-sm font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+                      Verification Required
+                    </span>
+</td>
+<td class="px-3 py-2.5 text-right">
+<button class="h-7 px-2.5 bg-surface-container text-on-surface rounded border border-outline-variant hover:border-secondary hover:text-secondary font-label-sm text-label-sm transition-colors">
+                      Inspect
+                    </button>
+</td>
+</tr>
+<!-- ROW 4 -->
+<tr class="hover:bg-surface-container transition-colors cursor-pointer group">
+<td class="px-3 py-2.5">
+<input class="rounded bg-surface border-outline-variant text-secondary focus:ring-0 w-3.5 h-3.5" type="checkbox"/>
+</td>
+<td class="px-3 py-2.5">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-mono-data-sm text-mono-data-sm text-primary font-medium">MPLAD-2023-RJ-0782</span>
+<span class="text-label-sm font-label-sm text-outline">Pokhran Sector</span>
+</div>
+<span class="font-medium text-on-surface text-body-md font-body-md group-hover:text-secondary transition-colors">Construction of Elevated RCC Water Reservoir</span>
+<span class="text-body-sm font-body-sm text-on-surface-variant">MP: Shri B. S. Rathore (Jodhpur)</span>
+</div>
+</td>
+<td class="px-3 py-2.5">
+<span class="px-2 py-0.5 rounded bg-surface-container border border-outline-variant text-label-sm font-label-sm text-on-surface">
+                      Drinking Water
+                    </span>
+</td>
+<td class="px-3 py-2.5 text-on-surface-variant font-body-sm">
+                    Jodhpur, RJ
+                  </td>
+<td class="px-3 py-2.5">
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-mono-data text-mono-data font-semibold text-secondary">31 / 100</span>
+<span class="text-label-sm font-label-sm text-secondary uppercase">Low</span>
+</div>
+<div class="w-full bg-surface-container-lowest h-1.5 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 31%"></div>
+</div>
+</div>
+</td>
+<td class="px-3 py-2.5">
+<ul class="space-y-1 text-on-surface-variant text-body-sm">
+<li class="flex items-start gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[13px] mt-0.5 shrink-0" data-icon="update">update</span>
+<span class="truncate max-w-[220px]">Routine physical progress milestone #2</span>
+</li>
+<li class="flex items-start gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[13px] mt-0.5 shrink-0" data-icon="check">check</span>
+<span class="truncate max-w-[220px]">Standard variance threshold compliant</span>
+</li>
+</ul>
+</td>
+<td class="px-3 py-2.5">
+<span class="inline-flex items-center gap-1 text-secondary text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-[14px]" data-icon="verified">verified</span>
+<span>Geotag &amp; MB Verified</span>
+</span>
+</td>
+<td class="px-3 py-2.5">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-surface-container-high border border-outline-variant text-on-surface-variant text-label-sm font-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+                      Pending Final Signoff
+                    </span>
+</td>
+<td class="px-3 py-2.5 text-right">
+<button class="h-7 px-2.5 bg-surface-container text-on-surface rounded border border-outline-variant hover:border-secondary hover:text-secondary font-label-sm text-label-sm transition-colors">
+                      Inspect
+                    </button>
+</td>
+</tr>
+<!-- ROW 5 -->
+<tr class="hover:bg-surface-container transition-colors cursor-pointer group">
+<td class="px-3 py-2.5">
+<input class="rounded bg-surface border-outline-variant text-secondary focus:ring-0 w-3.5 h-3.5" type="checkbox"/>
+</td>
+<td class="px-3 py-2.5">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-mono-data-sm text-mono-data-sm text-error font-medium">MPLAD-2023-UP-5109</span>
+<span class="text-label-sm font-label-sm text-outline">Bhadohi District</span>
+</div>
+<span class="font-medium text-on-surface text-body-md font-body-md group-hover:text-secondary transition-colors">CC Road Pavement from Main Road to Harijan Basti</span>
+<span class="text-body-sm font-body-sm text-on-surface-variant">MP: Shri R. N. Bind (Bhadohi)</span>
+</div>
+</td>
+<td class="px-3 py-2.5">
+<span class="px-2 py-0.5 rounded bg-surface-container border border-outline-variant text-label-sm font-label-sm text-on-surface">
+                      Rural Connectivity
+                    </span>
+</td>
+<td class="px-3 py-2.5 text-on-surface-variant font-body-sm">
+                    Bhadohi, UP
+                  </td>
+<td class="px-3 py-2.5">
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-mono-data text-mono-data font-semibold text-error">92 / 100</span>
+<span class="text-label-sm font-label-sm text-error uppercase">Critical</span>
+</div>
+<div class="w-full bg-surface-container-lowest h-1.5 rounded-full overflow-hidden">
+<div class="bg-error h-full rounded-full" style="width: 92%"></div>
+</div>
+</div>
+</td>
+<td class="px-3 py-2.5">
+<ul class="space-y-1 text-on-surface-variant text-body-sm">
+<li class="flex items-start gap-1 text-error">
+<span class="material-symbols-outlined text-[13px] mt-0.5 shrink-0" data-icon="difference">difference</span>
+<span class="truncate max-w-[220px]">Overlap with PMGSY road chainage 4.2km</span>
+</li>
+<li class="flex items-start gap-1 text-error">
+<span class="material-symbols-outlined text-[13px] mt-0.5 shrink-0" data-icon="photo_camera">photo_camera</span>
+<span class="truncate max-w-[220px]">EXIF data indicates 2019 capture date</span>
+</li>
+</ul>
+</td>
+<td class="px-3 py-2.5">
+<span class="inline-flex items-center gap-1 text-error text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-[14px]" data-icon="warning">warning</span>
+<span>EXIF Anomaly Flagged</span>
+</span>
+</td>
+<td class="px-3 py-2.5">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-error-container/40 border border-error/30 text-error text-label-sm font-label-sm font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+                      Needs Review
+                    </span>
+</td>
+<td class="px-3 py-2.5 text-right">
+<button class="h-7 px-2.5 bg-surface-container text-on-surface rounded border border-outline-variant hover:border-secondary hover:text-secondary font-label-sm text-label-sm transition-colors">
+                      Inspect
+                    </button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer Pagination & Ledger Range -->
+<div class="h-9 px-3 bg-surface-container border-t border-outline-variant flex items-center justify-between text-label-sm font-label-sm text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span>Showing 1 to 5 of 42 records needing review</span>
+<span class="text-outline">•</span>
+<span class="font-mono-data-sm text-mono-data-sm">Batch Hash: 0x8F9C...44D1</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="px-2 py-1 bg-surface rounded border border-outline-variant disabled:opacity-50 text-on-surface hover:bg-surface-container-high transition-colors" disabled="">Previous</button>
+<button class="px-2 py-1 bg-surface-container-highest text-secondary rounded border border-secondary font-mono-data-sm text-mono-data-sm">1</button>
+<button class="px-2 py-1 bg-surface rounded border border-outline-variant text-on-surface hover:bg-surface-container-high font-mono-data-sm text-mono-data-sm">2</button>
+<button class="px-2 py-1 bg-surface rounded border border-outline-variant text-on-surface hover:bg-surface-container-high font-mono-data-sm text-mono-data-sm">3</button>
+<button class="px-2 py-1 bg-surface rounded border border-outline-variant text-on-surface hover:bg-surface-container-high transition-colors">Next</button>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- 6. PROJECT DETAIL DRAWER (Slide-out Inspection Panel, 420px Fixed Width)  -->
+<!-- ========================================================================= -->
+<aside class="w-[420px] shrink-0 border-l border-outline-variant bg-surface-container-low flex flex-col h-[calc(100vh-3.5rem)] overflow-y-auto select-none">
+<!-- Drawer Header -->
+<div class="p-3.5 border-b border-outline-variant bg-surface-container flex items-center justify-between sticky top-0 z-10">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-mono-data text-mono-data text-secondary font-semibold">MPLAD-2023-UP-4891</span>
+<span class="px-1.5 py-0.2 bg-error-container text-error text-[10px] rounded font-label-sm uppercase font-semibold">Flagged</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Project Inspection Drawer</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="w-7 h-7 rounded hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant transition-colors" title="Open full screen audit view">
+<span class="material-symbols-outlined text-[18px]" data-icon="open_in_new">open_in_new</span>
+</button>
+<button class="w-7 h-7 rounded hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant transition-colors" title="Dismiss inspection pane">
+<span class="material-symbols-outlined text-[18px]" data-icon="close">close</span>
+</button>
+</div>
+</div>
+<div class="p-4 space-y-4 flex-1">
+<!-- LEVEL 1: QUICK UNDERSTANDING -->
+<div class="space-y-3">
+<div>
+<span class="text-label-sm font-label-sm text-primary uppercase tracking-wider">Sanction Title</span>
+<h2 class="text-body-lg font-body-lg font-semibold text-on-surface leading-snug mt-0.5">
+                Construction of Community Health Sub-Centre, Ward 14
+              </h2>
+<div class="flex items-center gap-2 mt-1 text-label-sm font-label-sm text-on-surface-variant">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-outline" data-icon="pin_drop">pin_drop</span>
+                  Varanasi, Uttar Pradesh
+                </span>
+<span class="text-outline">•</span>
+<span>Nodal: CMO Varanasi</span>
+</div>
+</div>
+<!-- Financial Snapshot Tiles -->
+<div class="grid grid-cols-2 gap-2 bg-surface-container p-2.5 rounded border border-outline-variant">
+<div>
+<span class="font-label-sm text-label-sm text-primary">Sanctioned Allocation</span>
+<div class="font-mono-data text-mono-data font-semibold text-on-surface">₹42,50,000</div>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-primary">Disbursed To Date</span>
+<div class="font-mono-data text-mono-data font-semibold text-secondary">₹38,25,000 <span class="text-body-sm text-outline font-normal">(90%)</span></div>
+</div>
+</div>
+<!-- Audit Priority Badge Box -->
+<div class="p-3 bg-surface-container rounded border border-error/30 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="text-label-sm font-label-sm text-error uppercase font-medium">Audit Scrutiny Score</span>
+<span class="text-headline-md font-headline-md font-bold text-error">84 / 100</span>
+</div>
+<div class="text-right flex flex-col items-end">
+<span class="px-2 py-0.5 rounded bg-error-container text-error font-label-sm text-label-sm font-medium">
+                  High Review Priority
+                </span>
+<span class="text-body-sm font-body-sm text-on-surface-variant mt-0.5">Confidence: 94.2%</span>
+</div>
+</div>
+<!-- Primary Explainable Flags (Objective, neutral terminology) -->
+<div class="space-y-1.5">
+<span class="text-label-sm font-label-sm text-primary uppercase tracking-wider">Automated Audit Findings</span>
+<div class="space-y-2">
+<div class="p-2 rounded bg-surface-container border border-outline-variant flex items-start gap-2.5">
+<span class="material-symbols-outlined text-error text-[18px] shrink-0 mt-0.5" data-icon="fmd_bad">fmd_bad</span>
+<div class="flex flex-col">
+<span class="text-label-md font-label-md text-on-surface">Geotag Spatial Proximity Discrepancy</span>
+<span class="text-body-sm font-body-sm text-on-surface-variant leading-relaxed">
+                      Coordinates resolve within 45 meters of previously completed work <span class="font-mono-data-sm text-mono-data-sm text-primary">MPLAD-2021-UP-1022</span>. High likelihood of shared physical boundary.
+                    </span>
+</div>
+</div>
+<div class="p-2 rounded bg-surface-container border border-outline-variant flex items-start gap-2.5">
+<span class="material-symbols-outlined text-tertiary text-[18px] shrink-0 mt-0.5" data-icon="timeline">timeline</span>
+<div class="flex flex-col">
+<span class="text-label-md font-label-md text-on-surface">Disbursement Sequence Variance</span>
+<span class="text-body-sm font-body-sm text-on-surface-variant leading-relaxed">
+                      Stage 3 financial release (₹12,75,000) was authorized 4 business days prior to the formal physical inspection certificate upload.
+                    </span>
+</div>
+</div>
+<div class="p-2 rounded bg-surface-container border border-outline-variant flex items-start gap-2.5">
+<span class="material-symbols-outlined text-tertiary text-[18px] shrink-0 mt-0.5" data-icon="content_copy">content_copy</span>
+<div class="flex flex-col">
+<span class="text-label-md font-label-md text-on-surface">Photographic Feature Redundancy</span>
+<span class="text-body-sm font-body-sm text-on-surface-variant leading-relaxed">
+                      Foundation slab photograph exhibits a 91% structural feature match with contractor file in neighboring Badagaon block.
+                    </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- LEVEL 2: EVIDENCE & VERIFICATION -->
+<div class="space-y-2 pt-2 border-t border-outline-variant">
+<span class="text-label-sm font-label-sm text-primary uppercase tracking-wider">Photographic Cross-Verification</span>
+<div class="grid grid-cols-2 gap-2">
+<!-- Evidence Photo 1 -->
+<div class="group relative rounded overflow-hidden border border-outline-variant bg-surface-container-highest">
+<div class="w-full h-24 bg-surface-bright flex items-center justify-center relative">
+<!-- Real high-integrity audit site photo placeholder with compliant data-alt -->
+<img class="object-cover w-full h-full opacity-70 group-hover:opacity-100 transition-opacity" data-alt="Close up analytical audit photograph of a concrete foundation slab with steel rebar reinforcements at a rural construction site in Uttar Pradesh, filmed under direct overhead daylight, documentary architectural style with clean technical framing." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNHFZzBgbIJZ4Vd-9m-CETUbYPqYWUahFCTN6ZopVy2JQaePUB1fC4Sqeafgx5imF5w5Q57nB7AOBSs5Alijo2YKpSoixLw-902h9H_VxD8DD2rtTO5jMSvk6vxLyIivT3-eEhDBgN4ye2rRSJFBtmhCohprWBdtBn4C454finRk8ubDZ__HImT6ebtMIew3GJTysPIO8DxM8a7OcYZoCB1CHX1BhjRiws7eghvoteP3ksGMmNd-qH"/>
+<span class="absolute top-1 left-1 px-1.5 py-0.5 bg-surface-container-lowest/90 font-mono-data-sm text-mono-data-sm text-on-surface rounded">
+                    Site Photo #01
+                  </span>
+</div>
+<div class="p-1.5 bg-surface-container flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface truncate">Foundation Slab</span>
+<span class="font-mono-data-sm text-mono-data-sm text-outline text-[10px]">25.3176° N, 82.9739° E</span>
+</div>
+</div>
+<!-- Evidence Photo 2 (Flagged match from historical archive) -->
+<div class="group relative rounded overflow-hidden border border-error/40 bg-surface-container-highest">
+<div class="w-full h-24 bg-surface-bright flex items-center justify-center relative">
+<!-- Comparative reference image with compliant data-alt -->
+<img class="object-cover w-full h-full opacity-70 group-hover:opacity-100 transition-opacity" data-alt="Archive technical inspection photo of a cured concrete plinth beam on a public health building site in rural India, shot from a matching angle with muted grey tones and crisp technical clarity, institutional documentation style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAtu7kCCVpHwNYiZ9ySJBV3qdFkytig2RvsSo8tNM2-MSopHpAgxRrUPh8hLXqkkD7G7lx87zX-juHjwDjAZnKFkaFi0qfCYhtObAsZSa-CtcqbcRxdmm8Nx1BPQZdqQ4rnUpIpLY3KEPUcjvmVDiGzhtDeyp9EMfCWJO8groVTGziQ3XEbl-qrY-RKRMdnX6eaZ-cLR43_soK7pb7NBNbGL1cVk00pr6uZAGRHBd6Bz3w6_Hh-UhT"/>
+<span class="absolute top-1 left-1 px-1.5 py-0.5 bg-error-container font-mono-data-sm text-mono-data-sm text-error rounded">
+                    91% Match (Ref: 1022)
+                  </span>
+</div>
+<div class="p-1.5 bg-surface-container flex flex-col">
+<span class="font-label-sm text-label-sm text-error truncate">Historical Match Found</span>
+<span class="font-mono-data-sm text-mono-data-sm text-outline text-[10px]">Captured: 14 Oct 2021</span>
+</div>
+</div>
+</div>
+<!-- Verification Checklist Items -->
+<div class="space-y-1.5 pt-2">
+<span class="text-label-sm font-label-sm text-primary uppercase tracking-wider">Mandatory Verification Checklist</span>
+<div class="space-y-1 text-body-sm font-body-sm">
+<label class="flex items-center gap-2 p-1.5 rounded bg-surface hover:bg-surface-container transition-colors cursor-pointer">
+<input class="rounded bg-surface border-outline-variant text-secondary focus:ring-0 w-3.5 h-3.5" type="checkbox"/>
+<span class="text-on-surface text-label-sm">Physical site boundary demarcation verified</span>
+</label>
+<label class="flex items-center gap-2 p-1.5 rounded bg-surface hover:bg-surface-container transition-colors cursor-pointer">
+<input class="rounded bg-surface border-outline-variant text-secondary focus:ring-0 w-3.5 h-3.5" type="checkbox"/>
+<span class="text-on-surface text-label-sm">Measurement Book (MB) volume cross-referenced</span>
+</label>
+<label class="flex items-center gap-2 p-1.5 rounded bg-surface hover:bg-surface-container transition-colors cursor-pointer">
+<input class="rounded bg-surface border-outline-variant text-secondary focus:ring-0 w-3.5 h-3.5" type="checkbox"/>
+<span class="text-on-surface text-label-sm">Photographic EXIF timestamp &amp; azimuth verified</span>
+</label>
+</div>
+</div>
+<!-- Recommended Next Step Callout -->
+<div class="p-2.5 rounded bg-surface-container-high border border-secondary/30 flex items-start gap-2.5">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5" data-icon="lightbulb">lightbulb</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-secondary">Recommended Auditor Protocol</span>
+<p class="text-body-sm font-body-sm text-on-surface-variant leading-normal mt-0.5">
+                  Dispatch Field Verification Officer for on-site differential GPS re-survey prior to clearing final 10% retention tranche.
+                </p>
+</div>
+</div>
+</div>
+</div>
+<!-- AUDITOR ACTION FOOTER -->
+<div class="p-3.5 border-t border-outline-variant bg-surface-container space-y-2 sticky bottom-0 z-10">
+<div class="grid grid-cols-2 gap-2">
+<button class="h-8 px-3 rounded bg-secondary hover:bg-secondary-fixed text-on-secondary-container font-label-md text-label-md font-semibold flex items-center justify-center gap-1.5 transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[16px]" data-icon="gavel">gavel</span>
+<span>Open Investigation</span>
+</button>
+<button class="h-8 px-3 rounded bg-surface-container-highest hover:bg-surface-bright text-on-surface border border-outline-variant font-label-md text-label-md flex items-center justify-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[16px]" data-icon="fmd_good">fmd_good</span>
+<span>Request Field Survey</span>
+</button>
+</div>
+<div class="flex items-center justify-between pt-1">
+<button class="text-label-sm font-label-sm text-primary hover:text-on-surface transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="edit_note">edit_note</span>
+<span>Add Finding Note</span>
+</button>
+<button class="text-label-sm font-label-sm text-outline hover:text-tertiary transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="bookmark">bookmark</span>
+<span>Mark In Review</span>
+</button>
+<button class="text-label-sm font-label-sm text-outline hover:text-error transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="flag">flag</span>
+<span>Escalate File</span>
+</button>
+</div>
+</div>
+</aside>
+</main>
+</div>
+<!-- Micro-interaction Script for Tabular Selection & Active State Feedback -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Row selection toggle to simulate dynamic inspection drawer updates
+      const rows = document.querySelectorAll('tbody tr');
+      rows.forEach(row => {
+        row.addEventListener('click', (e) => {
+          if (e.target.tagName === 'INPUT') return;
+          rows.forEach(r => {
+            r.classList.remove('bg-surface-container-high', 'border-l-2', 'border-l-secondary');
+            const chk = r.querySelector('input[type="checkbox"]');
+            if (chk) chk.checked = false;
+          });
+          row.classList.add('bg-surface-container-high', 'border-l-2', 'border-l-secondary');
+          const currentChk = row.querySelector('input[type="checkbox"]');
+          if (currentChk) currentChk.checked = true;
+        });
+      });
+    });
+  </script>
+</body></html>

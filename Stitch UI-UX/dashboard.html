@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "surface-bright": "#353942",
+          "secondary-fixed-dim": "#ffb95f",
+          "on-tertiary-fixed": "#410004",
+          "on-error": "#690005",
+          "surface": "#0f131c",
+          "on-primary-fixed": "#002113",
+          "tertiary-container": "#ff7a73",
+          "error": "#ffb4ab",
+          "surface-container-low": "#181c24",
+          "surface-container-high": "#262a33",
+          "surface-tint": "#4edea3",
+          "primary": "#4edea3",
+          "secondary": "#ffb95f",
+          "tertiary-fixed-dim": "#ffb3ad",
+          "inverse-surface": "#dfe2ee",
+          "surface-container-lowest": "#0a0e16",
+          "surface-container-highest": "#31353e",
+          "secondary-container": "#ee9800",
+          "on-secondary-fixed-variant": "#653e00",
+          "on-error-container": "#ffdad6",
+          "on-tertiary-container": "#79000e",
+          "primary-fixed": "#6ffbbe",
+          "inverse-primary": "#006c49",
+          "on-tertiary": "#68000a",
+          "primary-fixed-dim": "#4edea3",
+          "primary-container": "#10b981",
+          "tertiary-fixed": "#ffdad7",
+          "on-secondary-fixed": "#2a1700",
+          "on-secondary-container": "#5b3800",
+          "on-secondary": "#472a00",
+          "surface-dim": "#0f131c",
+          "on-surface-variant": "#bbcabf",
+          "tertiary": "#ffb3ad",
+          "outline": "#86948a",
+          "on-background": "#dfe2ee",
+          "error-container": "#93000a",
+          "on-primary-container": "#00422b",
+          "on-tertiary-fixed-variant": "#930013",
+          "secondary-fixed": "#ffddb8",
+          "on-primary": "#003824",
+          "on-primary-fixed-variant": "#005236",
+          "outline-variant": "#3c4a42",
+          "surface-variant": "#31353e",
+          "on-surface": "#dfe2ee",
+          "inverse-on-surface": "#2c3039",
+          "background": "#0f131c",
+          "surface-container": "#1c2028"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.125rem",
+          "lg": "0.25rem",
+          "xl": "0.5rem",
+          "full": "0.75rem"
+        },
+        "spacing": {
+          "space-sm": "0.5rem",
+          "gutter-table": "0.5rem",
+          "space-3xl": "2rem",
+          "sidebar-width": "16rem",
+          "space-lg": "1rem",
+          "space-2xl": "1.5rem",
+          "space-md": "0.75rem",
+          "space-xl": "1.25rem",
+          "gutter-panel": "1rem",
+          "space-2xs": "0.125rem",
+          "space-xs": "0.25rem",
+          "inspector-width": "22rem"
+        },
+        "fontFamily": {
+          "label-md": [
+            "Inter"
+          ],
+          "headline-md": [
+            "Inter"
+          ],
+          "label-sm": [
+            "Inter"
+          ],
+          "mono-sm": [
+            "JetBrains Mono"
+          ],
+          "body-xs": [
+            "Inter"
+          ],
+          "headline-sm": [
+            "Inter"
+          ],
+          "body-md": [
+            "Inter"
+          ],
+          "headline-xl": [
+            "Inter"
+          ],
+          "headline-lg": [
+            "Inter"
+          ],
+          "body-sm": [
+            "Inter"
+          ],
+          "mono-md": [
+            "JetBrains Mono"
+          ]
+        },
+        "fontSize": {
+          "label-md": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.02em",
+              "fontWeight": "500"
+            }
+          ],
+          "headline-md": [
+            "18px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "label-sm": [
+            "11px",
+            {
+              "lineHeight": "14px",
+              "letterSpacing": "0.04em",
+              "fontWeight": "600"
+            }
+          ],
+          "mono-sm": [
+            "11px",
+            {
+              "lineHeight": "14px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "500"
+            }
+          ],
+          "body-xs": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-sm": [
+            "15px",
+            {
+              "lineHeight": "20px",
+              "letterSpacing": "-0.005em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-md": [
+            "14px",
+            {
+              "lineHeight": "20px",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-xl": [
+            "28px",
+            {
+              "lineHeight": "36px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-lg": [
+            "22px",
+            {
+              "lineHeight": "28px",
+              "letterSpacing": "-0.015em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-sm": [
+            "13px",
+            {
+              "lineHeight": "18px",
+              "fontWeight": "400"
+            }
+          ],
+          "mono-md": [
+            "13px",
+            {
+              "lineHeight": "18px",
+              "fontWeight": "400"
+            }
+          ]
+        }
+      },
+    },
+  }</script></head><body class="bg-surface text-on-surface font-body-sm text-body-sm antialiased selection:bg-primary-container selection:text-on-primary-container"><aside class="fixed left-0 top-0 h-full w-sidebar-width bg-surface-container-low z-50 flex flex-col justify-between select-none"><div class="flex flex-col"><div class="h-14 px-space-md flex items-center gap-space-sm bg-surface-container-lowest"><img alt="MPLADS Audit Intelligence Emblem" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WCTreKbMCj-lAmrbqH_Er_sNvjLHBUmQUVHjfXJXuqNMuMhZqFxaAp8eE9PeeZO9hRuHK_Xb-yOV0McNfdxf_UQNeMMwKHwNms44fBDgx73Ztpg0c5L2f-EJfjL3eLoQGSbUSS0RHMC-xnK8X1qaSTiLJAVFG4btxRtaOUEqAiPC-C3bRXstjcSyHPU60C79Jj9Ki0oQxHQeYCqGmdiewLMpDJYZuwLrm1X_KEHKiIHAfSms6BbRf5Hfs"/><div class="flex flex-col min-w-0 leading-tight"><span class="font-headline-sm text-headline-sm text-on-surface truncate tracking-tight">MPLADS Audit</span><span class="font-mono-sm text-mono-sm text-outline uppercase tracking-wider">Institutional Oversight</span></div></div><div class="px-space-md py-space-sm bg-surface-container-low"><div class="flex items-center justify-between font-mono-sm text-mono-sm text-outline-variant uppercase"><span class="flex items-center gap-space-2xs text-outline"><span class="material-symbols-outlined text-[13px] text-primary">verified</span>AUDIT SYS // V3.8</span><span class="text-primary font-mono-sm text-mono-sm">CAG-SECURE</span></div></div><nav class="flex flex-col gap-space-2xs py-space-sm px-space-xs" data-active-classes="bg-surface-container-high text-primary border-l-2 border-primary font-semibold"><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm rounded-DEFAULT transition-colors bg-surface-container-high text-primary border-l-2 border-primary font-semibold" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[18px]">dashboard</span><span class="font-label-md text-label-md">Dashboard</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-DEFAULT text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="reviews" href="#"><span class="material-symbols-outlined text-[18px]">fact_check</span><span class="font-label-md text-label-md">Reviews</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-DEFAULT text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="project-investigation" href="#"><span class="material-symbols-outlined text-[18px]">policy</span><span class="font-label-md text-label-md">Project Investigation</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-DEFAULT text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="evidence-intelligence" href="#"><span class="material-symbols-outlined text-[18px]">inventory_2</span><span class="font-label-md text-label-md">Evidence Intelligence</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-DEFAULT text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="evidence-comparison" href="#"><span class="material-symbols-outlined text-[18px]">compare</span><span class="font-label-md text-label-md">Evidence Comparison</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-DEFAULT text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="nexus-graph-intelligence" href="#"><span class="material-symbols-outlined text-[18px]">hub</span><span class="font-label-md text-label-md">Nexus Graph Intelligence</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-DEFAULT text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="gis-intelligence" href="#"><span class="material-symbols-outlined text-[18px]">travel_explore</span><span class="font-label-md text-label-md">GIS Intelligence</span></a></nav></div><div class="p-space-md bg-surface-container-lowest flex flex-col gap-space-xs"><div class="flex items-center justify-between font-mono-sm text-mono-sm text-outline"><span>SESSION DISPATCH</span><span class="text-primary flex items-center gap-space-2xs"><span class="inline-block w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>LIVE</span></div><div class="bg-surface-container px-space-sm py-space-xs rounded-DEFAULT font-mono-sm text-mono-sm text-on-surface-variant flex items-center justify-between"><span>NODE: DEL-OD01-CAG</span><span class="material-symbols-outlined text-[14px] text-outline">lock</span></div></div></aside><div class="pl-sidebar-width min-h-screen flex flex-col bg-surface"><header class="fixed top-0 left-sidebar-width right-0 h-14 bg-surface-container-low/95 backdrop-blur-md z-40 px-space-lg flex items-center justify-between"><div class="flex items-center gap-space-md flex-1"><img alt="MPLADS Audit Intelligence Emblem" class="h-8 w-auto object-contain hidden lg:block" src="https://lh3.googleusercontent.com/aida/AEtjO1WCTreKbMCj-lAmrbqH_Er_sNvjLHBUmQUVHjfXJXuqNMuMhZqFxaAp8eE9PeeZO9hRuHK_Xb-yOV0McNfdxf_UQNeMMwKHwNms44fBDgx73Ztpg0c5L2f-EJfjL3eLoQGSbUSS0RHMC-xnK8X1qaSTiLJAVFG4btxRtaOUEqAiPC-C3bRXstjcSyHPU60C79Jj9Ki0oQxHQeYCqGmdiewLMpDJYZuwLrm1X_KEHKiIHAfSms6BbRf5Hfs"/><div class="flex items-center gap-space-xs px-space-sm py-space-2xs rounded-DEFAULT bg-surface-container-highest font-mono-sm text-mono-sm text-on-surface"><span class="text-secondary font-semibold">FY 2023-24</span><span class="text-outline">•</span><span class="text-on-surface">Nodal District: Balasore</span><span class="text-outline">•</span><span class="text-outline-variant uppercase">Fictional Demo Data</span></div><div class="relative max-w-xs w-full hidden md:block"><span class="material-symbols-outlined absolute left-2.5 top-1/2 -translate-y-1/2 text-outline text-[16px]">search</span><input class="w-full h-8 bg-surface-container-lowest pl-8 pr-3 font-body-xs text-body-xs text-on-surface placeholder:text-outline rounded-DEFAULT focus:outline-none focus:bg-surface-container-high transition-colors" placeholder="Search constituency, work code, vendor PIN..." type="text"/></div></div><div class="flex items-center gap-space-md"><div class="flex flex-col text-right hidden sm:flex leading-tight"><span class="font-label-md text-label-md text-on-surface">Lead Auditor - Office of CAG</span><span class="font-mono-sm text-mono-sm text-primary">Reviewer Mode (Level-3 Clear)</span></div><div class="flex items-center gap-space-xs"><button class="h-8 w-8 flex items-center justify-center rounded-DEFAULT bg-surface-container-highest text-on-surface-variant hover:text-on-surface hover:bg-surface-bright transition-colors" title="Audit Notifications"><span class="material-symbols-outlined text-[18px]">notifications</span></button><button class="h-8 w-8 flex items-center justify-center rounded-DEFAULT bg-surface-container-highest text-on-surface-variant hover:text-on-surface hover:bg-surface-bright transition-colors" title="Security Log"><span class="material-symbols-outlined text-[18px]">terminal</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-space-xs"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-14 bg-surface flex-1 px-space-lg py-space-lg"><div class="flex flex-col w-full gap-space-lg">
+<!-- BANNER: FICTIONAL DEMONSTRATION RECORD -->
+<div class="flex items-center justify-between px-space-md py-space-xs bg-surface-container-low text-on-surface-variant font-mono-sm text-mono-sm">
+<div class="flex items-center gap-space-sm">
+<span class="inline-flex items-center justify-center px-space-xs py-0.5 bg-secondary-container/20 text-secondary font-semibold uppercase tracking-wider">Simulated Environment</span>
+<span>NOTICE: Data displayed is strictly fictional and generated for CAG compliance workflow evaluation.</span>
+</div>
+<span class="text-outline uppercase tracking-widest text-[10px]">Session Ref: MPLADS-SIM-BLS-2024</span>
+</div>
+<!-- PAGE HEADER & PRIMARY CONTROLS -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-sm">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight font-semibold">Institutional Oversight Dashboard</h1>
+<span class="px-space-xs py-0.5 bg-surface-container-highest text-primary font-mono-sm text-mono-sm font-medium">CYCLE 24-Q3</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-2xs">
+        Institutional audit overview of flagged works, priority distribution, and verification backlog.
+      </p>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<!-- Filter Session Dropdown -->
+<div class="relative flex items-center bg-surface-container-low text-on-surface px-space-sm py-1.5 rounded-DEFAULT">
+<span class="material-symbols-outlined text-outline text-[16px] mr-space-xs">filter_alt</span>
+<span class="font-mono-sm text-mono-sm text-on-surface-variant mr-space-xs">SCOPE:</span>
+<select class="bg-transparent font-label-md text-label-md text-on-surface focus:outline-none cursor-pointer pr-space-md appearance-none">
+<option value="bls-nodal">Current Nodal Cycle (Balasore)</option>
+<option value="state-od">Odisha All Constituencies</option>
+<option value="fy22-23">Prior Audit Archive FY 22-23</option>
+</select>
+<span class="material-symbols-outlined text-outline text-[16px] pointer-events-none absolute right-2">expand_more</span>
+</div>
+<!-- Export Audit Summary Button -->
+<button class="flex items-center gap-space-xs px-space-md py-1.5 bg-surface-container-low hover:bg-surface-container-high text-on-surface text-label-md font-label-md rounded-DEFAULT transition-colors">
+<span class="material-symbols-outlined text-[16px]">file_download</span>
+<span>Export Audit Summary</span>
+</button>
+<!-- Primary Action -->
+<button class="flex items-center gap-space-xs px-space-md py-1.5 bg-primary text-on-primary font-label-md text-label-md font-semibold rounded-DEFAULT hover:bg-primary-fixed transition-colors">
+<span class="material-symbols-outlined text-[16px]">add_task</span>
+<span>Create Review Batch</span>
+</button>
+</div>
+</div>
+<!-- METRIC TILES (4-COLUMN KPI GRID) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Card 1: Total Monitored Projects -->
+<div class="bg-surface-container-low p-space-md flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-start justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Total Monitored Works</span>
+<span class="material-symbols-outlined text-outline text-[18px]">account_balance</span>
+</div>
+<div class="my-space-sm flex items-baseline gap-space-sm">
+<span class="font-headline-xl text-headline-xl text-on-surface font-mono-md tracking-tight">1,428</span>
+<span class="font-mono-sm text-mono-sm text-outline">SANCTIONED</span>
+</div>
+<div class="flex items-center justify-between text-body-xs font-body-xs text-on-surface-variant pt-space-xs bg-surface-container-low">
+<span>48 Works Active in Current FY</span>
+<span class="text-outline font-mono-sm text-mono-sm">OD-BLS</span>
+</div>
+</div>
+<!-- Card 2: Needs Review (Alert Anchor) -->
+<div class="bg-surface-container-low p-space-md flex flex-col justify-between relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-[3px] bg-secondary"></div>
+<div class="flex items-start justify-between">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider font-semibold">Needs Immediate Review</span>
+<span class="px-space-xs py-0.5 bg-secondary-container/20 text-secondary font-mono-sm text-mono-sm font-semibold">12 HIGH PRIORITY</span>
+</div>
+<div class="my-space-sm flex items-baseline gap-space-sm">
+<span class="font-headline-xl text-headline-xl text-secondary-fixed-dim font-mono-md tracking-tight">34</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Works Queued</span>
+</div>
+<div class="flex items-center justify-between text-body-xs font-body-xs text-on-surface-variant pt-space-xs">
+<span class="flex items-center gap-space-2xs text-secondary"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>Requires Auditor Sign-off</span>
+<span class="font-mono-sm text-mono-sm text-outline">T-14 D</span>
+</div>
+</div>
+<!-- Card 3: Evidence Coverage -->
+<div class="bg-surface-container-low p-space-md flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-start justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Evidence Ingestion Coverage</span>
+<span class="px-space-xs py-0.5 bg-primary/10 text-primary font-mono-sm text-mono-sm">VERIFIED</span>
+</div>
+<div class="my-space-sm flex items-baseline gap-space-sm">
+<span class="font-headline-xl text-headline-xl text-on-surface font-mono-md tracking-tight">89.4%</span>
+<span class="font-mono-sm text-mono-sm text-primary">+1.8% wk</span>
+</div>
+<div class="flex items-center justify-between text-body-xs font-body-xs text-on-surface-variant pt-space-xs">
+<span class="truncate">152 Photos &amp; M-Book sheets verified</span>
+<span class="font-mono-sm text-mono-sm text-outline">N=1,276</span>
+</div>
+</div>
+<!-- Card 4: Data Quality & Geo-Integrity -->
+<div class="bg-surface-container-low p-space-md flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-start justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Spatial Integrity Score</span>
+<span class="material-symbols-outlined text-primary text-[18px]">verified_user</span>
+</div>
+<div class="my-space-sm flex items-baseline gap-space-sm">
+<span class="font-headline-xl text-headline-xl text-on-surface font-mono-md tracking-tight">96.2%</span>
+<span class="font-mono-sm text-mono-sm text-outline">GEOTAG</span>
+</div>
+<div class="flex items-center justify-between text-body-xs font-body-xs text-on-surface-variant pt-space-xs">
+<span class="truncate">Coordinate telemetry valid &amp; bound</span>
+<span class="font-mono-sm text-mono-sm text-primary">STABLE</span>
+</div>
+</div>
+</div>
+<!-- SECTION 3: NEEDS ATTENTION (AUDIT WORKFLOW TABLE) -->
+<div class="bg-surface-container-low flex flex-col">
+<!-- Section Toolbar -->
+<div class="p-space-md flex flex-col md:flex-row md:items-center justify-between gap-space-sm bg-surface-container-lowest">
+<div>
+<div class="flex items-center gap-space-sm">
+<h2 class="font-headline-md text-headline-md text-on-surface font-semibold">Needs Immediate Review</h2>
+<span class="px-space-xs py-0.5 bg-error-container/20 text-tertiary-container font-mono-sm text-mono-sm font-semibold">PRIORITY QUEUE</span>
+</div>
+<p class="font-body-xs text-body-xs text-on-surface-variant">
+          High-priority works requiring human auditor verification based on multi-factor pattern flags.
+        </p>
+</div>
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-space-2xs text-body-xs font-body-xs text-outline">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+<span>High Severity (Score ≥ 80)</span>
+<span class="w-2 h-2 rounded-full bg-secondary ml-space-sm"></span>
+<span>Review Required (Score &lt; 80)</span>
+</div>
+<a class="font-label-md text-label-md text-primary hover:underline flex items-center gap-space-2xs" href="#">
+          View All (34) <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Table Container -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-lowest text-outline font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-space-sm px-space-md">Project Title &amp; Code</th>
+<th class="py-space-sm px-space-md">Category / Sanction</th>
+<th class="py-space-sm px-space-md">Location &amp; Coordinates</th>
+<th class="py-space-sm px-space-md">Audit Priority</th>
+<th class="py-space-sm px-space-md">Why Flagged (Auditor Context)</th>
+<th class="py-space-sm px-space-md">Evidence Status</th>
+<th class="py-space-sm px-space-md">State</th>
+<th class="py-space-sm px-space-md text-right">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-high/40 transition-colors bg-surface-container-low">
+<td class="py-space-sm px-space-md">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface font-medium truncate max-w-xs">Construction of Community Hall, Sector 4</span>
+<span class="font-mono-sm text-mono-sm text-primary">MPLAD-2023-OD-0842</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface">Civic Amenity / Building</span>
+<span class="font-mono-sm text-mono-sm text-on-surface-variant">₹24.50 L</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex flex-col font-mono-sm text-mono-sm">
+<span class="text-on-surface">Balasore, Ward 12</span>
+<span class="text-outline">21.4934° N, 86.9135° E</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<span class="inline-flex items-center gap-space-2xs px-space-sm py-0.5 bg-error-container/20 text-tertiary-container font-mono-sm text-mono-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+                92 — High Priority
+              </span>
+</td>
+<td class="py-space-sm px-space-md">
+<span class="font-body-xs text-body-xs text-on-surface-variant max-w-xs block">
+                Potential duplicate photo evidence matching <span class="font-mono-sm text-mono-sm text-secondary">MPLAD-2021-OD-0119</span>
+</span>
+</td>
+<td class="py-space-sm px-space-md">
+<span class="inline-block px-space-xs py-0.5 bg-secondary-container/10 text-secondary font-mono-sm text-mono-sm">Similarity Detected</span>
+</td>
+<td class="py-space-sm px-space-md">
+<span class="inline-flex items-center gap-space-2xs px-space-xs py-0.5 bg-secondary-container/20 text-secondary font-label-sm text-label-sm uppercase font-semibold">Unreviewed</span>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<button class="inline-flex items-center gap-space-2xs px-space-sm py-1 bg-surface-container text-on-surface hover:bg-surface-bright font-label-md text-label-md transition-colors">
+<span>Open Review</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-high/40 transition-colors bg-surface-container-low">
+<td class="py-space-sm px-space-md">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface font-medium truncate max-w-xs">Upgradation of High School Laboratory Block</span>
+<span class="font-mono-sm text-mono-sm text-primary">MPLAD-2023-OD-1102</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface">Education Infrastructure</span>
+<span class="font-mono-sm text-mono-sm text-on-surface-variant">₹18.00 L</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex flex-col font-mono-sm text-mono-sm">
+<span class="text-on-surface">Remuna Block, GP-04</span>
+<span class="text-outline">21.5281° N, 86.8712° E</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<span class="inline-flex items-center gap-space-2xs px-space-sm py-0.5 bg-error-container/20 text-tertiary-container font-mono-sm text-mono-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+                84 — High Priority
+              </span>
+</td>
+<td class="py-space-sm px-space-md">
+<span class="font-body-xs text-body-xs text-on-surface-variant max-w-xs block">
+                Disbursement spike (90%) ahead of physical progress inspection submission
+              </span>
+</td>
+<td class="py-space-sm px-space-md">
+<span class="inline-block px-space-xs py-0.5 bg-secondary-container/10 text-secondary font-mono-sm text-mono-sm">Missing M-Book</span>
+</td>
+<td class="py-space-sm px-space-md">
+<span class="inline-flex items-center gap-space-2xs px-space-xs py-0.5 bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm uppercase font-semibold">Under Investigation</span>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<button class="inline-flex items-center gap-space-2xs px-space-sm py-1 bg-surface-container text-on-surface hover:bg-surface-bright font-label-md text-label-md transition-colors">
+<span>Open Review</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-high/40 transition-colors bg-surface-container-low">
+<td class="py-space-sm px-space-md">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface font-medium truncate max-w-xs">Solar Micro-Grid Installation &amp; Streetlighting</span>
+<span class="font-mono-sm text-mono-sm text-primary">MPLAD-2023-OD-0931</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface">Renewable / Power</span>
+<span class="font-mono-sm text-mono-sm text-on-surface-variant">₹12.75 L</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex flex-col font-mono-sm text-mono-sm">
+<span class="text-on-surface">Nilagiri Tehsil, Zone 1</span>
+<span class="text-outline">21.4611° N, 86.7644° E</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<span class="inline-flex items-center gap-space-2xs px-space-sm py-0.5 bg-secondary-container/20 text-secondary font-mono-sm text-mono-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                78 — Review Required
+              </span>
+</td>
+<td class="py-space-sm px-space-md">
+<span class="font-body-xs text-body-xs text-on-surface-variant max-w-xs block">
+                Geo-cluster anomaly: 4 projects listed at identical coordinates (radius &lt; 5m)
+              </span>
+</td>
+<td class="py-space-sm px-space-md">
+<span class="inline-block px-space-xs py-0.5 bg-secondary-container/10 text-secondary font-mono-sm text-mono-sm">Coordinates Mismatch</span>
+</td>
+<td class="py-space-sm px-space-md">
+<span class="inline-flex items-center gap-space-2xs px-space-xs py-0.5 bg-secondary-container/20 text-secondary font-label-sm text-label-sm uppercase font-semibold">Unreviewed</span>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<button class="inline-flex items-center gap-space-2xs px-space-sm py-1 bg-surface-container text-on-surface hover:bg-surface-bright font-label-md text-label-md transition-colors">
+<span>Open Review</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</button>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-high/40 transition-colors bg-surface-container-low">
+<td class="py-space-sm px-space-md">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface font-medium truncate max-w-xs">Paver Road with RCC Drainage Canal, Ward 8</span>
+<span class="font-mono-sm text-mono-sm text-primary">MPLAD-2023-OD-0724</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface">Roads &amp; Pathways</span>
+<span class="font-mono-sm text-mono-sm text-on-surface-variant">₹31.20 L</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex flex-col font-mono-sm text-mono-sm">
+<span class="text-on-surface">Soro Municipality</span>
+<span class="text-outline">21.2894° N, 86.6908° E</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<span class="inline-flex items-center gap-space-2xs px-space-sm py-0.5 bg-secondary-container/20 text-secondary font-mono-sm text-mono-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                71 — Review Required
+              </span>
+</td>
+<td class="py-space-sm px-space-md">
+<span class="font-body-xs text-body-xs text-on-surface-variant max-w-xs block">
+                Milestone completion reported during monsoon restricted bituminous window
+              </span>
+</td>
+<td class="py-space-sm px-space-md">
+<span class="inline-block px-space-xs py-0.5 bg-secondary-container/10 text-secondary font-mono-sm text-mono-sm">Verification Required</span>
+</td>
+<td class="py-space-sm px-space-md">
+<span class="inline-flex items-center gap-space-2xs px-space-xs py-0.5 bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm uppercase font-semibold">Awaiting Site Log</span>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<button class="inline-flex items-center gap-space-2xs px-space-sm py-1 bg-surface-container text-on-surface hover:bg-surface-bright font-label-md text-label-md transition-colors">
+<span>Open Review</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</button>
+</td>
+</tr>
+<!-- Row 5 -->
+<tr class="hover:bg-surface-container-high/40 transition-colors bg-surface-container-low">
+<td class="py-space-sm px-space-md">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface font-medium truncate max-w-xs">Drinking Water Reverse Osmosis Filtration Plant</span>
+<span class="font-mono-sm text-mono-sm text-primary">MPLAD-2023-OD-1405</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface">Drinking Water Supply</span>
+<span class="font-mono-sm text-mono-sm text-on-surface-variant">₹15.60 L</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex flex-col font-mono-sm text-mono-sm">
+<span class="text-on-surface">Bahanaga Block</span>
+<span class="text-outline">21.3415° N, 86.8122° E</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<span class="inline-flex items-center gap-space-2xs px-space-sm py-0.5 bg-surface-container-highest text-on-surface font-mono-sm text-mono-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+                64 — Moderate
+              </span>
+</td>
+<td class="py-space-sm px-space-md">
+<span class="font-body-xs text-body-xs text-on-surface-variant max-w-xs block">
+                Contractor repetitive allocation threshold exceeded across 3 neighboring blocks
+              </span>
+</td>
+<td class="py-space-sm px-space-md">
+<span class="inline-block px-space-xs py-0.5 bg-primary/10 text-primary font-mono-sm text-mono-sm">Available</span>
+</td>
+<td class="py-space-sm px-space-md">
+<span class="inline-flex items-center gap-space-2xs px-space-xs py-0.5 bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm uppercase font-semibold">Under Investigation</span>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<button class="inline-flex items-center gap-space-2xs px-space-sm py-1 bg-surface-container text-on-surface hover:bg-surface-bright font-label-md text-label-md transition-colors">
+<span>Open Review</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- SECONDARY THREE-COLUMN SUPPORTING SECTION -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-md">
+<!-- Col 1: Why Projects Are Being Flagged -->
+<div class="bg-surface-container-low p-space-md flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Anomaly Taxonomy</h3>
+<span class="font-mono-sm text-mono-sm text-outline">34 TOTAL</span>
+</div>
+<p class="font-body-xs text-body-xs text-on-surface-variant mb-space-md">
+          Category breakdown of algorithmic audit triggers across currently active queue.
+        </p>
+<!-- Anomaly bars list -->
+<div class="flex flex-col gap-space-sm">
+<!-- Item 1 -->
+<div class="flex flex-col gap-space-2xs">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-on-surface">Financial / Progress-Spend Divergence</span>
+<span class="font-mono-sm text-mono-sm text-secondary">32% (11)</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-secondary" style="width: 32%"></div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex flex-col gap-space-2xs">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-on-surface">Evidence / Image Hash or GeoTag Gap</span>
+<span class="font-mono-sm text-mono-sm text-secondary">26% (9)</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-secondary" style="width: 26%"></div>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="flex flex-col gap-space-2xs">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-on-surface">Location / GIS Coordinate Overlap</span>
+<span class="font-mono-sm text-mono-sm text-outline">18% (6)</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-outline" style="width: 18%"></div>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="flex flex-col gap-space-2xs">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-on-surface">Timeline / Accelerated Completion</span>
+<span class="font-mono-sm text-mono-sm text-outline">12% (4)</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-outline" style="width: 12%"></div>
+</div>
+</div>
+<!-- Item 5 -->
+<div class="flex flex-col gap-space-2xs">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-on-surface">Network / Vendor Repetition Density</span>
+<span class="font-mono-sm text-mono-sm text-outline">8% (3)</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-outline" style="width: 8%"></div>
+</div>
+</div>
+<!-- Item 6 -->
+<div class="flex flex-col gap-space-2xs">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-on-surface">NLP / Specification Similarity</span>
+<span class="font-mono-sm text-mono-sm text-outline">4% (1)</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-outline" style="width: 4%"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm bg-surface-container-lowest p-space-sm flex items-center justify-between">
+<span class="font-body-xs text-body-xs text-outline">Dominant Risk Vector:</span>
+<span class="font-mono-sm text-mono-sm text-secondary font-medium">Progress Ahead of Inspection</span>
+</div>
+</div>
+<!-- Col 2: GIS Spatial Overview -->
+<div class="bg-surface-container-low p-space-md flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">GIS Spatial Cluster</h3>
+<span class="px-space-xs py-0.5 bg-surface-container text-primary font-mono-sm text-mono-sm">DISTRICT: BALASORE</span>
+</div>
+<p class="font-body-xs text-body-xs text-on-surface-variant mb-space-sm">
+          Spatial concentration analysis showing clustered asset geotags requiring physical verification.
+        </p>
+<!-- Simulated Vector Schematic Map Preview -->
+<div class="relative w-full h-44 bg-surface-container-lowest overflow-hidden flex items-center justify-center p-space-sm">
+<!-- Background Grid Lines -->
+<svg class="absolute inset-0 w-full h-full opacity-20 text-outline" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="24" id="grid" patternunits="userSpaceOnUse" width="24">
+<path d="M 24 0 L 0 0 0 24" fill="none" stroke="currentColor" stroke-width="0.5"></path>
+</pattern>
+</defs>
+<rect fill="url(#grid)" height="100%" width="100%"></rect>
+</svg>
+<!-- Simulated District Boundary Path -->
+<svg class="absolute inset-0 w-full h-full text-surface-container-highest" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 300 180">
+<path d="M30,30 L110,25 L160,50 L220,35 L270,75 L285,140 L230,165 L140,150 L60,160 L20,105 Z" fill="currentColor" fill-opacity="0.15"></path>
+<!-- Sub-block borders -->
+<path d="M110,25 L140,150" stroke-dasharray="2 2" stroke-width="1"></path>
+<path d="M160,50 L230,165" stroke-dasharray="2 2" stroke-width="1"></path>
+</svg>
+<!-- Pin Hotspots -->
+<!-- Hotspot 1: Severe Cluster -->
+<div class="absolute top-12 left-28 flex flex-col items-center">
+<span class="w-3 h-3 rounded-full bg-error animate-ping absolute"></span>
+<span class="w-3 h-3 rounded-full bg-error relative flex items-center justify-center text-[8px] font-mono-sm text-surface-container-lowest font-bold">6</span>
+<span class="font-mono-sm text-[9px] text-tertiary-container bg-surface-container-lowest/90 px-1 mt-1">Cluster OD-N1</span>
+</div>
+<!-- Hotspot 2: Review Required -->
+<div class="absolute bottom-12 right-24 flex flex-col items-center">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary relative"></span>
+<span class="font-mono-sm text-[9px] text-secondary bg-surface-container-lowest/90 px-1 mt-1">Nilagiri (3)</span>
+</div>
+<!-- Hotspot 3: Verified Asset -->
+<div class="absolute top-16 right-16 flex flex-col items-center">
+<span class="w-2 h-2 rounded-full bg-primary relative"></span>
+</div>
+<div class="absolute bottom-8 left-14 flex flex-col items-center">
+<span class="w-2 h-2 rounded-full bg-primary relative"></span>
+</div>
+<!-- Geo-Cluster Badge Alert -->
+<div class="absolute bottom-2 left-2 right-2 bg-surface-container-low/95 p-space-xs font-mono-sm text-mono-sm text-on-surface flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[14px]">warning</span>
+<span class="truncate">Balasore North: 6 works within 400m radius</span>
+</div>
+</div>
+<!-- Legend -->
+<div class="flex items-center justify-between text-body-xs font-body-xs text-outline mt-space-sm">
+<div class="flex items-center gap-space-2xs">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+<span>Priority (≥80)</span>
+</div>
+<div class="flex items-center gap-space-2xs">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span>Needs Review</span>
+</div>
+<div class="flex items-center gap-space-2xs">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span>Verified (1,248)</span>
+</div>
+</div>
+</div>
+<a class="mt-space-md pt-space-xs flex items-center justify-between font-label-md text-label-md text-primary hover:underline" href="#">
+<span>Open Full GIS Intelligence</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<!-- Col 3: Evidence Verification Backlog -->
+<div class="bg-surface-container-low p-space-md flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Evidence Verification Backlog</h3>
+<span class="font-mono-sm text-mono-sm text-primary">89.3% CLEAR</span>
+</div>
+<p class="font-body-xs text-body-xs text-on-surface-variant mb-space-sm">
+          Photographic and digital measurement book status across 1,428 monitored projects.
+        </p>
+<!-- Compact Ledger Metrics -->
+<div class="grid grid-cols-2 gap-space-xs mb-space-md">
+<div class="bg-surface-container-lowest p-space-xs">
+<span class="font-mono-sm text-mono-sm text-outline block">VERIFIED &amp; CLEAR</span>
+<span class="font-mono-md text-mono-md text-primary font-semibold">1,276</span>
+<span class="font-body-xs text-body-xs text-outline-variant block">89.3%</span>
+</div>
+<div class="bg-surface-container-lowest p-space-xs">
+<span class="font-mono-sm text-mono-sm text-outline block">REQUIRES REVIEW</span>
+<span class="font-mono-md text-mono-md text-secondary font-semibold">84</span>
+<span class="font-body-xs text-body-xs text-secondary/70 block">5.9%</span>
+</div>
+<div class="bg-surface-container-lowest p-space-xs">
+<span class="font-mono-sm text-mono-sm text-outline block">EVIDENCE MISSING</span>
+<span class="font-mono-md text-mono-md text-on-surface font-semibold">42</span>
+<span class="font-body-xs text-body-xs text-outline-variant block">2.9%</span>
+</div>
+<div class="bg-surface-container-lowest p-space-xs">
+<span class="font-mono-sm text-mono-sm text-outline block">SIMILARITY MATCH</span>
+<span class="font-mono-md text-mono-md text-tertiary-container font-semibold">26</span>
+<span class="font-body-xs text-body-xs text-tertiary-container/70 block">1.9%</span>
+</div>
+</div>
+<!-- Flagged Photo Pair Comparison Thumbnail Preview -->
+<div class="bg-surface-container-lowest p-space-xs flex flex-col gap-space-2xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase font-semibold">Flagged Visual Match</span>
+<span class="font-mono-sm text-mono-sm text-tertiary-container bg-error-container/20 px-space-xs">94% HASH MATCH</span>
+</div>
+<div class="grid grid-cols-2 gap-space-xs my-space-2xs">
+<!-- Thumbnail A -->
+<div class="relative bg-surface-container overflow-hidden">
+<img class="w-full h-20 object-cover opacity-80 hover:opacity-100 transition-opacity" data-alt="Institutional photograph of a single-story concrete community hall building under construction in rural India with gray cinder blocks, scaffolding, and harsh natural sunlight taken from a three-quarters perspective." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmbF-2_OS412_SXwFPA87hTvw4vrpSrxYveFuF5e2VPLWX4A6Xo7um4-M0ddmYwrTIz9YeivQXddOaYyz1qfuwwLUIr6-9pkFa54liM3L2aqG5bjKc5SJoY0W9LCTJB5D2cXu-OtpvMvSaLRp6repAp2mdTnwxOdEdQO6jY8e1D2YQLHY0-Yr_o4eH3Z9OF7w3aI2mPeUup50XE0j18pHCqgORwQcD6NueBT8tswNkHV1-f6vrf0Ag"/>
+<div class="absolute bottom-0 left-0 right-0 bg-surface-container-lowest/90 px-1 py-0.5 font-mono-sm text-[9px] text-on-surface truncate">
+                MPLAD-2021-OD-0119
+              </div>
+</div>
+<!-- Thumbnail B -->
+<div class="relative bg-surface-container overflow-hidden">
+<img class="w-full h-20 object-cover opacity-80 hover:opacity-100 transition-opacity" data-alt="Audit evidence photograph showing an almost identical municipal community hall structure with matching reinforced concrete pillars and window placement under bright sunny conditions, captured from a slightly different angle." src="https://lh3.googleusercontent.com/aida-public/AB6AXuArOBc54iSC0D7-9lIazsIJBAIiVlIKLDFJLQQaPvBvcx7e6paeU_SLJhYvmNaVHuTZ9fwy6zZVWwoYdB58ifES8lXX8OAOmeCi46ssksR1gJlAEWGUpd2N2fl4EsqKjyJtQWS6Msii8ZenH2SYOAAx0Fg_Vrj-NPwhFJRCw1zQtnnGgvSm-9byOp2MK6OrVs7KgkrEtJ8AuvJVx-gCrf7GMJWX2gRZdP-3tW3PTgj1YiNREvfgzWu5"/>
+<div class="absolute bottom-0 left-0 right-0 bg-surface-container-lowest/90 px-1 py-0.5 font-mono-sm text-[9px] text-tertiary-container truncate">
+                MPLAD-2023-OD-0842 (NEW)
+              </div>
+</div>
+</div>
+<span class="font-body-xs text-[11px] text-on-surface-variant">
+            Cross-sanction image reuse flagged between FY 2021-22 and FY 2023-24. Requires manual ocular check.
+          </span>
+</div>
+</div>
+<a class="mt-space-md pt-space-xs flex items-center justify-between font-label-md text-label-md text-primary hover:underline" href="#">
+<span>Launch Evidence Comparison Tool</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- INSTITUTIONAL FOOTER / DISCLAIMER -->
+<div class="bg-surface-container-lowest p-space-md flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-sm text-outline font-body-xs text-body-xs">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-outline text-[18px]">verified</span>
+<span>
+        All displayed entries are fictional demonstration records. Algorithmic flags represent audit prioritization, not confirmed non-compliance. Final determination rests with appointed human audit officers.
+      </span>
+</div>
+<div class="flex items-center gap-space-md shrink-0 font-mono-sm text-mono-sm text-outline-variant">
+<span>SYSTEM: v3.8-CAG</span>
+<span>NODE: DEL-OD01-SECURE</span>
+</div>
+</div>
+</div></main></div></body></html>

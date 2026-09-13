@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "primary-fixed-dim": "#6bd8cb",
+          "surface-bright": "#2c3a4c",
+          "surface-variant": "#273647",
+          "surface-container": "#122131",
+          "on-secondary-fixed": "#2f1500",
+          "surface-container-lowest": "#010f1f",
+          "on-tertiary-fixed-variant": "#93000b",
+          "surface-dim": "#051424",
+          "surface-container-low": "#0d1c2d",
+          "outline": "#879391",
+          "tertiary": "#ffb4ab",
+          "on-tertiary-container": "#5c0004",
+          "surface": "#051424",
+          "surface-container-highest": "#273647",
+          "tertiary-fixed": "#ffdad6",
+          "secondary-fixed-dim": "#ffb77d",
+          "primary-container": "#29a195",
+          "tertiary-container": "#ff544a",
+          "inverse-surface": "#d4e4fa",
+          "error": "#ffb4ab",
+          "on-tertiary": "#690005",
+          "on-background": "#d4e4fa",
+          "primary-fixed": "#89f5e7",
+          "on-primary": "#003732",
+          "secondary-fixed": "#ffdcc3",
+          "inverse-on-surface": "#233143",
+          "primary": "#6bd8cb",
+          "on-error-container": "#ffdad6",
+          "error-container": "#93000a",
+          "on-surface": "#d4e4fa",
+          "background": "#051424",
+          "on-secondary-fixed-variant": "#6e3900",
+          "on-secondary": "#4d2600",
+          "secondary-container": "#d97707",
+          "on-error": "#690005",
+          "on-primary-fixed-variant": "#005049",
+          "secondary": "#ffb77d",
+          "tertiary-fixed-dim": "#ffb4ab",
+          "on-primary-container": "#00302b",
+          "surface-tint": "#6bd8cb",
+          "on-surface-variant": "#bcc9c6",
+          "outline-variant": "#3d4947",
+          "inverse-primary": "#006a61",
+          "on-secondary-container": "#432100",
+          "on-primary-fixed": "#00201d",
+          "on-tertiary-fixed": "#410002",
+          "surface-container-high": "#1c2b3c"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.125rem",
+          "lg": "0.25rem",
+          "xl": "0.5rem",
+          "full": "0.75rem"
+        },
+        "spacing": {
+          "margin-desktop": "1.5rem",
+          "space-2xs": "0.125rem",
+          "gutter-desktop": "1rem",
+          "space-xs": "0.25rem",
+          "space-2xl": "2rem",
+          "margin-mobile": "1rem",
+          "space-md": "0.75rem",
+          "gutter-mobile": "0.75rem",
+          "space-lg": "1rem",
+          "space-xl": "1.5rem",
+          "space-sm": "0.5rem"
+        },
+        "fontFamily": {
+          "headline-md": [
+            "Inter"
+          ],
+          "body-md": [
+            "Inter"
+          ],
+          "code-md": [
+            "JetBrains Mono"
+          ],
+          "code-sm": [
+            "JetBrains Mono"
+          ],
+          "display-lg": [
+            "Inter"
+          ],
+          "display-lg-mobile": [
+            "Inter"
+          ],
+          "headline-lg": [
+            "Inter"
+          ],
+          "headline-sm": [
+            "Inter"
+          ],
+          "body-lg": [
+            "Inter"
+          ],
+          "label-sm": [
+            "Inter"
+          ],
+          "body-sm": [
+            "Inter"
+          ],
+          "label-md": [
+            "Inter"
+          ]
+        },
+        "fontSize": {
+          "headline-md": [
+            "20px",
+            {
+              "lineHeight": "28px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-md": [
+            "13px",
+            {
+              "lineHeight": "20px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ],
+          "code-md": [
+            "13px",
+            {
+              "lineHeight": "18px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "400"
+            }
+          ],
+          "code-sm": [
+            "11px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0em",
+              "fontWeight": "500"
+            }
+          ],
+          "display-lg": [
+            "32px",
+            {
+              "lineHeight": "40px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "600"
+            }
+          ],
+          "display-lg-mobile": [
+            "24px",
+            {
+              "lineHeight": "32px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-lg": [
+            "24px",
+            {
+              "lineHeight": "32px",
+              "letterSpacing": "-0.015em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-sm": [
+            "16px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "-0.005em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-lg": [
+            "15px",
+            {
+              "lineHeight": "22px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ],
+          "label-sm": [
+            "11px",
+            {
+              "lineHeight": "14px",
+              "letterSpacing": "0.04em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-sm": [
+            "12px",
+            {
+              "lineHeight": "18px",
+              "letterSpacing": "0.005em",
+              "fontWeight": "400"
+            }
+          ],
+          "label-md": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "500"
+            }
+          ]
+        }
+      },
+    },
+  }</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between select-none"><div class="flex flex-col"><div class="px-space-xl pt-space-lg pb-space-md bg-surface-container-lowest"><div class="flex items-center gap-space-sm"><div class="w-7 h-7 rounded bg-surface-container-highest flex items-center justify-center text-primary"><span class="material-symbols-outlined text-[18px]">verified_user</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface leading-tight tracking-tight">MPLADS Audit</span><span class="font-code-sm text-code-sm text-outline tracking-wider uppercase">Intelligence Engine</span></div></div><div class="mt-space-sm px-space-xs py-space-2xs bg-surface-container rounded inline-flex items-center gap-space-xs"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span><span class="font-label-sm text-label-sm uppercase text-on-surface-variant tracking-wider">Official Auditor Workbench</span></div></div><div class="px-space-xl pt-space-md pb-space-xs"><span class="font-label-sm text-label-sm uppercase text-outline tracking-wider">Core Investigative Rail</span></div><nav class="flex flex-col px-space-md gap-space-2xs" data-active-classes="bg-primary-container text-on-primary-container font-headline-sm"><a class="flex items-center gap-space-md px-space-md py-space-sm rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[18px]">grid_view</span><span class="font-label-md text-label-md">Dashboard</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="reviews" href="#"><span class="material-symbols-outlined text-[18px]">rate_review</span><span class="font-label-md text-label-md">Reviews</span></a><a aria-current="page" class="flex items-center gap-space-md px-space-md py-space-sm rounded transition-colors bg-primary-container text-on-primary-container font-headline-sm" data-path="project-investigation" href="#"><span class="material-symbols-outlined text-[18px]">biotech</span><span class="font-label-md text-label-md">Project Investigation</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="evidence-intelligence" href="#"><span class="material-symbols-outlined text-[18px]">fact_check</span><span class="font-label-md text-label-md">Evidence Intelligence</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="evidence-comparison" href="#"><span class="material-symbols-outlined text-[18px]">compare</span><span class="font-label-md text-label-md">Evidence Comparison</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="nexus-graph-intelligence" href="#"><span class="material-symbols-outlined text-[18px]">hub</span><span class="font-label-md text-label-md">Nexus Graph Intelligence</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="gis-intelligence" href="#"><span class="material-symbols-outlined text-[18px]">explore</span><span class="font-label-md text-label-md">GIS Intelligence</span></a></nav></div><div class="flex flex-col bg-surface-container-lowest p-space-md gap-space-xs"><div class="px-space-sm pt-space-xs pb-space-2xs"><span class="font-label-sm text-label-sm uppercase text-outline tracking-wider">Institutional Standards</span></div><nav class="flex flex-col gap-space-2xs" data-active-classes="bg-surface-container-high text-on-surface"><a class="flex items-center gap-space-md px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="audit-manual" href="#"><span class="material-symbols-outlined text-[16px]">menu_book</span><span class="font-body-sm text-body-sm">Audit Manual</span></a><a class="flex items-center gap-space-md px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="reference-norms" href="#"><span class="material-symbols-outlined text-[16px]">gavel</span><span class="font-body-sm text-body-sm">Reference Norms</span></a><a class="flex items-center gap-space-md px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="system-settings" href="#"><span class="material-symbols-outlined text-[16px]">settings</span><span class="font-body-sm text-body-sm">System Settings</span></a></nav><div class="mt-space-sm p-space-sm rounded bg-surface-container flex items-center justify-between"><div class="flex flex-col"><span class="font-code-sm text-code-sm text-primary">AUD-DL-4821</span><span class="font-label-sm text-label-sm text-outline">Sr. Audit Officer</span></div><span class="material-symbols-outlined text-[16px] text-outline">badge</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-14 bg-surface-container-low z-40 flex items-center justify-between px-space-xl"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-xs px-space-sm py-space-2xs rounded bg-surface-container"><span class="font-label-sm text-label-sm uppercase text-outline">Session:</span><span class="font-code-sm text-code-sm text-on-surface font-semibold">FY 2023-24 Q3 Compliance Review</span></div><div class="flex items-center gap-space-xs px-space-sm py-space-2xs rounded bg-surface-container"><span class="material-symbols-outlined text-[16px] text-outline">account_balance</span><span class="font-body-sm text-body-sm text-on-surface">Varanasi North / District Planning Cell</span></div></div><div class="flex items-center gap-space-md"><div class="relative flex items-center w-80"><span class="material-symbols-outlined absolute left-space-sm text-[16px] text-outline pointer-events-none">search</span><input class="w-full h-8 pl-8 pr-space-sm bg-surface-container-lowest text-on-surface placeholder-outline font-body-sm text-body-sm rounded outline-none focus:bg-surface-container-high transition-colors" placeholder="Search Project ID, Contractor, or Sanction Order..." type="text"/></div><button class="relative p-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-secondary-container"></span></button><button class="h-8 px-space-md rounded bg-surface-container-high text-on-surface hover:bg-surface-bright hover:text-on-surface flex items-center gap-space-xs transition-colors" type="button"><span class="material-symbols-outlined text-[16px] text-primary">download</span><span class="font-label-md text-label-md">Export Session Dossier</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="w-full pt-14 px-margin-desktop bg-background min-h-screen"><div class="flex flex-col w-full pb-space-2xl text-on-surface">
+<!-- Top Breadcrumb & Workflow Priority Banner -->
+<div class="flex flex-col gap-space-sm pt-space-md pb-space-lg">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-outline uppercase tracking-wider">
+<span>Reviews</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span>High Priority Queue</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-primary font-semibold">Project Details</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-code-sm text-code-sm text-outline">Dossier State:</span>
+<span class="px-space-xs py-space-2xs rounded bg-surface-container-high text-on-surface font-code-sm text-code-sm font-medium">L3_FORENSIC_HOLD</span>
+</div>
+</div>
+<!-- Project Header Box -->
+<div class="bg-surface-container rounded-lg p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex flex-col xl:flex-row xl:items-start justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="font-code-md text-code-md text-primary font-semibold tracking-tight px-space-xs py-space-2xs bg-surface-container-lowest rounded">MPLADS-2023-UP-04829</span>
+<div class="inline-flex items-center gap-space-2xs px-space-xs py-space-2xs rounded bg-secondary-container/15 text-secondary">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Under Investigation</span>
+</div>
+<div class="inline-flex items-center gap-space-xs px-space-sm py-space-2xs rounded bg-surface-container-highest text-tertiary">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Audit Priority</span>
+<span class="font-code-sm text-code-sm font-semibold text-tertiary">88 / 100</span>
+</div>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight mt-space-2xs">
+            Construction of Community Drainage and Culvert Network - Sector 9 Ward 14
+          </h1>
+</div>
+<!-- Action Control Group -->
+<div class="flex items-center gap-space-sm flex-wrap self-start xl:self-auto">
+<button class="h-8 px-space-md rounded bg-surface-container-high text-on-surface hover:bg-surface-bright flex items-center gap-space-xs transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px] text-primary">description</span>
+<span class="font-label-md text-label-md">Generate Audit Brief</span>
+</button>
+<button class="h-8 px-space-md rounded bg-surface-container-high text-on-surface hover:bg-surface-bright flex items-center gap-space-xs transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px] text-secondary">edit_note</span>
+<span class="font-label-md text-label-md">Record Finding</span>
+</button>
+<button class="h-8 px-space-md rounded bg-primary text-on-primary hover:bg-primary-fixed-dim flex items-center gap-space-xs transition-colors font-semibold shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span class="font-label-md text-label-md">Continue Review</span>
+</button>
+</div>
+</div>
+<!-- Metadata Attributes Row -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-space-sm pt-space-xs">
+<div class="flex flex-col bg-surface-container-lowest p-space-sm rounded">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Location &amp; Geo</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium truncate mt-space-2xs">Varanasi North, Uttar Pradesh</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">Ward 14 (25.3216, 82.9872)</span>
+</div>
+<div class="flex flex-col bg-surface-container-lowest p-space-sm rounded">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Implementing Agency</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium truncate mt-space-2xs">DRDA Varanasi</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">District Rural Dev Agency</span>
+</div>
+<div class="flex flex-col bg-surface-container-lowest p-space-sm rounded">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Primary Contractor</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium truncate mt-space-2xs">Apex Infra &amp; Civil Works Ltd</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">GST: 09AAACA4021B1Z2</span>
+</div>
+<div class="flex flex-col bg-surface-container-lowest p-space-sm rounded">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Sanctioned / Disbursed</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium mt-space-2xs">₹48,50,000 / ₹42,20,000</span>
+<span class="font-code-sm text-code-sm text-secondary font-semibold">87.0% Fund Disbursed</span>
+</div>
+<div class="flex flex-col bg-surface-container-lowest p-space-sm rounded">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Sanction Order Ref</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium truncate mt-space-2xs">SO-DRDA-VAR-1082</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">Dated 14 Oct 2022</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Primary Reason Flagged Section (Prominent Forensic Panel) -->
+<section class="flex flex-col gap-space-sm mb-space-lg">
+<div class="bg-surface-container-low rounded-lg p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-xs">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded bg-secondary-container/20 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">warning</span>
+</div>
+<div class="flex flex-col">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Why Flagged for Investigation</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Multi-vector pattern analysis identified 3 primary indicators requiring human auditor review</p>
+</div>
+</div>
+<div class="inline-flex items-center gap-space-2xs px-space-sm py-space-2xs rounded bg-surface-container text-outline font-code-sm text-code-sm">
+<span class="material-symbols-outlined text-[14px]">psychology</span>
+<span>Vector Weight: 0.884</span>
+</div>
+</div>
+<!-- 3 Primary Anomaly Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Financial Anomaly -->
+<div class="flex flex-col p-space-md bg-surface-container rounded shadow-sm gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Financial Anomaly</span>
+</div>
+<span class="font-code-sm text-code-sm text-outline">CR-FIN-01</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+            Disbursement velocity deviated significantly from physical milestone reporting. 87% funds released within 18 days of tender award prior to Stage-2 engineering certification.
+          </p>
+<div class="mt-auto pt-space-xs flex items-center gap-space-xs text-outline font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] text-secondary">speed</span>
+<span>Tranche release 4.2x standard velocity</span>
+</div>
+</div>
+<!-- Spatial Discrepancy -->
+<div class="flex flex-col p-space-md bg-surface-container rounded shadow-sm gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Spatial &amp; Evidence Discrepancy</span>
+</div>
+<span class="font-code-sm text-code-sm text-outline">CR-GIS-09</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+            Geo-tagged completion photos (IMG-7741, IMG-7749) show coordinates 1.4 km outside sanctioned project boundaries, overlapping with an existing PWD municipal drainage site completed in 2021.
+          </p>
+<div class="mt-auto pt-space-xs flex items-center gap-space-xs text-outline font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] text-secondary">wrong_location</span>
+<span>1,410m spatial offset detected</span>
+</div>
+</div>
+<!-- Contractor Nexus -->
+<div class="flex flex-col p-space-md bg-surface-container rounded shadow-sm gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Contractor &amp; Network Nexus</span>
+</div>
+<span class="font-code-sm text-code-sm text-outline">CR-NET-04</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+            Apex Infra &amp; Civil Works Ltd shares registered director and banking remittance branch with 2 competing bidders (Shree Civil Tech &amp; Ganga Enterprises) in sanction tender Ref-092/2022.
+          </p>
+<div class="mt-auto pt-space-xs flex items-center gap-space-xs text-outline font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] text-secondary">hub</span>
+<span>Common directorship detected</span>
+</div>
+</div>
+</div>
+<!-- Ethical Notice Banner -->
+<div class="flex items-start gap-space-sm p-space-sm bg-surface-container-lowest rounded text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px] text-outline mt-0.5 shrink-0">policy</span>
+<p class="font-body-sm text-body-sm leading-normal">
+<strong class="font-semibold text-on-surface">Ethical Notice:</strong> AI-generated anomaly indicators flag priority review items for official auditors. Findings do not constitute verified non-compliance until substantiated by field and document verification.
+        </p>
+</div>
+</div>
+</section>
+<!-- 4-Column Structured Investigation Overview -->
+<section class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-md mb-space-lg">
+<!-- Col 1: Financial Overview -->
+<div class="bg-surface-container rounded-lg p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Project Sanction</span>
+<span class="material-symbols-outlined text-[18px] text-primary">payments</span>
+</div>
+<div class="flex flex-col gap-space-2xs">
+<div class="flex items-baseline justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Sanctioned:</span>
+<span class="font-code-md text-code-md font-semibold text-on-surface">₹48.50 L</span>
+</div>
+<div class="flex items-baseline justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Disbursed:</span>
+<span class="font-code-md text-code-md font-semibold text-secondary">₹42.20 L</span>
+</div>
+<div class="flex items-baseline justify-between">
+<span class="font-body-sm text-body-sm text-outline">Pending Final:</span>
+<span class="font-code-sm text-code-sm text-outline">₹6.30 L</span>
+</div>
+</div>
+<div class="mt-space-sm pt-space-xs bg-surface-container-lowest px-space-xs py-space-2xs rounded flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline">Claimed Progress</span>
+<span class="font-code-sm text-code-sm font-semibold text-on-surface">100% (Stage 4)</span>
+</div>
+</div>
+<!-- Col 2: Timeline Audit -->
+<div class="bg-surface-container rounded-lg p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Timeline Audit</span>
+<span class="material-symbols-outlined text-[18px] text-tertiary">calendar_clock</span>
+</div>
+<div class="flex flex-col gap-space-2xs">
+<div class="flex items-baseline justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Scheduled:</span>
+<span class="font-code-sm text-code-sm text-on-surface">30 Jun 2023</span>
+</div>
+<div class="flex items-baseline justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Recorded End:</span>
+<span class="font-code-sm text-code-sm text-on-surface">08 Nov 2023</span>
+</div>
+<div class="flex items-baseline justify-between">
+<span class="font-body-sm text-body-sm text-tertiary">Unjustified Delay:</span>
+<span class="font-code-md text-code-md font-semibold text-tertiary">+131 Days</span>
+</div>
+</div>
+<div class="mt-space-sm pt-space-xs bg-surface-container-lowest px-space-xs py-space-2xs rounded flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline">Sanction Window</span>
+<span class="font-code-sm text-code-sm text-outline">390 Total Days</span>
+</div>
+</div>
+<!-- Col 3: Geographic Verification -->
+<div class="bg-surface-container rounded-lg p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">GIS Verification</span>
+<span class="material-symbols-outlined text-[18px] text-secondary">satellite_alt</span>
+</div>
+<div class="flex flex-col gap-space-2xs">
+<div class="flex items-baseline justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Sanction Polygon:</span>
+<span class="font-code-sm text-code-sm text-on-surface">Ward 14 Core</span>
+</div>
+<div class="flex items-baseline justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Upload Coordinates:</span>
+<span class="font-code-sm text-code-sm text-on-surface">Ward 11 Margin</span>
+</div>
+<div class="flex items-baseline justify-between">
+<span class="font-body-sm text-body-sm text-secondary">GPS Offset:</span>
+<span class="font-code-md text-code-md font-semibold text-secondary">+1,410m Offset</span>
+</div>
+</div>
+<div class="mt-space-sm pt-space-xs bg-surface-container-lowest px-space-xs py-space-2xs rounded flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline">Registry Overlap</span>
+<span class="font-code-sm text-code-sm text-secondary font-medium">PWD Drainage 2021</span>
+</div>
+</div>
+<!-- Col 4: Documentation Integrity -->
+<div class="bg-surface-container rounded-lg p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Documentation</span>
+<span class="material-symbols-outlined text-[18px] text-primary">fact_check</span>
+</div>
+<div class="flex flex-col gap-space-2xs">
+<div class="flex items-baseline justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Required Items:</span>
+<span class="font-code-sm text-code-sm text-on-surface">9 Artifacts</span>
+</div>
+<div class="flex items-baseline justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Verified Files:</span>
+<span class="font-code-sm text-code-sm text-primary font-semibold">7 Artifacts</span>
+</div>
+<div class="flex items-baseline justify-between">
+<span class="font-body-sm text-body-sm text-tertiary">Missing Critical:</span>
+<span class="font-code-sm text-code-sm text-tertiary font-semibold">2 Mandatory Logs</span>
+</div>
+</div>
+<div class="mt-space-sm pt-space-xs bg-surface-container-lowest px-space-xs py-space-2xs rounded flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline">Missing</span>
+<span class="font-code-sm text-code-sm text-outline truncate max-w-[140px]">Soil QA &amp; Pour Log</span>
+</div>
+</div>
+</section>
+<!-- Interactive Tabs Rail -->
+<div class="flex items-center gap-space-xs overflow-x-auto pb-space-xs mb-space-lg">
+<button class="h-9 px-space-md rounded bg-primary-container text-on-primary-container font-headline-sm text-headline-sm whitespace-nowrap flex items-center gap-space-xs transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">overview</span>
+<span>Overview</span>
+</button>
+<button class="h-9 px-space-md rounded bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-headline-sm text-headline-sm whitespace-nowrap flex items-center gap-space-xs transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">account_tree</span>
+<span>Financial &amp; Milestone Analysis</span>
+</button>
+<button class="h-9 px-space-md rounded bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-headline-sm text-headline-sm whitespace-nowrap flex items-center gap-space-xs transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span>Timeline &amp; Delays</span>
+</button>
+<button class="h-9 px-space-md rounded bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-headline-sm text-headline-sm whitespace-nowrap flex items-center gap-space-xs transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">map</span>
+<span>Spatial &amp; GIS Verification</span>
+</button>
+<button class="h-9 px-space-md rounded bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-headline-sm text-headline-sm whitespace-nowrap flex items-center gap-space-xs transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">hub</span>
+<span>Contractor &amp; Nexus Network</span>
+</button>
+<button class="h-9 px-space-md rounded bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-headline-sm text-headline-sm whitespace-nowrap flex items-center gap-space-xs transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">photo_library</span>
+<span>Evidence Intelligence &amp; Inspection</span>
+</button>
+<button class="h-9 px-space-md rounded bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-headline-sm text-headline-sm whitespace-nowrap flex items-center gap-space-xs transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">terminal</span>
+<span>Technical &amp; Audit Logs</span>
+</button>
+</div>
+<!-- Dual-Column Investigation Workspace (8-Col Left, 4-Col Right) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- LEFT / CENTER COLUMN (8 cols): Primary Forensic Inspection -->
+<div class="lg:col-span-8 flex flex-col gap-space-lg">
+<!-- Milestone Discrepancy Breakdown Table -->
+<div class="bg-surface-container rounded-lg p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-primary">table_chart</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Milestone Disbursement &amp; Engineering Discrepancy Matrix</h3>
+</div>
+<span class="font-code-sm text-code-sm text-outline">4 Milestones Audited</span>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-surface-container-lowest text-outline font-label-sm text-label-sm uppercase tracking-wider h-8">
+<th class="px-space-sm py-space-xs font-semibold">Milestone Stage</th>
+<th class="px-space-sm py-space-xs text-right font-semibold">Target (₹)</th>
+<th class="px-space-sm py-space-xs text-right font-semibold">Disbursed (₹)</th>
+<th class="px-space-sm py-space-xs font-semibold">Verification Note / Anomaly Indicator</th>
+<th class="px-space-sm py-space-xs text-right font-semibold">Action</th>
+</tr>
+</thead>
+<tbody class="font-body-md text-body-md divide-y-0">
+<!-- Row 1 -->
+<tr class="h-10 hover:bg-surface-container-high transition-colors">
+<td class="px-space-sm py-space-xs font-medium text-on-surface">
+<div class="flex flex-col">
+<span>1. Foundation &amp; Trenching</span>
+<span class="font-code-sm text-code-sm text-outline">Chainage 0.00 to 1.20 km</span>
+</div>
+</td>
+<td class="px-space-sm py-space-xs text-right font-code-md text-code-md text-on-surface">₹10,00,000</td>
+<td class="px-space-sm py-space-xs text-right font-code-md text-code-md text-primary font-medium">₹10,00,000</td>
+<td class="px-space-sm py-space-xs">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-primary/10 text-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+                    Verified by Junior Engineer
+                  </span>
+</td>
+<td class="px-space-sm py-space-xs text-right">
+<button class="text-outline hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">folder_open</span>
+</button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="h-10 bg-surface-container-lowest/40 hover:bg-surface-container-high transition-colors">
+<td class="px-space-sm py-space-xs font-medium text-on-surface">
+<div class="flex flex-col">
+<span>2. Culvert Slab Reinforcement</span>
+<span class="font-code-sm text-code-sm text-outline">Sector 9 Junction Span</span>
+</div>
+</td>
+<td class="px-space-sm py-space-xs text-right font-code-md text-code-md text-on-surface">₹18,50,000</td>
+<td class="px-space-sm py-space-xs text-right font-code-md text-code-md text-secondary font-medium">₹18,50,000</td>
+<td class="px-space-sm py-space-xs">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-secondary/10 text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">photo_library</span>
+                    Evidence flagged: duplicate rebar photo
+                  </span>
+</td>
+<td class="px-space-sm py-space-xs text-right">
+<button class="text-secondary hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="h-10 hover:bg-surface-container-high transition-colors">
+<td class="px-space-sm py-space-xs font-medium text-on-surface">
+<div class="flex flex-col">
+<span>3. Masonry &amp; Finishing</span>
+<span class="font-code-sm text-code-sm text-outline">Outfall Channel Parapet</span>
+</div>
+</td>
+<td class="px-space-sm py-space-xs text-right font-code-md text-code-md text-on-surface">₹13,70,000</td>
+<td class="px-space-sm py-space-xs text-right font-code-md text-code-md text-secondary font-medium">₹13,70,000</td>
+<td class="px-space-sm py-space-xs">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-secondary/10 text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+                    Completed 42 days ahead of schedule
+                  </span>
+</td>
+<td class="px-space-sm py-space-xs text-right">
+<button class="text-outline hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">folder_open</span>
+</button>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="h-10 bg-surface-container-lowest/40 hover:bg-surface-container-high transition-colors">
+<td class="px-space-sm py-space-xs font-medium text-on-surface">
+<div class="flex flex-col">
+<span>4. Handover &amp; Drainage Flow Test</span>
+<span class="font-code-sm text-code-sm text-outline">Final Tranche Clearance</span>
+</div>
+</td>
+<td class="px-space-sm py-space-xs text-right font-code-md text-code-md text-on-surface">₹6,30,000</td>
+<td class="px-space-sm py-space-xs text-right font-code-md text-code-md text-tertiary font-medium">₹0.00</td>
+<td class="px-space-sm py-space-xs">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-tertiary/10 text-tertiary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">block</span>
+                    On Hold by District Auditor
+                  </span>
+</td>
+<td class="px-space-sm py-space-xs text-right">
+<button class="text-primary hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">lock_clock</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Visual Evidence Intelligence Summary Card -->
+<div class="bg-surface-container rounded-lg p-space-md shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-primary">collections</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Visual Evidence Intelligence</h3>
+</div>
+<a class="font-label-md text-label-md text-primary hover:text-primary-fixed flex items-center gap-space-2xs transition-colors" href="#">
+<span>Open Full Evidence Intelligence Workspace</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+<!-- 4 Visual Evidence Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Evidence 1 -->
+<div class="bg-surface-container-low rounded p-space-sm flex flex-col gap-space-xs shadow-sm">
+<div class="relative w-full h-28 rounded bg-surface-container-lowest overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Forensic photographic capture of concrete culvert headwall along a rural road, taken from an angle showing the drainage opening with sediment, harsh daytime sunlight casting deep shadows on grey precast concrete." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_yA_nPvtTUppxZ_8MAg34671H_BSBrWVOHzl5zt3h1yooZnzzCXQqY7u6iQumWjDckA0Z42git7kETal2XTHhj1XDPizrLO3LNSjbevMmiI_HpbKMajpjCCJ0wv0woiTzAA8D6lkD7mmFNNWfqVy5DnLTro7HdHO5vC82dd1TLARFfD7mHpsfsYvBpNf952KpMG6KZVHs6X44qa-ffKTmx8zKxus7bhvAVS-khTMfhaj4KgrJk6w6"/>
+<span class="absolute top-1 left-1 px-1.5 py-0.5 rounded bg-surface-container-lowest/90 font-code-sm text-code-sm text-outline">IMG-7741</span>
+</div>
+<div class="flex flex-col mt-space-2xs">
+<span class="font-body-sm text-body-sm font-medium text-on-surface truncate">Completion Culvert View 01</span>
+<span class="font-code-sm text-code-sm text-outline">25.3341° N, 82.9912° E</span>
+</div>
+<div class="mt-auto pt-space-xs">
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-secondary/10 text-secondary font-label-sm text-label-sm font-medium">
+<span class="material-symbols-outlined text-[12px]">warning</span>
+                Requires Verification
+              </span>
+</div>
+</div>
+<!-- Evidence 2 -->
+<div class="bg-surface-container-low rounded p-space-sm flex flex-col gap-space-xs shadow-sm">
+<div class="relative w-full h-28 rounded bg-surface-container-lowest overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Close up architectural forensic photograph of crisscrossed steel rebar reinforcement grid before cement pouring, industrial steel rods wired together with visible wire ties, clean grey stone gravel aggregate underneath." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkk9IFhblcQmH7mkv62Gp0ZM1SsOfFv2LMD_6Ta50xsqqfka3HdAif8f9uU-aQU17cgTvqVj5GOOVWhWu4--oiY1YWjSbgl2tdxroybLtD4SD2F_EALiDYNXCJl4P3D6CRcDf9bCmJTtYcyviASNCgfTEyzwt4yddgo3atibFcA1nOe-nI-HcbgPuog3Cv34kXyaxtRiebSc5aF9gkHxAodZ-eVfVPV6Ja8JUnPDIoSQ-TB8Ihc1Bl"/>
+<span class="absolute top-1 left-1 px-1.5 py-0.5 rounded bg-surface-container-lowest/90 font-code-sm text-code-sm text-outline">IMG-7749</span>
+</div>
+<div class="flex flex-col mt-space-2xs">
+<span class="font-body-sm text-body-sm font-medium text-on-surface truncate">Concrete Reinforcement Slab</span>
+<span class="font-code-sm text-code-sm text-secondary">94% match MPLADS-2021</span>
+</div>
+<div class="mt-auto pt-space-xs">
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-secondary/10 text-secondary font-label-sm text-label-sm font-medium">
+<span class="material-symbols-outlined text-[12px]">compare</span>
+                Similarity Detected
+              </span>
+</div>
+</div>
+<!-- Evidence 3 -->
+<div class="bg-surface-container-low rounded p-space-sm flex flex-col gap-space-xs shadow-sm">
+<div class="relative w-full h-28 rounded bg-surface-container-lowest overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Official government project inception sign board installed outdoors by road, blue metal plate with white Hindi and English painted text detailing MPLADS scheme details, sanction number, and budget." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJmtb5mRegiTlDbnU4CWIqIM3q2YuQGq7pQ6O28MaUF_oKMf7RUIcxOxMm5D45XN4PvFlZwWSLQ9lSUHJ3L9YZF9g7b4TNWINA-m-H3QsBUo12iKQNVJeHV4UQjnk9fBa8hDlDyv0EgbhglvzIOb1SPXqB3pucw0XJqFFHaYZnpa6dz1O-N2EefeaceKEPzr3n6w1qkypLY2HidWegYWF5aXJnk7NBikuLcM99XU_Hi-PnuyJQOKH9"/>
+<span class="absolute top-1 left-1 px-1.5 py-0.5 rounded bg-surface-container-lowest/90 font-code-sm text-code-sm text-outline">IMG-7601</span>
+</div>
+<div class="flex flex-col mt-space-2xs">
+<span class="font-body-sm text-body-sm font-medium text-on-surface truncate">Site Inception Signboard</span>
+<span class="font-code-sm text-code-sm text-outline">25.3218° N, 82.9875° E</span>
+</div>
+<div class="mt-auto pt-space-xs">
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-primary/10 text-primary font-label-sm text-label-sm font-medium">
+<span class="material-symbols-outlined text-[12px]">verified</span>
+                Verified
+              </span>
+</div>
+</div>
+<!-- Evidence 4 -->
+<div class="bg-surface-container-low rounded p-space-sm flex flex-col justify-between shadow-sm">
+<div class="flex flex-col gap-space-xs">
+<div class="w-full h-28 rounded bg-surface-container-lowest flex flex-col items-center justify-center text-outline gap-space-2xs">
+<span class="material-symbols-outlined text-[32px]">folder_off</span>
+<span class="font-label-sm text-label-sm uppercase">File Absent</span>
+</div>
+<div class="flex flex-col mt-space-2xs">
+<span class="font-body-sm text-body-sm font-medium text-on-surface truncate">Excavation Log Sheet</span>
+<span class="font-code-sm text-code-sm text-outline">Log ID: EXC-094-VAR</span>
+</div>
+</div>
+<div class="pt-space-xs">
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-surface-container-highest text-outline font-label-sm text-label-sm font-medium">
+<span class="material-symbols-outlined text-[12px]">upload_file</span>
+                Evidence Missing
+              </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN (4 cols): Nexus Context & Action Command Center -->
+<div class="lg:col-span-4 flex flex-col gap-space-lg">
+<!-- Related Entities & Network Nexus Card -->
+<div class="bg-surface-container rounded-lg p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between pb-space-2xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-primary">hub</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Related Entities &amp; Nexus</h3>
+</div>
+<span class="font-code-sm text-code-sm text-secondary">3 Nodes Flagged</span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Entity 1 -->
+<div class="p-space-sm bg-surface-container-low rounded flex flex-col gap-space-2xs">
+<div class="flex items-center justify-between">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">Apex Infra &amp; Civil Works Ltd</span>
+<span class="font-label-sm text-label-sm text-secondary bg-secondary/10 px-1.5 py-0.5 rounded">Contractor</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">3 active MPLADS contracts, 2 flagged for co-bidding directorship pattern.</p>
+</div>
+<!-- Entity 2 -->
+<div class="p-space-sm bg-surface-container-low rounded flex flex-col gap-space-2xs">
+<div class="flex items-center justify-between">
+<span class="font-code-sm text-code-sm text-primary font-semibold">MPLADS-2021-UP-01902</span>
+<span class="font-label-sm text-label-sm text-secondary bg-secondary/10 px-1.5 py-0.5 rounded">Prior Work</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Culvert Ward 11 — 94% perceptual image duplicate match on rebar slab.</p>
+</div>
+<!-- Entity 3 -->
+<div class="p-space-sm bg-surface-container-low rounded flex flex-col gap-space-2xs">
+<div class="flex items-center justify-between">
+<span class="font-code-sm text-code-sm text-primary font-semibold">MPLADS-2022-UP-03110</span>
+<span class="font-label-sm text-label-sm text-outline bg-surface-container-highest px-1.5 py-0.5 rounded">Shared Subcontract</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Road Drainage — Overlapping equipment supplier and banking branch.</p>
+</div>
+</div>
+<button class="mt-space-xs w-full py-space-xs rounded bg-surface-container-high hover:bg-surface-bright text-primary font-label-md text-label-md flex items-center justify-center gap-space-xs transition-colors" type="button">
+<span>Explore in Nexus Graph Intelligence</span>
+<span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</button>
+</div>
+<!-- Action Command Center (Human in the Loop) -->
+<div class="bg-surface-container rounded-lg p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between pb-space-2xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-primary">gavel</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Auditor Action Center</h3>
+</div>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Human-In-The-Loop</span>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-col gap-space-xs">
+<button class="w-full py-2 px-3 rounded bg-surface-container-high hover:bg-surface-bright text-on-surface text-left flex items-center justify-between transition-colors shadow-sm" type="button">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[18px] text-primary">person_search</span>
+<span class="font-label-md text-label-md font-semibold">Request Field Verification</span>
+</div>
+<span class="material-symbols-outlined text-[16px] text-outline">chevron_right</span>
+</button>
+<button class="w-full py-2 px-3 rounded bg-surface-container-high hover:bg-surface-bright text-on-surface text-left flex items-center justify-between transition-colors shadow-sm" type="button">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[18px] text-secondary">rate_review</span>
+<span class="font-label-md text-label-md font-semibold">Record Finding</span>
+</div>
+<span class="material-symbols-outlined text-[16px] text-outline">chevron_right</span>
+</button>
+<button class="w-full py-2 px-3 rounded bg-tertiary/15 hover:bg-tertiary/25 text-tertiary text-left flex items-center justify-between transition-colors shadow-sm" type="button">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[18px]">priority_high</span>
+<span class="font-label-md text-label-md font-semibold">Escalate for Review</span>
+</div>
+<span class="material-symbols-outlined text-[16px]">arrow_upward</span>
+</button>
+<button class="w-full py-2 px-3 rounded bg-surface-container-lowest hover:bg-surface-container-highest text-outline hover:text-on-surface text-left flex items-center justify-between transition-colors" type="button">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span class="font-label-md text-label-md">Mark as Cleared with Justification</span>
+</div>
+<span class="material-symbols-outlined text-[16px]">key</span>
+</button>
+</div>
+<!-- Latest Auditor Observation Preview -->
+<div class="mt-space-xs p-space-sm bg-surface-container-lowest rounded flex flex-col gap-space-2xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Latest Auditor Note</span>
+<span class="font-code-sm text-code-sm text-primary">AUD-DL-4821</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic">
+            "Recommend on-site physical measurement of culvert depth before final tranche clearance. Coordinate mismatch indicates probable duplicate claims on adjacent PWD asset."
+          </p>
+</div>
+</div>
+<!-- Progressive Disclosure: Technical Information Drawer (Level 3 Hash & Pipeline Inspection) -->
+<details class="group bg-surface-container rounded-lg p-space-md shadow-sm">
+<summary class="cursor-pointer select-none flex items-center justify-between text-on-surface">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-outline">memory</span>
+<span class="font-headline-sm text-headline-sm">Technical &amp; Verification Hashes</span>
+</div>
+<span class="material-symbols-outlined text-[18px] text-outline group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="mt-space-md pt-space-xs flex flex-col gap-space-xs font-code-sm text-code-sm">
+<div class="flex flex-col bg-surface-container-lowest p-space-xs rounded">
+<span class="text-outline uppercase text-[10px]">SHA-256 Primary Digest</span>
+<span class="text-primary truncate">8f4e2b109c9f82d140e94a81bfa67e3321d91c</span>
+</div>
+<div class="flex flex-col bg-surface-container-lowest p-space-xs rounded">
+<span class="text-outline uppercase text-[10px]">Perceptual Hash (Image Set)</span>
+<span class="text-secondary truncate">a9b2c8301e8ff092</span>
+</div>
+<div class="flex items-center justify-between bg-surface-container-lowest p-space-xs rounded">
+<span class="text-outline uppercase text-[10px]">Model Pipeline</span>
+<span class="text-on-surface">v4.2.1-compliance-audit</span>
+</div>
+<div class="flex items-center justify-between bg-surface-container-lowest p-space-xs rounded">
+<span class="text-outline uppercase text-[10px]">Anomaly Vector Weight</span>
+<span class="text-secondary font-bold">0.884</span>
+</div>
+<div class="flex items-center justify-between bg-surface-container-lowest p-space-xs rounded">
+<span class="text-outline uppercase text-[10px]">Ingestion Timestamp</span>
+<span class="text-on-surface">2024-02-14 09:31:04 UTC</span>
+</div>
+</div>
+</details>
+</div>
+</div>
+</div></main></div></body></html>

@@ -1,0 +1,201 @@
+contractor_id,contractor_name,registration_no,entity_type,primary_district,primary_state,incorporation_year,contact_email,total_projects_count,total_sanctioned_amount
+CONTRACTOR-DEMO-0001,Apex Infrastructure Ltd,REG-KA-2021-8007,CONTRACTOR,Dharwad,Karnataka,2021,contact@apexinfrastr-demo.in,85,102197000.0
+CONTRACTOR-DEMO-0002,Shree Ganesh Construction Co,REG-KA-2010-2832,CONTRACTOR,Dharwad,Karnataka,2010,contact@shreeganeshc-demo.in,45,56723000.0
+CONTRACTOR-DEMO-0003,National Civil Projects,REG-GU-2021-3442,CONTRACTOR,Surat,Gujarat,2021,contact@nationalcivi-demo.in,0,0.0
+CONTRACTOR-DEMO-0004,Aditya Buildcon Pvt Ltd,REG-KA-2010-7049,CONTRACTOR,Dharwad,Karnataka,2010,contact@adityabuildc-demo.in,5,7980000.0
+CONTRACTOR-DEMO-0005,Shanti Contractors,REG-TA-2018-3426,CONTRACTOR,Coimbatore,Tamil Nadu,2018,contact@shanticontra-demo.in,3,2890000.0
+CONTRACTOR-DEMO-0006,Apex Civil Projects,REG-MA-2012-1685,CONTRACTOR,Bhopal,Madhya Pradesh,2012,contact@apexcivilpro-demo.in,1,1100000.0
+CONTRACTOR-DEMO-0007,Vikas Civil Projects,REG-RA-2015-1653,CONTRACTOR,Jaipur,Rajasthan,2015,contact@vikascivilpr-demo.in,2,3830000.0
+CONTRACTOR-DEMO-0008,Apex Projects Ltd,REG-OD-2015-4441,CONTRACTOR,Cuttack,Odisha,2015,contact@apexprojects-demo.in,6,10100000.0
+CONTRACTOR-DEMO-0009,Golden Urban Works Pvt Ltd,REG-KE-2013-2684,CONTRACTOR,Wayanad,Kerala,2013,contact@goldenurbanw-demo.in,6,6630000.0
+CONTRACTOR-DEMO-0010,Bharat Contractors,REG-RA-2018-7658,CONTRACTOR,Udaipur,Rajasthan,2018,contact@bharatcontra-demo.in,3,3100000.0
+CONTRACTOR-DEMO-0011,Mahalaxmi Infrastructure Ltd,REG-TA-2021-3532,CONTRACTOR,Madurai,Tamil Nadu,2021,contact@mahalaxmiinf-demo.in,5,6940000.0
+CONTRACTOR-DEMO-0012,Vanguard Rural Developers,REG-OD-2013-3662,CONTRACTOR,Ganjam,Odisha,2013,contact@vanguardrura-demo.in,5,18390000.0
+CONTRACTOR-DEMO-0013,Bharat Engineering Works,REG-TE-2012-7755,CONTRACTOR,Nizamabad,Telangana,2012,contact@bharatengine-demo.in,4,3360000.0
+CONTRACTOR-DEMO-0014,Surya Shakti Construction Co,REG-GU-2012-6442,CONTRACTOR,Rajkot,Gujarat,2012,contact@suryashaktic-demo.in,5,5410000.0
+CONTRACTOR-DEMO-0015,Maruti Contractors,REG-TE-2016-5065,CONTRACTOR,Nizamabad,Telangana,2016,contact@maruticontra-demo.in,5,9380000.0
+CONTRACTOR-DEMO-0016,Om Buildcon Pvt Ltd,REG-UT-2012-2771,CONTRACTOR,Gorakhpur,Uttar Pradesh,2012,contact@ombuildconpv-demo.in,4,7170000.0
+CONTRACTOR-DEMO-0017,Vikas Engineers & Builders,REG-MA-2010-8711,CONTRACTOR,Indore,Madhya Pradesh,2010,contact@vikasenginee-demo.in,5,7070000.0
+CONTRACTOR-DEMO-0018,Bharat Civil Projects,REG-UT-2013-8541,CONTRACTOR,Lucknow,Uttar Pradesh,2013,contact@bharatcivilp-demo.in,2,1720000.0
+CONTRACTOR-DEMO-0019,Samriddhi Infrastructure Ltd,REG-RA-2014-4728,CONTRACTOR,Udaipur,Rajasthan,2014,contact@samriddhiinf-demo.in,4,7240000.0
+CONTRACTOR-DEMO-0020,Universal Engineering Works,REG-UT-2010-4164,CONTRACTOR,Lucknow,Uttar Pradesh,2010,contact@universaleng-demo.in,1,1110000.0
+CONTRACTOR-DEMO-0021,Apex Contractors,REG-MA-2015-5564,CONTRACTOR,Indore,Madhya Pradesh,2015,contact@apexcontract-demo.in,5,7470000.0
+CONTRACTOR-DEMO-0022,Reliable Engineers & Builders,REG-OD-2011-5573,CONTRACTOR,Khordha,Odisha,2011,contact@reliableengi-demo.in,3,2660000.0
+CONTRACTOR-DEMO-0023,Reliable Buildcon Pvt Ltd,REG-RA-2020-9346,CONTRACTOR,Udaipur,Rajasthan,2020,contact@reliablebuil-demo.in,3,5240000.0
+CONTRACTOR-DEMO-0024,Modern Contractors,REG-MA-2020-9785,CONTRACTOR,Indore,Madhya Pradesh,2020,contact@moderncontra-demo.in,5,9420000.0
+CONTRACTOR-DEMO-0025,Aditya Infra Solutions,REG-RA-2010-2889,CONTRACTOR,Jodhpur,Rajasthan,2010,contact@adityainfras-demo.in,7,10320000.0
+CONTRACTOR-DEMO-0026,Gitanjali Buildcon Pvt Ltd,REG-OD-2014-3925,CONTRACTOR,Cuttack,Odisha,2014,contact@gitanjalibui-demo.in,8,9790000.0
+CONTRACTOR-DEMO-0027,Modern Rural Developers,REG-TA-2014-1626,CONTRACTOR,Coimbatore,Tamil Nadu,2014,contact@modernrurald-demo.in,4,8920000.0
+CONTRACTOR-DEMO-0028,Siddhartha Buildcon Pvt Ltd,REG-MA-2019-8119,CONTRACTOR,Nagpur,Maharashtra,2019,contact@siddharthabu-demo.in,3,6550000.0
+CONTRACTOR-DEMO-0029,Pragati Construction Co,REG-RA-2021-6139,CONTRACTOR,Udaipur,Rajasthan,2021,contact@pragaticonst-demo.in,3,4070000.0
+CONTRACTOR-DEMO-0030,Hindustan Civil Projects,REG-MA-2019-9379,CONTRACTOR,Bhopal,Madhya Pradesh,2019,contact@hindustanciv-demo.in,5,7670000.0
+CONTRACTOR-DEMO-0031,Shiv Shakti Buildcon Pvt Ltd,REG-MA-2016-4114,CONTRACTOR,Nagpur,Maharashtra,2016,contact@shivshaktibu-demo.in,4,5030000.0
+CONTRACTOR-DEMO-0032,Golden Rural Developers,REG-UT-2010-8144,CONTRACTOR,Gorakhpur,Uttar Pradesh,2010,contact@goldenrurald-demo.in,6,11230000.0
+CONTRACTOR-DEMO-0033,Golden Buildcon Pvt Ltd,REG-GU-2018-9821,CONTRACTOR,Rajkot,Gujarat,2018,contact@goldenbuildc-demo.in,4,5630000.0
+CONTRACTOR-DEMO-0034,Maruti Engineers & Builders,REG-KE-2021-4228,CONTRACTOR,Wayanad,Kerala,2021,contact@marutiengine-demo.in,2,1410000.0
+CONTRACTOR-DEMO-0035,Surya Shakti Urban Works Pvt Ltd,REG-RA-2016-2146,CONTRACTOR,Udaipur,Rajasthan,2016,contact@suryashaktiu-demo.in,2,3580000.0
+CONTRACTOR-DEMO-0036,Sai Projects Ltd,REG-KE-2015-6143,CONTRACTOR,Wayanad,Kerala,2015,contact@saiprojectsl-demo.in,8,10680000.0
+CONTRACTOR-DEMO-0037,Classic Urban Works Pvt Ltd,REG-KE-2011-5920,CONTRACTOR,Wayanad,Kerala,2011,contact@classicurban-demo.in,7,10250000.0
+CONTRACTOR-DEMO-0038,Om Infrastructure Ltd,REG-KA-2014-7691,CONTRACTOR,Mysuru,Karnataka,2014,contact@ominfrastruc-demo.in,3,9790000.0
+CONTRACTOR-DEMO-0039,Vanguard Engineers & Builders,REG-RA-2016-5844,CONTRACTOR,Jodhpur,Rajasthan,2016,contact@vanguardengi-demo.in,3,3490000.0
+CONTRACTOR-DEMO-0040,Balaji Rural Developers,REG-KA-2012-4143,CONTRACTOR,Dharwad,Karnataka,2012,contact@balajirurald-demo.in,4,4210000.0
+CONTRACTOR-DEMO-0041,Om Engineers & Builders,REG-MA-2020-7211,CONTRACTOR,Bhopal,Madhya Pradesh,2020,contact@omengineersa-demo.in,4,10380000.0
+CONTRACTOR-DEMO-0042,Balaji Construction Co,REG-KE-2021-3851,CONTRACTOR,Wayanad,Kerala,2021,contact@balajiconstr-demo.in,5,11850000.0
+CONTRACTOR-DEMO-0043,Panchsheel Engineers & Builders,REG-TA-2019-5930,CONTRACTOR,Madurai,Tamil Nadu,2019,contact@panchsheelen-demo.in,6,9360000.0
+CONTRACTOR-DEMO-0044,United Engineering Works,REG-MA-2018-1006,CONTRACTOR,Indore,Madhya Pradesh,2018,contact@unitedengine-demo.in,5,14780000.0
+CONTRACTOR-DEMO-0045,Shiv Shakti Rural Developers,REG-RA-2014-4443,CONTRACTOR,Jaipur,Rajasthan,2014,contact@shivshaktiru-demo.in,6,9520000.0
+CONTRACTOR-DEMO-0046,Classic Projects Ltd,REG-MA-2019-6279,CONTRACTOR,Bhopal,Madhya Pradesh,2019,contact@classicproje-demo.in,7,14500000.0
+CONTRACTOR-DEMO-0047,Golden Civil Projects,REG-MA-2017-8244,CONTRACTOR,Jabalpur,Madhya Pradesh,2017,contact@goldencivilp-demo.in,4,8240000.0
+CONTRACTOR-DEMO-0048,Shanti Rural Developers,REG-KE-2013-9375,CONTRACTOR,Wayanad,Kerala,2013,contact@shantirurald-demo.in,2,4270000.0
+CONTRACTOR-DEMO-0049,National Buildcon Pvt Ltd,REG-KA-2021-3780,CONTRACTOR,Bengaluru Rural,Karnataka,2021,contact@nationalbuil-demo.in,6,7990000.0
+CONTRACTOR-DEMO-0050,Sai Engineering Works,REG-KE-2011-5649,CONTRACTOR,Wayanad,Kerala,2011,contact@saiengineeri-demo.in,5,7690000.0
+CONTRACTOR-DEMO-0051,Maruti Engineering Works,REG-KA-2020-6491,CONTRACTOR,Mysuru,Karnataka,2020,contact@marutiengine-demo.in,5,5380000.0
+CONTRACTOR-DEMO-0052,Siddhartha Urban Works Pvt Ltd,REG-GU-2013-6085,CONTRACTOR,Surat,Gujarat,2013,contact@siddharthaur-demo.in,6,6760000.0
+CONTRACTOR-DEMO-0053,Bharat Engineers & Builders,REG-UT-2013-3414,CONTRACTOR,Lucknow,Uttar Pradesh,2013,contact@bharatengine-demo.in,6,7710000.0
+CONTRACTOR-DEMO-0054,Krishna Construction Co,REG-GU-2010-5011,CONTRACTOR,Rajkot,Gujarat,2010,contact@krishnaconst-demo.in,6,10730000.0
+CONTRACTOR-DEMO-0055,Gitanjali Projects Ltd,REG-KA-2019-2193,CONTRACTOR,Bengaluru Rural,Karnataka,2019,contact@gitanjalipro-demo.in,8,10950000.0
+CONTRACTOR-DEMO-0056,Om Construction Co,REG-MA-2016-4185,CONTRACTOR,Jabalpur,Madhya Pradesh,2016,contact@omconstructi-demo.in,7,10360000.0
+CONTRACTOR-DEMO-0057,Universal Projects Ltd,REG-KE-2021-7291,CONTRACTOR,Ernakulam,Kerala,2021,contact@universalpro-demo.in,6,13770000.0
+CONTRACTOR-DEMO-0058,Panchsheel Urban Works Pvt Ltd,REG-KA-2016-4997,CONTRACTOR,Bengaluru Rural,Karnataka,2016,contact@panchsheelur-demo.in,4,8550000.0
+CONTRACTOR-DEMO-0059,National Rural Developers,REG-MA-2020-1090,CONTRACTOR,Pune,Maharashtra,2020,contact@nationalrura-demo.in,3,4630000.0
+CONTRACTOR-DEMO-0060,Premier Contractors,REG-OD-2011-7965,CONTRACTOR,Cuttack,Odisha,2011,contact@premiercontr-demo.in,4,6320000.0
+CONTRACTOR-DEMO-0061,Gitanjali Engineers & Builders,REG-UT-2012-9486,CONTRACTOR,Lucknow,Uttar Pradesh,2012,contact@gitanjalieng-demo.in,3,5680000.0
+CONTRACTOR-DEMO-0062,Panchsheel Projects Ltd,REG-MA-2010-5082,CONTRACTOR,Jabalpur,Madhya Pradesh,2010,contact@panchsheelpr-demo.in,3,5500000.0
+CONTRACTOR-DEMO-0063,Navnirman Infrastructure Ltd,REG-OD-2011-8478,CONTRACTOR,Ganjam,Odisha,2011,contact@navnirmaninf-demo.in,5,6780000.0
+CONTRACTOR-DEMO-0064,Sai Civil Projects,REG-MA-2017-9702,CONTRACTOR,Pune,Maharashtra,2017,contact@saicivilproj-demo.in,6,10830000.0
+CONTRACTOR-DEMO-0065,Kisan Enterprises,REG-KA-2019-6198,CONTRACTOR,Dharwad,Karnataka,2019,contact@kisanenterpr-demo.in,5,9840000.0
+CONTRACTOR-DEMO-0066,Aditya Projects Ltd,REG-TE-2017-9270,CONTRACTOR,Warangal,Telangana,2017,contact@adityaprojec-demo.in,7,11940000.0
+CONTRACTOR-DEMO-0067,Premier Infra Solutions,REG-MA-2018-8305,CONTRACTOR,Bhopal,Madhya Pradesh,2018,contact@premierinfra-demo.in,2,2410000.0
+CONTRACTOR-DEMO-0068,National Civil Projects,REG-OD-2012-8777,CONTRACTOR,Cuttack,Odisha,2012,contact@nationalcivi-demo.in,1,2170000.0
+CONTRACTOR-DEMO-0069,Samriddhi Infra Solutions,REG-MA-2014-5050,CONTRACTOR,Jabalpur,Madhya Pradesh,2014,contact@samriddhiinf-demo.in,3,5180000.0
+CONTRACTOR-DEMO-0070,Alliance Projects Ltd,REG-TE-2020-5543,CONTRACTOR,Karimnagar,Telangana,2020,contact@allianceproj-demo.in,6,8410000.0
+CONTRACTOR-DEMO-0071,Kisan Infra Solutions,REG-TE-2018-8939,CONTRACTOR,Warangal,Telangana,2018,contact@kisaninfraso-demo.in,11,19000000.0
+CONTRACTOR-DEMO-0072,Sai Rural Developers,REG-TA-2013-5499,CONTRACTOR,Salem,Tamil Nadu,2013,contact@sairuraldeve-demo.in,5,5990000.0
+CONTRACTOR-DEMO-0073,Gitanjali Engineering Works,REG-MA-2011-5681,CONTRACTOR,Jabalpur,Madhya Pradesh,2011,contact@gitanjalieng-demo.in,6,7340000.0
+CONTRACTOR-DEMO-0074,Hindustan Urban Works Pvt Ltd,REG-UT-2014-6502,CONTRACTOR,Lucknow,Uttar Pradesh,2014,contact@hindustanurb-demo.in,10,14260000.0
+CONTRACTOR-DEMO-0075,National Engineering Works,REG-RA-2018-2320,CONTRACTOR,Jodhpur,Rajasthan,2018,contact@nationalengi-demo.in,4,7370000.0
+CONTRACTOR-DEMO-0076,Vanguard Infrastructure Ltd,REG-MA-2012-4788,CONTRACTOR,Pune,Maharashtra,2012,contact@vanguardinfr-demo.in,2,2910000.0
+CONTRACTOR-DEMO-0077,Aditya Construction Co,REG-MA-2021-3503,CONTRACTOR,Indore,Madhya Pradesh,2021,contact@adityaconstr-demo.in,2,1820000.0
+CONTRACTOR-DEMO-0078,Maruti Civil Projects,REG-KE-2013-2052,CONTRACTOR,Ernakulam,Kerala,2013,contact@maruticivilp-demo.in,6,7280000.0
+CONTRACTOR-DEMO-0079,Balaji Civil Projects,REG-MA-2016-6421,CONTRACTOR,Bhopal,Madhya Pradesh,2016,contact@balajicivilp-demo.in,6,11190000.0
+CONTRACTOR-DEMO-0080,Krishna Urban Works Pvt Ltd,REG-KA-2017-7812,CONTRACTOR,Dharwad,Karnataka,2017,contact@krishnaurban-demo.in,4,9300000.0
+CONTRACTOR-DEMO-0081,Vanguard Urban Works Pvt Ltd,REG-GU-2013-7883,CONTRACTOR,Ahmedabad,Gujarat,2013,contact@vanguardurba-demo.in,9,12190000.0
+CONTRACTOR-DEMO-0082,Siddhartha Construction Co,REG-MA-2019-1320,CONTRACTOR,Indore,Madhya Pradesh,2019,contact@siddharthaco-demo.in,5,7040000.0
+CONTRACTOR-DEMO-0083,Maruti Buildcon Pvt Ltd,REG-OD-2019-7232,CONTRACTOR,Khordha,Odisha,2019,contact@marutibuildc-demo.in,3,3730000.0
+CONTRACTOR-DEMO-0084,Apex Buildcon Pvt Ltd,REG-KA-2010-6763,CONTRACTOR,Bengaluru Rural,Karnataka,2010,contact@apexbuildcon-demo.in,2,4700000.0
+CONTRACTOR-DEMO-0085,Kisan Rural Developers,REG-RA-2016-7865,CONTRACTOR,Jaipur,Rajasthan,2016,contact@kisanruralde-demo.in,6,6370000.0
+CONTRACTOR-DEMO-0086,Swastik Buildcon Pvt Ltd,REG-KA-2021-9947,CONTRACTOR,Dharwad,Karnataka,2021,contact@swastikbuild-demo.in,7,12490000.0
+CONTRACTOR-DEMO-0087,Swastik Infrastructure Ltd,REG-TE-2019-4613,CONTRACTOR,Nizamabad,Telangana,2019,contact@swastikinfra-demo.in,6,7600000.0
+CONTRACTOR-DEMO-0088,Alliance Contractors,REG-KA-2013-5471,CONTRACTOR,Bengaluru Rural,Karnataka,2013,contact@alliancecont-demo.in,3,2600000.0
+CONTRACTOR-DEMO-0089,Kisan Urban Works Pvt Ltd,REG-MA-2017-1475,CONTRACTOR,Bhopal,Madhya Pradesh,2017,contact@kisanurbanwo-demo.in,1,1190000.0
+CONTRACTOR-DEMO-0090,Om Civil Projects,REG-MA-2015-7624,CONTRACTOR,Indore,Madhya Pradesh,2015,contact@omcivilproje-demo.in,4,4890000.0
+CONTRACTOR-DEMO-0091,Reliable Construction Co,REG-KE-2012-8657,CONTRACTOR,Kozhikode,Kerala,2012,contact@reliablecons-demo.in,6,6940000.0
+CONTRACTOR-DEMO-0092,Apex Infra Solutions,REG-OD-2012-9751,CONTRACTOR,Ganjam,Odisha,2012,contact@apexinfrasol-demo.in,2,2240000.0
+CONTRACTOR-DEMO-0093,Reliable Infrastructure Ltd,REG-GU-2016-1444,CONTRACTOR,Rajkot,Gujarat,2016,contact@reliableinfr-demo.in,3,5100000.0
+CONTRACTOR-DEMO-0094,Panchsheel Construction Co,REG-GU-2020-8022,CONTRACTOR,Surat,Gujarat,2020,contact@panchsheelco-demo.in,4,5940000.0
+CONTRACTOR-DEMO-0095,Panchsheel Engineering Works,REG-MA-2017-3977,CONTRACTOR,Pune,Maharashtra,2017,contact@panchsheelen-demo.in,1,1780000.0
+CONTRACTOR-DEMO-0096,Kisan Contractors,REG-GU-2014-7211,CONTRACTOR,Ahmedabad,Gujarat,2014,contact@kisancontrac-demo.in,7,5950000.0
+CONTRACTOR-DEMO-0097,Surya Shakti Buildcon Pvt Ltd,REG-RA-2013-8449,CONTRACTOR,Jodhpur,Rajasthan,2013,contact@suryashaktib-demo.in,5,10110000.0
+CONTRACTOR-DEMO-0098,Vanguard Civil Projects,REG-RA-2015-7211,CONTRACTOR,Jodhpur,Rajasthan,2015,contact@vanguardcivi-demo.in,6,5740000.0
+CONTRACTOR-DEMO-0099,Maruti Infrastructure Ltd,REG-UT-2016-5133,CONTRACTOR,Gorakhpur,Uttar Pradesh,2016,contact@marutiinfras-demo.in,2,3150000.0
+CONTRACTOR-DEMO-0100,Modern Civil Projects,REG-TE-2011-8705,CONTRACTOR,Karimnagar,Telangana,2011,contact@moderncivilp-demo.in,3,3460000.0
+CONTRACTOR-DEMO-0101,Bharat Construction Co,REG-GU-2021-9837,CONTRACTOR,Rajkot,Gujarat,2021,contact@bharatconstr-demo.in,8,14730000.0
+CONTRACTOR-DEMO-0102,Samriddhi Civil Projects,REG-GU-2015-4673,CONTRACTOR,Ahmedabad,Gujarat,2015,contact@samriddhiciv-demo.in,8,12520000.0
+CONTRACTOR-DEMO-0103,Om Enterprises,REG-TA-2011-1659,CONTRACTOR,Salem,Tamil Nadu,2011,contact@omenterprise-demo.in,2,3470000.0
+CONTRACTOR-DEMO-0104,Panchsheel Enterprises,REG-TE-2010-5051,CONTRACTOR,Warangal,Telangana,2010,contact@panchsheelen-demo.in,2,3770000.0
+CONTRACTOR-DEMO-0105,Krishna Buildcon Pvt Ltd,REG-UT-2010-3496,CONTRACTOR,Varanasi,Uttar Pradesh,2010,contact@krishnabuild-demo.in,7,14750000.0
+CONTRACTOR-DEMO-0106,Modern Engineering Works,REG-UT-2012-8758,CONTRACTOR,Lucknow,Uttar Pradesh,2012,contact@modernengine-demo.in,4,7360000.0
+CONTRACTOR-DEMO-0107,Golden Construction Co,REG-KE-2011-4571,CONTRACTOR,Wayanad,Kerala,2011,contact@goldenconstr-demo.in,0,0.0
+CONTRACTOR-DEMO-0108,Shanti Buildcon Pvt Ltd,REG-MA-2021-5198,CONTRACTOR,Jabalpur,Madhya Pradesh,2021,contact@shantibuildc-demo.in,4,4210000.0
+CONTRACTOR-DEMO-0109,Surya Shakti Contractors,REG-TE-2015-3749,CONTRACTOR,Warangal,Telangana,2015,contact@suryashaktic-demo.in,7,7760000.0
+CONTRACTOR-DEMO-0110,Surya Shakti Rural Developers,REG-TA-2019-2876,CONTRACTOR,Madurai,Tamil Nadu,2019,contact@suryashaktir-demo.in,4,6300000.0
+CONTRACTOR-DEMO-0111,Modern Construction Co,REG-TE-2012-6096,CONTRACTOR,Warangal,Telangana,2012,contact@modernconstr-demo.in,6,12420000.0
+CONTRACTOR-DEMO-0112,Hindustan Infrastructure Ltd,REG-MA-2019-1420,CONTRACTOR,Nagpur,Maharashtra,2019,contact@hindustaninf-demo.in,5,7140000.0
+CONTRACTOR-DEMO-0113,Modern Buildcon Pvt Ltd,REG-OD-2014-7149,CONTRACTOR,Ganjam,Odisha,2014,contact@modernbuildc-demo.in,6,6610000.0
+CONTRACTOR-DEMO-0114,Hindustan Contractors,REG-MA-2021-4249,CONTRACTOR,Indore,Madhya Pradesh,2021,contact@hindustancon-demo.in,3,3920000.0
+CONTRACTOR-DEMO-0115,Reliable Urban Works Pvt Ltd,REG-GU-2019-4978,CONTRACTOR,Surat,Gujarat,2019,contact@reliableurba-demo.in,8,12290000.0
+CONTRACTOR-DEMO-0116,Samriddhi Projects Ltd,REG-MA-2021-5941,CONTRACTOR,Nagpur,Maharashtra,2021,contact@samriddhipro-demo.in,4,4750000.0
+CONTRACTOR-DEMO-0117,Riddhi Engineers & Builders,REG-OD-2020-2983,CONTRACTOR,Khordha,Odisha,2020,contact@riddhiengine-demo.in,4,5620000.0
+CONTRACTOR-DEMO-0118,Om Rural Developers,REG-TE-2019-1672,CONTRACTOR,Nizamabad,Telangana,2019,contact@omruraldevel-demo.in,3,5550000.0
+CONTRACTOR-DEMO-0119,Shiv Shakti Infrastructure Ltd,REG-RA-2018-8018,CONTRACTOR,Udaipur,Rajasthan,2018,contact@shivshaktiin-demo.in,10,20730000.0
+CONTRACTOR-DEMO-0120,Golden Projects Ltd,REG-KE-2015-2129,CONTRACTOR,Wayanad,Kerala,2015,contact@goldenprojec-demo.in,4,6440000.0
+CONTRACTOR-DEMO-0121,Apex Engineering Works,REG-KA-2020-6590,CONTRACTOR,Mysuru,Karnataka,2020,contact@apexengineer-demo.in,7,16180000.0
+CONTRACTOR-DEMO-0122,Shanti Construction Co,REG-GU-2016-9031,CONTRACTOR,Rajkot,Gujarat,2016,contact@shanticonstr-demo.in,2,2570000.0
+CONTRACTOR-DEMO-0123,Navnirman Urban Works Pvt Ltd,REG-MA-2016-6934,CONTRACTOR,Nagpur,Maharashtra,2016,contact@navnirmanurb-demo.in,1,1200000.0
+CONTRACTOR-DEMO-0124,Samriddhi Construction Co,REG-TA-2017-3506,CONTRACTOR,Salem,Tamil Nadu,2017,contact@samriddhicon-demo.in,4,6950000.0
+CONTRACTOR-DEMO-0125,Samriddhi Contractors,REG-MA-2012-9548,CONTRACTOR,Bhopal,Madhya Pradesh,2012,contact@samriddhicon-demo.in,1,1760000.0
+CONTRACTOR-DEMO-0126,Swastik Engineers & Builders,REG-TA-2014-9817,CONTRACTOR,Salem,Tamil Nadu,2014,contact@swastikengin-demo.in,4,6150000.0
+CONTRACTOR-DEMO-0127,Samriddhi Engineering Works,REG-TE-2017-8616,CONTRACTOR,Warangal,Telangana,2017,contact@samriddhieng-demo.in,1,960000.0
+CONTRACTOR-DEMO-0128,Classic Infrastructure Ltd,REG-MA-2021-5397,CONTRACTOR,Bhopal,Madhya Pradesh,2021,contact@classicinfra-demo.in,8,18010000.0
+CONTRACTOR-DEMO-0129,Mahalaxmi Engineers & Builders,REG-RA-2013-2419,CONTRACTOR,Jodhpur,Rajasthan,2013,contact@mahalaxmieng-demo.in,9,12030000.0
+CONTRACTOR-DEMO-0130,Vikas Urban Works Pvt Ltd,REG-UT-2017-4995,CONTRACTOR,Gorakhpur,Uttar Pradesh,2017,contact@vikasurbanwo-demo.in,6,8700000.0
+CONTRACTOR-DEMO-0131,Panchsheel Rural Developers,REG-TE-2017-7209,CONTRACTOR,Warangal,Telangana,2017,contact@panchsheelru-demo.in,3,8870000.0
+CONTRACTOR-DEMO-0132,Riddhi Infrastructure Ltd,REG-RA-2010-9098,CONTRACTOR,Jodhpur,Rajasthan,2010,contact@riddhiinfras-demo.in,3,6690000.0
+CONTRACTOR-DEMO-0133,Mahalaxmi Contractors,REG-OD-2015-3979,CONTRACTOR,Khordha,Odisha,2015,contact@mahalaxmicon-demo.in,6,11230000.0
+CONTRACTOR-DEMO-0134,Shiv Shakti Engineering Works,REG-KA-2013-6813,CONTRACTOR,Bengaluru Rural,Karnataka,2013,contact@shivshaktien-demo.in,1,2060000.0
+CONTRACTOR-DEMO-0135,Pragati Rural Developers,REG-TE-2014-6576,CONTRACTOR,Nizamabad,Telangana,2014,contact@pragatirural-demo.in,2,2830000.0
+CONTRACTOR-DEMO-0136,Shree Ganesh Engineering Works,REG-UT-2019-5526,CONTRACTOR,Gorakhpur,Uttar Pradesh,2019,contact@shreeganeshe-demo.in,2,2960000.0
+CONTRACTOR-DEMO-0137,Om Contractors,REG-KA-2010-9464,CONTRACTOR,Dharwad,Karnataka,2010,contact@omcontractor-demo.in,5,11180000.0
+CONTRACTOR-DEMO-0138,Pragati Buildcon Pvt Ltd,REG-UT-2011-4954,CONTRACTOR,Varanasi,Uttar Pradesh,2011,contact@pragatibuild-demo.in,7,13710000.0
+CONTRACTOR-DEMO-0139,Premier Enterprises,REG-KE-2016-9004,CONTRACTOR,Kozhikode,Kerala,2016,contact@premierenter-demo.in,3,2800000.0
+CONTRACTOR-DEMO-0140,Krishna Enterprises,REG-KA-2013-8800,CONTRACTOR,Dharwad,Karnataka,2013,contact@krishnaenter-demo.in,2,3830000.0
+CONTRACTOR-DEMO-0141,Alliance Engineering Works,REG-TA-2021-9041,CONTRACTOR,Salem,Tamil Nadu,2021,contact@allianceengi-demo.in,4,6260000.0
+CONTRACTOR-DEMO-0142,Panchsheel Infra Solutions,REG-MA-2010-2524,CONTRACTOR,Jabalpur,Madhya Pradesh,2010,contact@panchsheelin-demo.in,5,6010000.0
+CONTRACTOR-DEMO-0143,Mahalaxmi Rural Developers,REG-RA-2013-7625,CONTRACTOR,Jaipur,Rajasthan,2013,contact@mahalaxmirur-demo.in,2,3070000.0
+CONTRACTOR-DEMO-0144,Navnirman Engineering Works,REG-KE-2013-6016,CONTRACTOR,Ernakulam,Kerala,2013,contact@navnirmaneng-demo.in,2,1850000.0
+CONTRACTOR-DEMO-0145,Samriddhi Urban Works Pvt Ltd,REG-KE-2019-7046,CONTRACTOR,Wayanad,Kerala,2019,contact@samriddhiurb-demo.in,6,14870000.0
+CONTRACTOR-DEMO-0146,Vikas Infrastructure Ltd,REG-KA-2018-9698,CONTRACTOR,Bengaluru Rural,Karnataka,2018,contact@vikasinfrast-demo.in,1,940000.0
+CONTRACTOR-DEMO-0147,Alliance Engineers & Builders,REG-RA-2016-6419,CONTRACTOR,Udaipur,Rajasthan,2016,contact@allianceengi-demo.in,2,2110000.0
+CONTRACTOR-DEMO-0148,National Engineers & Builders,REG-RA-2021-8434,CONTRACTOR,Udaipur,Rajasthan,2021,contact@nationalengi-demo.in,7,8150000.0
+CONTRACTOR-DEMO-0149,Classic Buildcon Pvt Ltd,REG-UT-2014-5118,CONTRACTOR,Gorakhpur,Uttar Pradesh,2014,contact@classicbuild-demo.in,10,13520000.0
+CONTRACTOR-DEMO-0150,Reliable Engineering Works,REG-UT-2011-4155,CONTRACTOR,Lucknow,Uttar Pradesh,2011,contact@reliableengi-demo.in,6,11930000.0
+CONTRACTOR-DEMO-0151,Modern Projects Ltd,REG-RA-2011-9779,CONTRACTOR,Jodhpur,Rajasthan,2011,contact@modernprojec-demo.in,8,14670000.0
+CONTRACTOR-DEMO-0152,National Construction Co,REG-TE-2021-4033,CONTRACTOR,Warangal,Telangana,2021,contact@nationalcons-demo.in,2,2200000.0
+CONTRACTOR-DEMO-0153,Siddhartha Infrastructure Ltd,REG-UT-2013-8933,CONTRACTOR,Varanasi,Uttar Pradesh,2013,contact@siddharthain-demo.in,6,9950000.0
+CONTRACTOR-DEMO-0154,Panchsheel Infrastructure Ltd,REG-UT-2021-9595,CONTRACTOR,Gorakhpur,Uttar Pradesh,2021,contact@panchsheelin-demo.in,1,1160000.0
+CONTRACTOR-DEMO-0155,Reliable Contractors,REG-TA-2014-2647,CONTRACTOR,Madurai,Tamil Nadu,2014,contact@reliablecont-demo.in,4,12300000.0
+CONTRACTOR-DEMO-0156,Alliance Infra Solutions,REG-TE-2013-5853,CONTRACTOR,Karimnagar,Telangana,2013,contact@allianceinfr-demo.in,3,11590000.0
+CONTRACTOR-DEMO-0157,Surya Shakti Infra Solutions,REG-UT-2015-3939,CONTRACTOR,Lucknow,Uttar Pradesh,2015,contact@suryashaktii-demo.in,6,8970000.0
+CONTRACTOR-DEMO-0158,Vikas Rural Developers,REG-RA-2010-9751,CONTRACTOR,Jaipur,Rajasthan,2010,contact@vikasruralde-demo.in,3,4600000.0
+CONTRACTOR-DEMO-0159,Samriddhi Engineers & Builders,REG-MA-2014-1745,CONTRACTOR,Pune,Maharashtra,2014,contact@samriddhieng-demo.in,4,5940000.0
+CONTRACTOR-DEMO-0160,Krishna Engineering Works,REG-GU-2018-5786,CONTRACTOR,Ahmedabad,Gujarat,2018,contact@krishnaengin-demo.in,4,6150000.0
+CONTRACTOR-DEMO-0161,Sai Infrastructure Ltd,REG-KE-2012-9042,CONTRACTOR,Ernakulam,Kerala,2012,contact@saiinfrastru-demo.in,5,5990000.0
+CONTRACTOR-DEMO-0162,Reliable Enterprises,REG-MA-2010-5658,CONTRACTOR,Nagpur,Maharashtra,2010,contact@reliableente-demo.in,6,10080000.0
+CONTRACTOR-DEMO-0163,Samriddhi Enterprises,REG-KA-2017-8216,CONTRACTOR,Bengaluru Rural,Karnataka,2017,contact@samriddhient-demo.in,2,5440000.0
+CONTRACTOR-DEMO-0164,Kisan Civil Projects,REG-RA-2012-1841,CONTRACTOR,Jodhpur,Rajasthan,2012,contact@kisancivilpr-demo.in,4,5680000.0
+CONTRACTOR-DEMO-0165,Riddhi Infra Solutions,REG-UT-2017-2869,CONTRACTOR,Gorakhpur,Uttar Pradesh,2017,contact@riddhiinfras-demo.in,5,12460000.0
+CONTRACTOR-DEMO-0166,Shiv Shakti Engineers & Builders,REG-TE-2011-7565,CONTRACTOR,Karimnagar,Telangana,2011,contact@shivshaktien-demo.in,6,9970000.0
+CONTRACTOR-DEMO-0167,Shiv Shakti Civil Projects,REG-KA-2011-1878,CONTRACTOR,Bengaluru Rural,Karnataka,2011,contact@shivshaktici-demo.in,3,5420000.0
+CONTRACTOR-DEMO-0168,Navnirman Infra Solutions,REG-MA-2012-5978,CONTRACTOR,Pune,Maharashtra,2012,contact@navnirmaninf-demo.in,5,6560000.0
+CONTRACTOR-DEMO-0169,Swastik Civil Projects,REG-GU-2013-2940,CONTRACTOR,Surat,Gujarat,2013,contact@swastikcivil-demo.in,6,7930000.0
+CONTRACTOR-DEMO-0170,Alliance Rural Developers,REG-KA-2016-4697,CONTRACTOR,Dharwad,Karnataka,2016,contact@alliancerura-demo.in,2,2400000.0
+CONTRACTOR-DEMO-0171,Golden Contractors,REG-TE-2018-7232,CONTRACTOR,Warangal,Telangana,2018,contact@goldencontra-demo.in,9,12710000.0
+CONTRACTOR-DEMO-0172,Aditya Enterprises,REG-MA-2017-5871,CONTRACTOR,Jabalpur,Madhya Pradesh,2017,contact@adityaenterp-demo.in,3,2920000.0
+CONTRACTOR-DEMO-0173,Kisan Infrastructure Ltd,REG-OD-2019-8025,CONTRACTOR,Khordha,Odisha,2019,contact@kisaninfrast-demo.in,6,10170000.0
+CONTRACTOR-DEMO-0174,Maruti Projects Ltd,REG-RA-2019-1986,CONTRACTOR,Jaipur,Rajasthan,2019,contact@marutiprojec-demo.in,3,6070000.0
+CONTRACTOR-DEMO-0175,Premier Projects Ltd,REG-TA-2021-2625,CONTRACTOR,Madurai,Tamil Nadu,2021,contact@premierproje-demo.in,2,4070000.0
+CONTRACTOR-DEMO-0176,Surya Shakti Infrastructure Ltd,REG-TE-2013-4457,CONTRACTOR,Warangal,Telangana,2013,contact@suryashaktii-demo.in,5,8550000.0
+CONTRACTOR-DEMO-0177,Apex Enterprises,REG-UT-2020-2330,CONTRACTOR,Gorakhpur,Uttar Pradesh,2020,contact@apexenterpri-demo.in,9,13030000.0
+CONTRACTOR-DEMO-0178,Golden Engineering Works,REG-MA-2013-3847,CONTRACTOR,Nashik,Maharashtra,2013,contact@goldenengine-demo.in,1,630000.0
+CONTRACTOR-DEMO-0179,Om Infra Solutions,REG-KA-2011-3564,CONTRACTOR,Dharwad,Karnataka,2011,contact@ominfrasolut-demo.in,3,4790000.0
+CONTRACTOR-DEMO-0180,Siddhartha Infra Solutions,REG-GU-2016-8381,CONTRACTOR,Rajkot,Gujarat,2016,contact@siddharthain-demo.in,1,1620000.0
+CONTRACTOR-DEMO-0181,Navnirman Engineers & Builders,REG-KE-2019-8699,CONTRACTOR,Ernakulam,Kerala,2019,contact@navnirmaneng-demo.in,3,6470000.0
+CONTRACTOR-DEMO-0182,Mahalaxmi Projects Ltd,REG-RA-2010-4792,CONTRACTOR,Jaipur,Rajasthan,2010,contact@mahalaxmipro-demo.in,2,2500000.0
+CONTRACTOR-DEMO-0183,Shree Ganesh Infra Solutions,REG-RA-2021-5632,CONTRACTOR,Jaipur,Rajasthan,2021,contact@shreeganeshi-demo.in,2,2050000.0
+CONTRACTOR-DEMO-0184,Shanti Projects Ltd,REG-KE-2017-2166,CONTRACTOR,Ernakulam,Kerala,2017,contact@shantiprojec-demo.in,7,11600000.0
+CONTRACTOR-DEMO-0185,United Construction Co,REG-KE-2013-5334,CONTRACTOR,Wayanad,Kerala,2013,contact@unitedconstr-demo.in,4,4390000.0
+CONTRACTOR-DEMO-0186,Classic Enterprises,REG-TE-2020-4241,CONTRACTOR,Nizamabad,Telangana,2020,contact@classicenter-demo.in,5,7530000.0
+CONTRACTOR-DEMO-0187,Balaji Engineering Works,REG-MA-2011-9922,CONTRACTOR,Bhopal,Madhya Pradesh,2011,contact@balajiengine-demo.in,3,6880000.0
+CONTRACTOR-DEMO-0188,Universal Contractors,REG-UT-2020-3441,CONTRACTOR,Lucknow,Uttar Pradesh,2020,contact@universalcon-demo.in,3,2790000.0
+CONTRACTOR-DEMO-0189,Balaji Engineers & Builders,REG-OD-2014-3330,CONTRACTOR,Ganjam,Odisha,2014,contact@balajiengine-demo.in,3,3770000.0
+CONTRACTOR-DEMO-0190,Balaji Enterprises,REG-GU-2010-3718,CONTRACTOR,Surat,Gujarat,2010,contact@balajienterp-demo.in,2,3240000.0
+CONTRACTOR-DEMO-0191,Surya Shakti Civil Projects,REG-TE-2014-5728,CONTRACTOR,Nizamabad,Telangana,2014,contact@suryashaktic-demo.in,6,7940000.0
+CONTRACTOR-DEMO-0192,Navnirman Buildcon Pvt Ltd,REG-MA-2011-8679,CONTRACTOR,Jabalpur,Madhya Pradesh,2011,contact@navnirmanbui-demo.in,8,12010000.0
+CONTRACTOR-DEMO-0193,Balaji Urban Works Pvt Ltd,REG-KE-2014-7594,CONTRACTOR,Ernakulam,Kerala,2014,contact@balajiurbanw-demo.in,3,4000000.0
+CONTRACTOR-DEMO-0194,United Urban Works Pvt Ltd,REG-UT-2018-9847,CONTRACTOR,Gorakhpur,Uttar Pradesh,2018,contact@unitedurbanw-demo.in,6,16850000.0
+CONTRACTOR-DEMO-0195,National Infra Solutions,REG-KA-2017-2317,CONTRACTOR,Bengaluru Rural,Karnataka,2017,contact@nationalinfr-demo.in,4,5920000.0
+CONTRACTOR-DEMO-0196,Pragati Engineering Works,REG-TA-2010-8078,CONTRACTOR,Madurai,Tamil Nadu,2010,contact@pragatiengin-demo.in,4,4770000.0
+CONTRACTOR-DEMO-0197,Universal Infrastructure Ltd,REG-KE-2015-5102,CONTRACTOR,Kozhikode,Kerala,2015,contact@universalinf-demo.in,4,6590000.0
+CONTRACTOR-DEMO-0198,Aditya Infrastructure Ltd,REG-GU-2011-4750,CONTRACTOR,Rajkot,Gujarat,2011,contact@adityainfras-demo.in,3,8770000.0
+CONTRACTOR-DEMO-0199,Shanti Civil Projects,REG-KE-2019-1339,CONTRACTOR,Wayanad,Kerala,2019,contact@shanticivilp-demo.in,2,2050000.0
+CONTRACTOR-DEMO-0200,Gitanjali Construction Co,REG-TE-2020-5415,CONTRACTOR,Warangal,Telangana,2020,contact@gitanjalicon-demo.in,6,9380000.0

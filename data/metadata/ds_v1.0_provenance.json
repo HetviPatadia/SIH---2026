@@ -1,0 +1,12 @@
+{
+  "source_id": "mospi_esakshi_benchmark",
+  "source_name": "MoSPI eSAKSHI & data.gov.in Simulated Benchmark",
+  "dataset_name": "MPLADS Project Registry 2024-2026",
+  "dataset_version": "ds_v1.0",
+  "dataset_period": "2024-2026",
+  "format": "CSV",
+  "download_date": "2026-09-07T14:00:30.203199",
+  "raw_file_path": "C:\\MPLADS\\SIH26102\\data\\raw\\ds_v1.0_20260907_140030.csv",
+  "record_count": 1200,
+  "checksum": "99be88d33d0a330c5caac1f4825cec30343751e76e2ed6e764b6583bc84dd5b5"
+}

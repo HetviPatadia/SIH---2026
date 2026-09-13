@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Evidence Intelligence - MPLADS Audit Intelligence</title>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts: Inter & JetBrains Mono -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS v3 -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "primary-fixed-dim": "#4fdbc8",
+            "surface-container-lowest": "#010f1f",
+            "primary": "#4fdbc8",
+            "surface-tint": "#4fdbc8",
+            "surface-dim": "#051424",
+            "tertiary-fixed-dim": "#ffb3ad",
+            "on-error-container": "#ffdad6",
+            "inverse-primary": "#006b5f",
+            "tertiary-fixed": "#ffdad7",
+            "on-secondary-fixed": "#2a1700",
+            "outline-variant": "#3c4947",
+            "on-primary-fixed-variant": "#005048",
+            "secondary-fixed": "#ffddb8",
+            "surface-container-low": "#0d1c2d",
+            "on-background": "#d4e4fa",
+            "tertiary-container": "#ff7d76",
+            "inverse-surface": "#d4e4fa",
+            "surface-container-highest": "#273647",
+            "on-tertiary": "#68000a",
+            "on-primary": "#003731",
+            "on-secondary": "#472a00",
+            "inverse-on-surface": "#233143",
+            "on-tertiary-fixed": "#410004",
+            "tertiary": "#ffb3ad",
+            "secondary-container": "#ee9800",
+            "background": "#051424",
+            "error-container": "#93000a",
+            "error": "#ffb4ab",
+            "on-secondary-fixed-variant": "#653e00",
+            "surface": "#051424",
+            "on-primary-container": "#00423b",
+            "on-secondary-container": "#5b3800",
+            "secondary-fixed-dim": "#ffb95f",
+            "secondary": "#ffb95f",
+            "surface-bright": "#2c3a4c",
+            "on-surface-variant": "#bbcac6",
+            "on-tertiary-fixed-variant": "#930013",
+            "surface-container": "#122131",
+            "surface-variant": "#273647",
+            "surface-container-high": "#1c2b3c",
+            "primary-fixed": "#71f8e4",
+            "on-surface": "#d4e4fa",
+            "on-primary-fixed": "#00201c",
+            "on-tertiary-container": "#7b000e",
+            "on-error": "#690005",
+            "outline": "#859490",
+            "primary-container": "#14b8a6"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "space-xs": "0.25rem",
+            "gutter-compact": "0.5rem",
+            "space-3xl": "2rem",
+            "space-2xs": "0.125rem",
+            "margin-screen": "1.5rem",
+            "space-2xl": "1.5rem",
+            "space-xl": "1.25rem",
+            "space-sm": "0.5rem",
+            "space-4xl": "2.5rem",
+            "space-lg": "1rem",
+            "gutter-standard": "0.75rem",
+            "gutter-panel": "1rem",
+            "space-md": "0.75rem"
+          },
+          "fontFamily": {
+            "display-lg": ["Inter", "sans-serif"],
+            "label-sm": ["Inter", "sans-serif"],
+            "mono-sm": ["JetBrains Mono", "monospace"],
+            "body-md": ["Inter", "sans-serif"],
+            "headline-md": ["Inter", "sans-serif"],
+            "headline-sm": ["Inter", "sans-serif"],
+            "mono-md": ["JetBrains Mono", "monospace"],
+            "headline-lg": ["Inter", "sans-serif"],
+            "label-lg": ["Inter", "sans-serif"],
+            "label-md": ["Inter", "sans-serif"],
+            "display-lg-mobile": ["Inter", "sans-serif"],
+            "mono-xs": ["JetBrains Mono", "monospace"],
+            "body-sm": ["Inter", "sans-serif"],
+            "body-lg": ["Inter", "sans-serif"]
+          },
+          "fontSize": {
+            "display-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.025em", "fontWeight": "600"}],
+            "label-sm": ["10px", {"lineHeight": "12px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+            "mono-sm": ["11px", {"lineHeight": "14px", "fontWeight": "400"}],
+            "body-md": ["13px", {"lineHeight": "18px", "fontWeight": "400"}],
+            "headline-md": ["18px", {"lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+            "headline-sm": ["15px", {"lineHeight": "20px", "letterSpacing": "-0.005em", "fontWeight": "600"}],
+            "mono-md": ["12px", {"lineHeight": "16px", "fontWeight": "400"}],
+            "headline-lg": ["22px", {"lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "600"}],
+            "label-lg": ["12px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+            "label-md": ["11px", {"lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600"}],
+            "display-lg-mobile": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+            "mono-xs": ["10px", {"lineHeight": "12px", "fontWeight": "500"}],
+            "body-sm": ["12px", {"lineHeight": "16px", "fontWeight": "400"}],
+            "body-lg": ["14px", {"lineHeight": "20px", "fontWeight": "400"}]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    /* Institutional custom scrollbars */
+    ::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #051424;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #273647;
+      border-radius: 2px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #3c4947;
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md antialiased h-screen overflow-hidden flex select-none">
+<!-- ================= SIDEBAR NAVIGATION ================= -->
+<aside class="flex flex-col justify-between h-full w-60 py-space-md z-40 bg-surface-dim border-r border-outline-variant shrink-0">
+<div>
+<!-- Header / Institutional Badge -->
+<div class="px-space-md pb-space-md border-b border-outline-variant flex items-center space-x-2.5">
+<div class="w-8 h-8 rounded bg-surface-container-highest flex items-center justify-center border border-outline-variant text-primary shrink-0">
+<span class="material-symbols-outlined text-[20px]" data-icon="shield">shield</span>
+</div>
+<div class="min-w-0">
+<div class="text-headline-sm font-headline-sm font-bold text-on-surface tracking-tight truncate">MPLADS Audit</div>
+<div class="text-mono-xs font-mono-xs text-on-surface-variant truncate">Govt. Forensic Desk</div>
+</div>
+</div>
+<!-- Navigation Tabs -->
+<nav class="mt-space-md flex flex-col space-y-0.5">
+<!-- 1. Dashboard -->
+<a class="border-l-2 border-transparent text-on-surface-variant px-space-md py-space-sm flex items-center space-x-2.5 hover:bg-surface-container-low hover:text-on-surface transition-all duration-150 ease-in-out text-label-md font-label-md" href="#">
+<span class="material-symbols-outlined text-[18px]" data-icon="dashboard">dashboard</span>
+<span>Dashboard</span>
+</a>
+<!-- 2. Reviews -->
+<a class="border-l-2 border-transparent text-on-surface-variant px-space-md py-space-sm flex items-center space-x-2.5 hover:bg-surface-container-low hover:text-on-surface transition-all duration-150 ease-in-out text-label-md font-label-md" href="#">
+<span class="material-symbols-outlined text-[18px]" data-icon="rate_review">rate_review</span>
+<span>Reviews</span>
+</a>
+<!-- 3. Project Investigation -->
+<a class="border-l-2 border-transparent text-on-surface-variant px-space-md py-space-sm flex items-center space-x-2.5 hover:bg-surface-container-low hover:text-on-surface transition-all duration-150 ease-in-out text-label-md font-label-md" href="#">
+<span class="material-symbols-outlined text-[18px]" data-icon="troubleshoot">troubleshoot</span>
+<span>Project Investigation</span>
+</a>
+<!-- 4. Evidence Intelligence (ACTIVE ITEM) -->
+<a class="border-l-2 border-primary text-primary bg-surface-container-low font-semibold px-space-md py-space-sm flex items-center space-x-2.5 transition-all duration-150 ease-in-out text-label-md font-label-md" href="#">
+<span class="material-symbols-outlined text-[18px]" data-icon="fingerprint">fingerprint</span>
+<span class="flex-1">Evidence Intelligence</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+</a>
+<!-- 5. Evidence Comparison -->
+<a class="border-l-2 border-transparent text-on-surface-variant px-space-md py-space-sm flex items-center space-x-2.5 hover:bg-surface-container-low hover:text-on-surface transition-all duration-150 ease-in-out text-label-md font-label-md" href="#">
+<span class="material-symbols-outlined text-[18px]" data-icon="compare">compare</span>
+<span>Evidence Comparison</span>
+</a>
+<!-- 6. Nexus Graph Intelligence -->
+<a class="border-l-2 border-transparent text-on-surface-variant px-space-md py-space-sm flex items-center space-x-2.5 hover:bg-surface-container-low hover:text-on-surface transition-all duration-150 ease-in-out text-label-md font-label-md" href="#">
+<span class="material-symbols-outlined text-[18px]" data-icon="hub">hub</span>
+<span>Nexus Graph Intelligence</span>
+</a>
+<!-- 7. GIS Intelligence -->
+<a class="border-l-2 border-transparent text-on-surface-variant px-space-md py-space-sm flex items-center space-x-2.5 hover:bg-surface-container-low hover:text-on-surface transition-all duration-150 ease-in-out text-label-md font-label-md" href="#">
+<span class="material-symbols-outlined text-[18px]" data-icon="map">map</span>
+<span>GIS Intelligence</span>
+</a>
+</nav>
+</div>
+<!-- Sidebar Footer -->
+<div class="px-space-md pt-space-sm border-t border-outline-variant flex flex-col space-y-2">
+<div class="flex items-center justify-between text-mono-xs font-mono-xs text-on-surface-variant px-1">
+<span class="flex items-center space-x-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container inline-block"></span>
+<span>System Status</span>
+</span>
+<span class="text-primary font-mono-xs">Nominal</span>
+</div>
+<div class="flex items-center justify-between text-mono-xs font-mono-xs text-outline px-1">
+<span>Session #8820-F</span>
+<span class="text-outline">TLS 1.3</span>
+</div>
+<div class="pt-1 flex flex-col space-y-1">
+<button class="w-full h-7 px-2 bg-surface-container-high border border-outline-variant hover:bg-surface-container-highest text-on-surface text-label-md font-label-md rounded flex items-center justify-center space-x-1.5 transition-colors duration-150">
+<span class="material-symbols-outlined text-[15px]" data-icon="lock">lock</span>
+<span>Lock Session</span>
+</button>
+</div>
+</div>
+</aside>
+<!-- ================= MAIN WORKBENCH CONTAINER ================= -->
+<div class="flex-1 flex flex-col min-w-0 h-full overflow-hidden bg-surface">
+<!-- TOP NAVIGATION BAR -->
+<header class="flex justify-between items-center h-10 w-full px-space-md bg-surface border-b border-outline-variant shrink-0">
+<!-- Left: Breadcrumbs & Product Navigation -->
+<div class="flex items-center space-x-3 text-label-md font-label-md min-w-0">
+<span class="text-headline-sm font-headline-sm font-semibold tracking-tight text-on-surface truncate">MPLADS Audit Intelligence</span>
+<span class="text-outline-variant">/</span>
+<span class="text-on-surface-variant hover:text-on-surface cursor-pointer truncate">Audits / DL-2024-884</span>
+<span class="text-outline-variant">/</span>
+<span class="text-primary font-semibold truncate">Evidence Ledger</span>
+<span class="text-outline-variant">/</span>
+<span class="text-mono-xs font-mono-xs px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface-variant">Session #8820-F</span>
+</div>
+<!-- Right: Global Actions & User Badge -->
+<div class="flex items-center space-x-2">
+<button class="h-7 px-2.5 bg-surface-container border border-outline-variant hover:bg-surface-container-high text-on-surface text-label-md font-label-md rounded flex items-center space-x-1 transition-colors duration-150">
+<span class="material-symbols-outlined text-[14px]" data-icon="file_download">file_download</span>
+<span>Export Ledger</span>
+</button>
+<button class="h-7 px-3 bg-primary-container text-on-primary-container hover:bg-primary font-semibold text-label-md font-label-md rounded flex items-center space-x-1 transition-colors duration-150">
+<span class="material-symbols-outlined text-[14px]" data-icon="verified">verified</span>
+<span>Verify Batch</span>
+</button>
+<div class="h-4 w-[1px] bg-outline-variant mx-1"></div>
+<button class="w-7 h-7 flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high rounded transition-colors duration-150">
+<span class="material-symbols-outlined text-[17px]" data-icon="terminal">terminal</span>
+</button>
+<button class="w-7 h-7 flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high rounded transition-colors duration-150">
+<span class="material-symbols-outlined text-[17px]" data-icon="security">security</span>
+</button>
+<button class="w-7 h-7 flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high rounded relative transition-colors duration-150">
+<span class="material-symbols-outlined text-[17px]" data-icon="notifications">notifications</span>
+<span class="absolute top-1 right-1 w-1.5 h-1.5 rounded-full bg-secondary"></span>
+</button>
+<div class="h-4 w-[1px] bg-outline-variant mx-1"></div>
+<!-- Auditor Badge -->
+<div class="flex items-center space-x-2 pl-1">
+<div class="w-6 h-6 rounded bg-surface-container-highest border border-outline-variant flex items-center justify-center text-primary text-mono-xs font-semibold">
+            AS
+          </div>
+<div class="text-left hidden xl:block">
+<div class="text-label-sm font-label-sm text-on-surface leading-none">Dr. A. Sharma</div>
+<div class="text-[9px] font-mono-xs text-outline leading-tight">Senior Audit Officer</div>
+</div>
+</div>
+</div>
+</header>
+<!-- WORKBENCH BODY -->
+<div class="flex-1 flex flex-col min-h-0 overflow-hidden">
+<!-- PAGE SUB-HEADER & METRIC KPI CARDS -->
+<div class="px-space-md py-space-sm border-b border-outline-variant bg-surface-container-lowest shrink-0 space-y-2">
+<!-- Title & Subtitle Banner -->
+<div class="flex flex-wrap items-center justify-between gap-2">
+<div>
+<h1 class="text-headline-md font-headline-md text-on-surface font-semibold tracking-tight">Evidence Intelligence</h1>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Review project evidence, evidence consistency and potential evidence reuse patterns.</p>
+</div>
+<div class="flex items-center space-x-2 text-mono-xs font-mono-xs">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant border border-outline-variant">Catalog Hash: 0x94ef..881b</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-primary border border-outline-variant flex items-center space-x-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span>Live Cross-Constituency Graph</span>
+</span>
+</div>
+</div>
+<!-- Top Compact Metrics Row (4 summary stat cards) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 pt-0.5">
+<!-- Stat 1: Evidence Available -->
+<div class="bg-surface-container-low border border-outline-variant rounded p-2.5 flex items-center justify-between hover:border-outline transition-colors">
+<div>
+<div class="text-label-sm font-label-sm text-on-surface-variant uppercase tracking-wider">Evidence Available</div>
+<div class="text-headline-sm font-headline-sm font-bold text-on-surface mt-0.5">1,428 <span class="text-body-sm font-body-sm text-outline font-normal">files</span></div>
+<div class="text-mono-xs font-mono-xs text-primary mt-0.5 flex items-center space-x-1">
+<span class="material-symbols-outlined text-[13px]" data-icon="check_circle">check_circle</span>
+<span>94.2% cataloged</span>
+</div>
+</div>
+<div class="w-8 h-8 rounded bg-surface-container-high border border-outline-variant flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]" data-icon="folder_managed">folder_managed</span>
+</div>
+</div>
+<!-- Stat 2: Missing Evidence -->
+<div class="bg-surface-container-low border border-outline-variant rounded p-2.5 flex items-center justify-between hover:border-outline transition-colors">
+<div>
+<div class="text-label-sm font-label-sm text-on-surface-variant uppercase tracking-wider">Missing Evidence</div>
+<div class="text-headline-sm font-headline-sm font-bold text-secondary mt-0.5">42 <span class="text-body-sm font-body-sm text-outline font-normal">projects</span></div>
+<div class="text-mono-xs font-mono-xs text-secondary mt-0.5 flex items-center space-x-1">
+<span class="material-symbols-outlined text-[13px]" data-icon="warning">warning</span>
+<span>Mandatory GPS stills absent</span>
+</div>
+</div>
+<div class="w-8 h-8 rounded bg-surface-container-high border border-outline-variant flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]" data-icon="photo_camera">photo_camera</span>
+</div>
+</div>
+<!-- Stat 3: Similar Evidence -->
+<div class="bg-surface-container-low border border-outline-variant rounded p-2.5 flex items-center justify-between hover:border-outline transition-colors">
+<div>
+<div class="text-label-sm font-label-sm text-on-surface-variant uppercase tracking-wider">Similar Evidence</div>
+<div class="text-headline-sm font-headline-sm font-bold text-secondary-fixed mt-0.5">18 <span class="text-body-sm font-body-sm text-outline font-normal">flagged pairs</span></div>
+<div class="text-mono-xs font-mono-xs text-secondary-fixed mt-0.5 flex items-center space-x-1">
+<span class="material-symbols-outlined text-[13px]" data-icon="difference">difference</span>
+<span>Cross-project visual match</span>
+</div>
+</div>
+<div class="w-8 h-8 rounded bg-surface-container-high border border-outline-variant flex items-center justify-center text-secondary-fixed">
+<span class="material-symbols-outlined text-[18px]" data-icon="compare_arrows">compare_arrows</span>
+</div>
+</div>
+<!-- Stat 4: Requires Verification -->
+<div class="bg-surface-container-low border border-outline-variant rounded p-2.5 flex items-center justify-between hover:border-outline transition-colors">
+<div>
+<div class="text-label-sm font-label-sm text-on-surface-variant uppercase tracking-wider">Requires Verification</div>
+<div class="text-headline-sm font-headline-sm font-bold text-tertiary mt-0.5">27 <span class="text-body-sm font-body-sm text-outline font-normal">items</span></div>
+<div class="text-mono-xs font-mono-xs text-tertiary mt-0.5 flex items-center space-x-1">
+<span class="material-symbols-outlined text-[13px]" data-icon="assignment_late">assignment_late</span>
+<span>Pending auditor sign-off</span>
+</div>
+</div>
+<div class="w-8 h-8 rounded bg-surface-container-high border border-outline-variant flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[18px]" data-icon="pending_actions">pending_actions</span>
+</div>
+</div>
+</div>
+</div>
+<!-- FILTER & CONTROL TOOLBAR -->
+<div class="px-space-md py-2 bg-surface-dim border-b border-outline-variant shrink-0 flex flex-wrap items-center justify-between gap-2">
+<div class="flex flex-wrap items-center gap-2 flex-1 min-w-0">
+<!-- Search Bar -->
+<div class="relative w-72 max-w-full">
+<span class="material-symbols-outlined absolute left-2.5 top-2 text-[16px] text-outline" data-icon="search">search</span>
+<input class="w-full h-8 pl-8 pr-3 text-body-sm font-body-sm bg-surface-container-low border border-outline-variant rounded text-on-surface placeholder:text-outline focus:outline-none focus:border-primary" placeholder="Search evidence, project ID, voucher hash..." type="text" value=""/>
+</div>
+<!-- Dropdowns -->
+<div class="flex items-center space-x-1.5 flex-wrap">
+<select class="h-8 px-2 text-label-md font-label-md bg-surface-container-low border border-outline-variant rounded text-on-surface focus:outline-none focus:border-primary">
+<option>Evidence Type: All</option>
+<option>Site Photographs</option>
+<option>Geo-tagged Stills</option>
+<option>Material Invoices</option>
+<option>Measurement Books</option>
+<option>UC Certificates</option>
+</select>
+<select class="h-8 px-2 text-label-md font-label-md bg-surface-container-low border border-outline-variant rounded text-on-surface focus:outline-none focus:border-primary">
+<option>Status: All</option>
+<option>Available</option>
+<option>Missing</option>
+<option selected="">Similarity &amp; Reuse</option>
+<option>Requires Verification</option>
+<option>Insufficient Evidence</option>
+</select>
+<select class="h-8 px-2 text-label-md font-label-md bg-surface-container-low border border-outline-variant rounded text-on-surface focus:outline-none focus:border-primary hidden md:block">
+<option>Project: All Constituencies</option>
+<option>DL-2024-884 (Storm Water Drain)</option>
+<option>DL-2024-910 (Approach Road)</option>
+<option>DL-2024-772 (Community Centre)</option>
+</select>
+<select class="h-8 px-2 text-label-md font-label-md bg-surface-container-low border border-outline-variant rounded text-on-surface focus:outline-none focus:border-primary hidden xl:block">
+<option>FY 2023-2024 Q3-Q4</option>
+<option>FY 2024-2025 Q1-Q2</option>
+</select>
+</div>
+<!-- Active Filter Pill -->
+<div class="inline-flex items-center space-x-1 bg-surface-container-high border border-outline-variant px-2 py-1 rounded text-label-sm font-label-sm text-secondary">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>Status: Similarity Detected &amp; Reuse Detected</span>
+<button class="hover:text-on-surface ml-1 flex items-center">
+<span class="material-symbols-outlined text-[13px]" data-icon="close">close</span>
+</button>
+</div>
+</div>
+<!-- Right: View toggles & Records Count -->
+<div class="flex items-center space-x-2">
+<span class="text-mono-xs font-mono-xs text-outline hidden sm:inline">Showing 6 of 24 items</span>
+<div class="inline-flex border border-outline-variant rounded bg-surface-container-low p-0.5">
+<button class="px-2 py-1 bg-surface-container-highest text-primary rounded text-[13px] flex items-center">
+<span class="material-symbols-outlined text-[15px]" data-icon="view_list">view_list</span>
+</button>
+<button class="px-2 py-1 hover:text-on-surface text-outline rounded text-[13px] flex items-center">
+<span class="material-symbols-outlined text-[15px]" data-icon="grid_view">grid_view</span>
+</button>
+</div>
+</div>
+</div>
+<!-- MAIN CONTENT SPLIT AREA (62% Evidence Grid/List, 38% Docked Detail Drawer) -->
+<div class="flex-1 flex min-h-0 overflow-hidden">
+<!-- ================= LEFT: EVIDENCE LIST / DATA GRID (~62%) ================= -->
+<section class="flex-1 lg:w-[62%] min-w-0 border-r border-outline-variant flex flex-col bg-surface overflow-hidden">
+<!-- Table Column Headers -->
+<div class="grid grid-cols-12 gap-2 px-3 py-2 bg-surface-container-low border-b border-outline-variant text-[11px] font-semibold text-outline uppercase tracking-wider select-none shrink-0">
+<div class="col-span-5 flex items-center space-x-2">
+<input class="rounded-none bg-surface border-outline-variant text-primary focus:ring-0 w-3.5 h-3.5" type="checkbox"/>
+<span>Evidence Artifact &amp; File</span>
+</div>
+<div class="col-span-3">Project Reference</div>
+<div class="col-span-2 text-center">Status / Confidence</div>
+<div class="col-span-2 text-right">Actions</div>
+</div>
+<!-- Scrollable Evidence List -->
+<div class="flex-1 overflow-y-auto divide-y divide-surface-container-high">
+<!-- Item 1 (Selected/Active) -->
+<div class="p-2.5 bg-surface-container-low/70 border-l-2 border-primary hover:bg-surface-container-low cursor-pointer transition-colors duration-150">
+<div class="grid grid-cols-12 gap-2 items-center">
+<!-- Artifact info -->
+<div class="col-span-5 flex items-start space-x-2.5 min-w-0">
+<input checked="" class="mt-1 rounded-none bg-surface border-outline-variant text-primary focus:ring-0 w-3.5 h-3.5" type="checkbox"/>
+<div class="w-12 h-10 rounded bg-surface-container-highest border border-primary/40 overflow-hidden shrink-0 relative flex items-center justify-center">
+<img class="w-full h-full object-cover" data-alt="Clear high resolution documentary photograph of an outdoor public works reinforced concrete storm water drainage channel with metal grating during municipal audit inspection under bright midday Delhi sunlight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7BmHcrQoyD9-tazwSKbOCiKS9sGvVdiybd3o26P8SReu1FnOiXseLemJXJLLWUufP4GTNR1UejVfKz3XaZ83IHZ-BC5xANTNLVrS50-F9i2OrHJTOggJk95Ps9G7X9JvimCwAFRC9fUVcVHwFCkFZXHq0j7wCbAvt5__fR5SgS12orR5Rt5sRqeJaFK4ARZPcjjvVj-Orw8m4of3aM8ZoLXB8cW60GGMjihZUbG7gyL3RT_4FXxfvpg"/>
+<span class="absolute bottom-0.5 right-0.5 text-[8px] font-mono-xs bg-surface-dim/80 text-primary px-0.5 rounded">GPS</span>
+</div>
+<div class="min-w-0 flex-1">
+<div class="text-body-sm font-semibold text-on-surface truncate flex items-center space-x-1">
+<span class="truncate">Site_Completion_Drainage_B4_2024.jpg</span>
+</div>
+<div class="text-mono-xs font-mono-xs text-outline flex items-center space-x-2 mt-0.5">
+<span>Geo-tagged Photo</span>
+<span>•</span>
+<span>3.8 MB</span>
+<span>•</span>
+<span>14 Oct 2024</span>
+</div>
+</div>
+</div>
+<!-- Project Ref -->
+<div class="col-span-3 min-w-0">
+<div class="text-mono-xs font-mono-xs text-primary font-medium hover:underline truncate">DL-2024-884</div>
+<div class="text-body-sm text-on-surface-variant truncate">Storm Water Drain Phase II</div>
+</div>
+<!-- Status & Confidence -->
+<div class="col-span-2 text-center min-w-0">
+<span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-mono-xs uppercase tracking-wide bg-secondary/15 text-secondary border border-secondary/30">
+                    Reuse Detected
+                  </span>
+<div class="text-mono-xs font-mono-xs text-tertiary mt-1 font-semibold">96.4% match</div>
+</div>
+<!-- Actions -->
+<div class="col-span-2 flex items-center justify-end space-x-1">
+<button class="h-6 px-2 bg-primary-container text-on-primary-container text-label-sm font-semibold rounded hover:bg-primary transition-colors">
+                    Inspect
+                  </button>
+<button class="h-6 px-1.5 bg-surface-container border border-outline-variant text-on-surface hover:bg-surface-container-high rounded text-label-sm">
+<span class="material-symbols-outlined text-[13px]" data-icon="compare">compare</span>
+</button>
+</div>
+</div>
+<div class="mt-1.5 ml-6 pl-10 text-mono-xs font-mono-xs text-secondary-fixed flex items-center space-x-2 bg-secondary/5 py-1 px-2 rounded border border-secondary/20">
+<span class="material-symbols-outlined text-[14px]" data-icon="info">info</span>
+<span>Visual hash duplicates DL-2023-412 (Ward 18 Drainage) submitted 11 months prior.</span>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="p-2.5 hover:bg-surface-container-low cursor-pointer transition-colors duration-150">
+<div class="grid grid-cols-12 gap-2 items-center">
+<div class="col-span-5 flex items-start space-x-2.5 min-w-0">
+<input class="mt-1 rounded-none bg-surface border-outline-variant text-primary focus:ring-0 w-3.5 h-3.5" type="checkbox"/>
+<div class="w-12 h-10 rounded bg-surface-container-highest border border-outline-variant overflow-hidden shrink-0 relative flex items-center justify-center">
+<img class="w-full h-full object-cover" data-alt="Technical inspection photograph of newly paved road culvert foundation concrete with gravel aggregates under neutral overcast forensic daylight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfNM8zSgW9ZVICAYtN2GHA_EjCDiH-1zAn34ACSGY4q7k_OXjVFoaZpwEn_Mowhwmy-uyDxeIZ70VKgKkHcDA7Ys1ML_6M5aObCXlPdNyDQgIJkIe41R-5srT-VMZMWdhQShGSRtP-jlMof2ILNy1bQqSKAR16iJ1B9VkriMyV93h_0YauTKXVD4r7HQFUx_U7uE3lhlpfn2gRWHbl3dkmNnBbSXSnPXq9_04RhUuaa9sxQd-DKoF4ww"/>
+<span class="absolute bottom-0.5 right-0.5 text-[8px] font-mono-xs bg-surface-dim/80 text-primary px-0.5 rounded">GPS</span>
+</div>
+<div class="min-w-0 flex-1">
+<div class="text-body-sm font-medium text-on-surface truncate">Culvert_Foundation_Paving_Geo.jpg</div>
+<div class="text-mono-xs font-mono-xs text-outline flex items-center space-x-2 mt-0.5">
+<span>Geo-tagged Photo</span>
+<span>•</span>
+<span>4.1 MB</span>
+<span>•</span>
+<span>02 Nov 2024</span>
+</div>
+</div>
+</div>
+<div class="col-span-3 min-w-0">
+<div class="text-mono-xs font-mono-xs text-on-surface font-medium hover:underline truncate">DL-2024-910</div>
+<div class="text-body-sm text-on-surface-variant truncate">Sector 4 Approach Road</div>
+</div>
+<div class="col-span-2 text-center min-w-0">
+<span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-mono-xs uppercase tracking-wide bg-secondary/15 text-secondary border border-secondary/30">
+                    Similarity Detected
+                  </span>
+<div class="text-mono-xs font-mono-xs text-secondary mt-1">89.1% match</div>
+</div>
+<div class="col-span-2 flex items-center justify-end space-x-1">
+<button class="h-6 px-2 bg-surface-container border border-outline-variant text-on-surface hover:bg-surface-container-high text-label-sm rounded transition-colors">
+                    Inspect
+                  </button>
+<button class="h-6 px-1.5 bg-surface-container border border-outline-variant text-on-surface hover:bg-surface-container-high rounded text-label-sm">
+<span class="material-symbols-outlined text-[13px]" data-icon="compare">compare</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="p-2.5 hover:bg-surface-container-low cursor-pointer transition-colors duration-150">
+<div class="grid grid-cols-12 gap-2 items-center">
+<div class="col-span-5 flex items-start space-x-2.5 min-w-0">
+<input class="mt-1 rounded-none bg-surface border-outline-variant text-primary focus:ring-0 w-3.5 h-3.5" type="checkbox"/>
+<div class="w-12 h-10 rounded bg-surface-container-highest border border-outline-variant overflow-hidden shrink-0 flex items-center justify-center text-outline">
+<span class="material-symbols-outlined text-[20px]" data-icon="description">description</span>
+</div>
+<div class="min-w-0 flex-1">
+<div class="text-body-sm font-medium text-on-surface truncate">Cement_Batch_Invoice_INV-88319.pdf</div>
+<div class="text-mono-xs font-mono-xs text-outline flex items-center space-x-2 mt-0.5">
+<span>Material Invoice</span>
+<span>•</span>
+<span>1.2 MB</span>
+<span>•</span>
+<span>28 Sep 2024</span>
+</div>
+</div>
+</div>
+<div class="col-span-3 min-w-0">
+<div class="text-mono-xs font-mono-xs text-on-surface font-medium hover:underline truncate">DL-2024-772</div>
+<div class="text-body-sm text-on-surface-variant truncate">Community Centre Boundary</div>
+</div>
+<div class="col-span-2 text-center min-w-0">
+<span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-mono-xs uppercase tracking-wide bg-primary/15 text-primary border border-primary/30">
+                    Verified
+                  </span>
+<div class="text-mono-xs font-mono-xs text-primary mt-1">100% Valid</div>
+</div>
+<div class="col-span-2 flex items-center justify-end space-x-1">
+<button class="h-6 px-2 bg-surface-container border border-outline-variant text-on-surface hover:bg-surface-container-high text-label-sm rounded transition-colors">
+                    Inspect
+                  </button>
+</div>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="p-2.5 hover:bg-surface-container-low cursor-pointer transition-colors duration-150">
+<div class="grid grid-cols-12 gap-2 items-center">
+<div class="col-span-5 flex items-start space-x-2.5 min-w-0">
+<input class="mt-1 rounded-none bg-surface border-outline-variant text-primary focus:ring-0 w-3.5 h-3.5" type="checkbox"/>
+<div class="w-12 h-10 rounded bg-surface-container-highest border border-outline-variant overflow-hidden shrink-0 flex items-center justify-center">
+<img class="w-full h-full object-cover" data-alt="Municipal audit proof showing newly erected outdoor solar street lamp pole on countryside road, clear blue sky, documentary angle." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeSn0KKaR4kITCTwPD7Ok3YDC036R4M_7N9fjNIg-UmDKsquYTmjl2UfjwVYv5DmweCpK8Tr6aE-YqoxT07mVTGjRD7IqLpBT1XKrIkCEmqj9YEjH05PfYz0MK3nAzRfNyCBeORJhsIgQCYKaz-GwLEVXiAK14XL51Iy-eJqh1EKPPrZE303KBBZ_Hk5EXxpGOTk7Rgx7KEkHeEgai0EQ8EN01pWEoZrmyx7r2o_VO3O0RRTF5UYbsug"/>
+</div>
+<div class="min-w-0 flex-1">
+<div class="text-body-sm font-medium text-on-surface truncate">Solar_Light_Installation_Pole12.jpg</div>
+<div class="text-mono-xs font-mono-xs text-outline flex items-center space-x-2 mt-0.5">
+<span>Site Photograph</span>
+<span>•</span>
+<span>2.9 MB</span>
+<span>•</span>
+<span>19 Aug 2024</span>
+</div>
+</div>
+</div>
+<div class="col-span-3 min-w-0">
+<div class="text-mono-xs font-mono-xs text-on-surface font-medium hover:underline truncate">DL-2024-605</div>
+<div class="text-body-sm text-on-surface-variant truncate">Rural Solar Electrification</div>
+</div>
+<div class="col-span-2 text-center min-w-0">
+<span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-mono-xs uppercase tracking-wide bg-tertiary/15 text-tertiary border border-tertiary/30">
+                    Requires Verification
+                  </span>
+<div class="text-mono-xs font-mono-xs text-outline mt-1">71.0% (Exif delta)</div>
+</div>
+<div class="col-span-2 flex items-center justify-end space-x-1">
+<button class="h-6 px-2 bg-surface-container border border-outline-variant text-on-surface hover:bg-surface-container-high text-label-sm rounded transition-colors">
+                    Inspect
+                  </button>
+<button class="h-6 px-1.5 bg-surface-container border border-outline-variant text-on-surface hover:bg-surface-container-high rounded text-label-sm">
+<span class="material-symbols-outlined text-[13px]" data-icon="compare">compare</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Item 5 -->
+<div class="p-2.5 hover:bg-surface-container-low cursor-pointer transition-colors duration-150">
+<div class="grid grid-cols-12 gap-2 items-center">
+<div class="col-span-5 flex items-start space-x-2.5 min-w-0">
+<input class="mt-1 rounded-none bg-surface border-outline-variant text-primary focus:ring-0 w-3.5 h-3.5" type="checkbox"/>
+<div class="w-12 h-10 rounded bg-surface-container-highest border border-outline-variant overflow-hidden shrink-0 flex items-center justify-center text-outline">
+<span class="material-symbols-outlined text-[20px]" data-icon="menu_book">menu_book</span>
+</div>
+<div class="min-w-0 flex-1">
+<div class="text-body-sm font-medium text-on-surface truncate">Measurement_Book_MB_Vol4_Scan.pdf</div>
+<div class="text-mono-xs font-mono-xs text-outline flex items-center space-x-2 mt-0.5">
+<span>Measurement Book</span>
+<span>•</span>
+<span>8.4 MB</span>
+<span>•</span>
+<span>11 Oct 2024</span>
+</div>
+</div>
+</div>
+<div class="col-span-3 min-w-0">
+<div class="text-mono-xs font-mono-xs text-on-surface font-medium hover:underline truncate">DL-2024-884</div>
+<div class="text-body-sm text-on-surface-variant truncate">Storm Water Drain Phase II</div>
+</div>
+<div class="col-span-2 text-center min-w-0">
+<span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-mono-xs uppercase tracking-wide bg-primary/15 text-primary border border-primary/30">
+                    Available
+                  </span>
+<div class="text-mono-xs font-mono-xs text-primary mt-1">99.0% Valid</div>
+</div>
+<div class="col-span-2 flex items-center justify-end space-x-1">
+<button class="h-6 px-2 bg-surface-container border border-outline-variant text-on-surface hover:bg-surface-container-high text-label-sm rounded transition-colors">
+                    Inspect
+                  </button>
+</div>
+</div>
+</div>
+<!-- Item 6 -->
+<div class="p-2.5 hover:bg-surface-container-low cursor-pointer transition-colors duration-150">
+<div class="grid grid-cols-12 gap-2 items-center">
+<div class="col-span-5 flex items-start space-x-2.5 min-w-0">
+<input class="mt-1 rounded-none bg-surface border-outline-variant text-primary focus:ring-0 w-3.5 h-3.5" type="checkbox"/>
+<div class="w-12 h-10 rounded bg-surface-container-highest border border-outline-variant overflow-hidden shrink-0 flex items-center justify-center">
+<img class="w-full h-full object-cover" data-alt="Primary school government building construction roof renovation project inspection image with cloudy sky and scaffolding." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRH5Di7jboAkGqXryFTKBt2JS5nAaVTUWK37y9Xn4p9uYd0YDDy4ZdLEI0oxlpSYuJCxqQIFTkcKzX2m1W1Eco734R94hBSB18-rTWJ9_Lx0YKe_FEYcAsAlpx3LiQsJKTWHJQaGxoUE01j4Su1V5idpaN8wSt3nZq0bx6nueAt-8wN-IY_ogiyrhR0o_tRRKPFtSYBhBXWr84h13Omdy5cgTmv1FFxZsnMKHR-ua69qyuUNJ3S3PNpw"/>
+</div>
+<div class="min-w-0 flex-1">
+<div class="text-body-sm font-medium text-on-surface truncate">Primary_School_Roofing_Final.jpg</div>
+<div class="text-mono-xs font-mono-xs text-outline flex items-center space-x-2 mt-0.5">
+<span>Geo-tagged Photo</span>
+<span>•</span>
+<span>0.8 MB</span>
+<span>•</span>
+<span>15 Jul 2024</span>
+</div>
+</div>
+</div>
+<div class="col-span-3 min-w-0">
+<div class="text-mono-xs font-mono-xs text-on-surface font-medium hover:underline truncate">DL-2024-520</div>
+<div class="text-body-sm text-on-surface-variant truncate">Zila Parishad School Upgrade</div>
+</div>
+<div class="col-span-2 text-center min-w-0">
+<span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-mono-xs uppercase tracking-wide bg-surface-container-highest text-outline border border-outline-variant">
+                    Insufficient Evidence
+                  </span>
+<div class="text-mono-xs font-mono-xs text-outline mt-1">45.2% Missing GPS</div>
+</div>
+<div class="col-span-2 flex items-center justify-end space-x-1">
+<button class="h-6 px-2 bg-surface-container border border-outline-variant text-on-surface hover:bg-surface-container-high text-label-sm rounded transition-colors">
+                    Inspect
+                  </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Pagination / Audit Ledger Footer -->
+<div class="h-9 px-3 bg-surface-container-low border-t border-outline-variant flex items-center justify-between text-mono-xs font-mono-xs text-on-surface-variant shrink-0">
+<div class="flex items-center space-x-2">
+<span>Ledger Offset: 0001-0024</span>
+<span>•</span>
+<span>Cluster Hash: 7b29ec..410f</span>
+</div>
+<div class="flex items-center space-x-1">
+<button class="px-2 py-0.5 border border-outline-variant rounded bg-surface hover:bg-surface-container disabled:opacity-40" disabled="">Prev</button>
+<span class="px-2 py-0.5 text-primary font-semibold">1</span>
+<button class="px-2 py-0.5 border border-outline-variant rounded bg-surface hover:bg-surface-container">2</button>
+<button class="px-2 py-0.5 border border-outline-variant rounded bg-surface hover:bg-surface-container">3</button>
+<button class="px-2 py-0.5 border border-outline-variant rounded bg-surface hover:bg-surface-container">Next</button>
+</div>
+</div>
+</section>
+<!-- ================= RIGHT: DOCKED EVIDENCE DETAIL DRAWER (~38%) ================= -->
+<aside class="hidden lg:flex flex-col w-[38%] min-w-0 bg-surface-container-low border-l border-outline-variant overflow-hidden">
+<!-- Drawer Top Bar -->
+<div class="h-10 px-space-md bg-surface-container border-b border-outline-variant flex items-center justify-between shrink-0">
+<div class="flex items-center space-x-2 min-w-0">
+<span class="text-headline-sm font-headline-sm font-semibold text-on-surface truncate">Evidence Inspector #EVD-9942</span>
+<span class="px-1.5 py-0.5 rounded text-[10px] font-mono-xs bg-secondary/15 text-secondary border border-secondary/30 whitespace-nowrap">
+                Potential Evidence Reuse
+              </span>
+</div>
+<div class="flex items-center space-x-2">
+<div class="px-2 py-0.5 rounded bg-surface-dim border border-outline-variant flex items-center space-x-1">
+<span class="text-label-sm font-label-sm text-outline">Audit Priority:</span>
+<span class="text-mono-xs font-mono-xs font-bold text-secondary">78/100</span>
+</div>
+<button class="w-6 h-6 flex items-center justify-center text-outline hover:text-on-surface">
+<span class="material-symbols-outlined text-[16px]" data-icon="open_in_full">open_in_full</span>
+</button>
+</div>
+</div>
+<!-- Drawer Scrollable Content -->
+<div class="flex-1 overflow-y-auto p-space-md space-y-space-md">
+<!-- High-Res Evidence Preview Box -->
+<div class="border border-outline-variant rounded bg-surface-container-lowest overflow-hidden">
+<div class="relative h-48 w-full bg-surface-container-highest">
+<img class="w-full h-full object-cover" data-alt="Forensic municipal evidence audit view of a newly excavated and paved reinforced cement stormwater drain channel in Delhi municipal ward under bright clear sunlight with sharp optical detail." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLf4eprjr-qVYgzcu0x0_-kxZPvhOpqiPHnY6eA_QrY5PCWX9HVHQaUDzPj1fhguKgzi8ND0J57S4R47-dQCHN_Mh3IQS_KJ01tgg7trdn61Nb3YTqMBcmevN2t0rfshG9697rV0z8YV_3k_lnZYWzLNF3_yV2mzi3jBv2W7he9cLx4NxA95f4f8QbFwCcT2JbRYxFOJcFJNJiosX3sKJht-_iYl6RnRUDlgrP8FhQRze4cUiu7K8L9A"/>
+<!-- EXIF HUD Overlay -->
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dim/90 via-transparent to-transparent flex flex-col justify-between p-2 pointer-events-none">
+<div class="flex justify-between items-start">
+<span class="px-1.5 py-0.5 rounded bg-surface-dim/80 text-primary border border-primary/40 text-[9px] font-mono-xs">
+                      GEO-VALIDATED
+                    </span>
+<span class="px-1.5 py-0.5 rounded bg-surface-dim/80 text-on-surface border border-outline-variant text-[9px] font-mono-xs">
+                      Camera: SM-A536E
+                    </span>
+</div>
+<div class="text-mono-xs font-mono-xs text-on-surface space-y-0.5">
+<div class="flex items-center space-x-2">
+<span class="text-primary font-semibold">28.5355° N, 77.2410° E</span>
+<span class="text-outline">±4.2m</span>
+</div>
+<div class="text-outline text-[9px]">Captured: 14-10-2024 16:42 IST | Exposure: 1/640s f/1.8 ISO 50</div>
+</div>
+</div>
+</div>
+<div class="p-2 border-t border-outline-variant bg-surface-container flex items-center justify-between text-mono-xs font-mono-xs">
+<span class="text-on-surface-variant truncate">Site_Completion_Drainage_B4_2024.jpg</span>
+<span class="text-primary cursor-pointer hover:underline flex items-center space-x-0.5">
+<span class="material-symbols-outlined text-[13px]" data-icon="download">download</span>
+<span>Original Raw (3.8MB)</span>
+</span>
+</div>
+</div>
+<!-- Section: Why This Evidence Matters -->
+<div class="bg-surface-container border border-secondary/30 rounded p-3 space-y-1.5">
+<div class="flex items-center space-x-1.5 text-secondary text-label-md font-label-md font-semibold">
+<span class="material-symbols-outlined text-[16px]" data-icon="policy">policy</span>
+<span>Why This Evidence Matters</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant leading-relaxed">
+                High visual and perceptual similarity detected between this photo submitted for Project <span class="text-on-surface font-mono-xs font-semibold">DL-2024-884</span> and an earlier submission for Project <span class="text-on-surface font-mono-xs font-semibold">DL-2023-412</span> (Drainage Ward 18). Perceptual distance is within <span class="text-secondary font-mono-xs">0.04 variance</span>. Physical features, concrete curing patterns, and background skyline match identical angle.
+              </p>
+</div>
+<!-- Related Project Card -->
+<div class="bg-surface-container border border-outline-variant rounded p-3 space-y-2">
+<div class="text-label-sm font-label-sm text-outline uppercase tracking-wider">Associated Sanction Metadata</div>
+<div>
+<div class="text-body-sm font-semibold text-on-surface">Construction of Storm Water Drain &amp; Culverts Phase II</div>
+<div class="text-mono-xs font-mono-xs text-primary mt-0.5">Project ID: DL-2024-884 <span class="text-outline">• Implementing Agency: DSIIDC East</span></div>
+</div>
+<div class="grid grid-cols-2 gap-2 pt-1 border-t border-outline-variant/60 text-mono-xs font-mono-xs">
+<div>
+<div class="text-outline text-[10px]">Sanctioned Amount</div>
+<div class="text-on-surface font-semibold">₹42.50 Lakh</div>
+</div>
+<div>
+<div class="text-outline text-[10px]">Expenditure Recorded</div>
+<div class="text-secondary font-semibold">₹38.10 Lakh (89.6%)</div>
+</div>
+</div>
+</div>
+<!-- Visual Evidence Comparison Preview -->
+<div class="bg-surface-container border border-outline-variant rounded p-3 space-y-2.5">
+<div class="flex items-center justify-between">
+<div class="text-label-md font-label-md font-semibold text-on-surface">Side-by-Side Visual Comparison</div>
+<span class="text-mono-xs font-mono-xs px-1.5 py-0.5 rounded bg-secondary/10 text-secondary border border-secondary/20">
+                  SSIM: 0.941
+                </span>
+</div>
+<!-- Miniature split compare -->
+<div class="grid grid-cols-2 gap-2">
+<!-- Left: Current -->
+<div class="border border-outline-variant rounded overflow-hidden bg-surface-dim">
+<div class="h-20 relative">
+<img class="w-full h-full object-cover" data-alt="Municipal audit completion photo submitted for drain culvert construction with daytime light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpb5RHkjmVHFIX5Aec3BRD8KFkA5QpQ_suNMJdP_0LAsK9m6h7gG8sAnPvsuI9S7ETiuKtWvnmNXSQf4Lnf9Wwjhmh3n_ddXFw5XibXpiUMKqprHqB2Q5RUTmRJMkxYEYLow4DXMmNa6Z97nZWFoe3hafL1aIxo8ZpGRtXS6kc6ML1lPwCLwtUzl0f4Z-w7W4TWANZlj9NAGGymp4Tnb1uIHBqrLCHX0MjZBw3bDDC_V2Mbtk9rS5Y1Q"/>
+<span class="absolute bottom-1 left-1 px-1 py-0.2 rounded bg-surface-dim/90 text-[8px] font-mono-xs text-on-surface">Current DL-2024-884</span>
+</div>
+<div class="p-1.5 text-mono-xs font-mono-xs text-outline text-[9px]">
+                    14 Oct 2024 (Phase II)
+                  </div>
+</div>
+<!-- Right: Flagged Match -->
+<div class="border border-secondary/40 rounded overflow-hidden bg-surface-dim">
+<div class="h-20 relative">
+<img class="w-full h-full object-cover" data-alt="Historical municipal audit photo submitted one year earlier showing the same concrete culvert drainage work from an identical angle." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUlY9vH-0tXJr8CBCucpdAoYMiWoE38hB3qecnxD4-q4mbBHB2JpyEO-8CjIGxuKtcVTwDoJ1rsWOnMZ2mYweXIsmr-7GdiJS619S_lGgkarcrQjfYx_a2col8f5bsPieQ4VKO4_5eMnNBaFGPXpQgcPAZ3q1SmEDVpG0TkTvLBOcdVDPOTHydVkXRBJE7yKSUlFYzZYWl4NYABap18cQj9k8Y5Gx3b-iOwTLk9Iu_jjxUeqrnvhaPGg"/>
+<span class="absolute bottom-1 left-1 px-1 py-0.2 rounded bg-surface-dim/90 text-[8px] font-mono-xs text-secondary font-semibold">Matched DL-2023-412</span>
+</div>
+<div class="p-1.5 text-mono-xs font-mono-xs text-secondary text-[9px]">
+                    19 Nov 2023 (Ward 18)
+                  </div>
+</div>
+</div>
+<div class="text-mono-xs font-mono-xs text-on-surface-variant flex items-center justify-between pt-1 border-t border-outline-variant/60">
+<span>Matched Keypoints: <strong class="text-primary">94.2% visual overlap</strong></span>
+<span class="text-outline">ORB/SIFT: 342 pts</span>
+</div>
+</div>
+<!-- Evidence Milestone Timeline -->
+<div class="bg-surface-container border border-outline-variant rounded p-3 space-y-2">
+<div class="text-label-md font-label-md font-semibold text-on-surface">Evidence Submission Timeline</div>
+<ol class="relative border-l border-outline-variant ml-2 space-y-3 pt-1">
+<li class="ml-4">
+<div class="absolute -left-1.5 mt-1.5 w-3 h-3 rounded-full border border-surface bg-outline"></div>
+<time class="text-mono-xs font-mono-xs text-outline">12 May 2024</time>
+<p class="text-body-sm text-on-surface">Administrative Sanction issued</p>
+</li>
+<li class="ml-4">
+<div class="absolute -left-1.5 mt-1.5 w-3 h-3 rounded-full border border-surface bg-outline"></div>
+<time class="text-mono-xs font-mono-xs text-outline">04 Aug 2024</time>
+<p class="text-body-sm text-on-surface">First tranche released (₹15.00 Lakh)</p>
+</li>
+<li class="ml-4">
+<div class="absolute -left-1.5 mt-1.5 w-3 h-3 rounded-full border border-surface bg-secondary"></div>
+<time class="text-mono-xs font-mono-xs text-secondary font-semibold">14 Oct 2024</time>
+<p class="text-body-sm text-on-surface font-medium">Final Completion Photo Submitted <span class="text-secondary">(Flagged)</span></p>
+</li>
+<li class="ml-4">
+<div class="absolute -left-1.5 mt-1.5 w-3 h-3 rounded-full border border-surface bg-secondary-fixed"></div>
+<time class="text-mono-xs font-mono-xs text-secondary-fixed">18 Oct 2024</time>
+<p class="text-body-sm text-on-surface">Automated Intelligence Similarity Flag Raised</p>
+</li>
+<li class="ml-4">
+<div class="absolute -left-1.5 mt-1.5 w-3 h-3 rounded-full border border-surface bg-primary animate-pulse"></div>
+<time class="text-mono-xs font-mono-xs text-primary font-semibold">Current State</time>
+<p class="text-body-sm text-primary font-medium">Awaiting Auditor Determination</p>
+</li>
+</ol>
+</div>
+<!-- Collapsible: Technical Details (Level 3) -->
+<details class="bg-surface-container border border-outline-variant rounded group">
+<summary class="p-3 text-label-md font-label-md font-semibold text-on-surface cursor-pointer flex items-center justify-between list-none">
+<span class="flex items-center space-x-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary" data-icon="data_object">data_object</span>
+<span>Technical Details (Level 3 Cryptographic Hash)</span>
+</span>
+<span class="material-symbols-outlined text-[16px] text-outline group-open:rotate-180 transition-transform" data-icon="expand_more">expand_more</span>
+</summary>
+<div class="px-3 pb-3 pt-1 border-t border-outline-variant space-y-1.5 text-mono-xs font-mono-xs">
+<div>
+<span class="text-outline block text-[9px]">SHA-256 Digest:</span>
+<span class="text-on-surface-variant break-all select-all">e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855</span>
+</div>
+<div class="grid grid-cols-2 gap-2 pt-1">
+<div>
+<span class="text-outline block text-[9px]">Perceptual Hash (pHash):</span>
+<span class="text-primary font-semibold">0x9f8e7d6c5b4a3921</span>
+</div>
+<div>
+<span class="text-outline block text-[9px]">Embedding Cosine Sim:</span>
+<span class="text-secondary font-semibold">0.9642 (ViT-B/16)</span>
+</div>
+</div>
+<div class="pt-1">
+<span class="text-outline block text-[9px]">Sensor GPS Accuracy:</span>
+<span class="text-on-surface">28°32'07.8"N 77°14'27.6"E (±4.2m)</span>
+</div>
+<div class="pt-1 text-[9px] text-outline flex justify-between">
+<span>Run: #PL-2024-10-18-0492</span>
+<span>Dataset: MPLADS-GEO-2024.11</span>
+</div>
+</div>
+</details>
+</div>
+<!-- Auditor Action Bar (Docked Bottom of Drawer) -->
+<div class="p-space-md bg-surface border-t border-outline-variant shrink-0 space-y-2">
+<div class="grid grid-cols-2 gap-2">
+<button class="h-8 px-2 bg-surface-container border border-outline-variant hover:bg-surface-container-high text-on-surface text-label-md font-label-md rounded flex items-center justify-center space-x-1.5 transition-colors">
+<span class="material-symbols-outlined text-[14px]" data-icon="compare">compare</span>
+<span>Compare Side-by-side</span>
+</button>
+<button class="h-8 px-2 bg-surface-container border border-outline-variant hover:bg-surface-container-high text-on-surface text-label-md font-label-md rounded flex items-center justify-center space-x-1.5 transition-colors">
+<span class="material-symbols-outlined text-[14px]" data-icon="pin_drop">pin_drop</span>
+<span>Request Field Verification</span>
+</button>
+</div>
+<button class="w-full h-9 px-3 bg-primary-container hover:bg-primary text-on-primary-container text-label-md font-label-md font-semibold rounded flex items-center justify-center space-x-2 transition-colors duration-150">
+<span class="material-symbols-outlined text-[16px]" data-icon="gavel">gavel</span>
+<span>Mark for Audit Committee Determination</span>
+</button>
+</div>
+</aside>
+</div>
+</div>
+</div>
+</body></html>
